@@ -9,7 +9,7 @@
 # apply (patch)     pritaikyti (pataisą)
 # argument          parametras
 # branch            šaka
-# commit            fiksuoti
+# commit            fiksuoti (?)
 # content           turinys
 # corrupt           pažeistas
 # file              failas
@@ -21,14 +21,15 @@
 # mutual            tarpusavyje
 # rebase            ?
 # remote            distancinis (?)
+# ref               ?
 # option            parinktis
 # output            išvestis
-# patch             pataisa
-# stage             pridėti
+# patch             pataisa (?)
+# stage             pridėti (?)
 # submodule         submodulis
 # specify           nurodyti
-# track             sekamas
-# unstage           išimti
+# track             sekti
+# unstage           išimti (?)
 # working directory veikiamasis katalogas
 #
 msgid ""
