@@ -6,22 +6,28 @@
 # Translation dictionary / Terminų žodynėlis
 # ------
 # abort             nutraukti
+# add               pridėti
 # apply (patch)     pritaikyti (pataisą)
 # argument          parametras
+# bundle            rinkinys, surinkti
 # branch            šaka
+# checkout          ?
 # commit            fiksuoti (?)
 # content           turinys
 # corrupt           pažeistas
 # file              failas
-# flush             ?
+# flush             ištuštinimas (?)
 # include           įtraukti
-# index             turinys
+# index             indeksas
 # initial           eskizinis
 # merge             sujungti (?)
 # mutual            tarpusavyje
 # rebase            ?
+# reset             atstatyti
 # remote            distancinis (?)
-# ref               ?
+# repository        repozitorija
+# revision          revizija
+# ref / reference   nuoroda
 # option            parinktis
 # output            išvestis
 # patch             pataisa (?)
@@ -30,6 +36,7 @@
 # specify           nurodyti
 # track             sekti
 # unstage           išimti (?)
+# unbundle          išrinkti
 # working directory veikiamasis katalogas
 #
 msgid ""
@@ -409,7 +416,7 @@ msgstr "git archive: protokolo klaida"
 
 #: builtin/archive.c:57
 msgid "git archive: expected a flush"
-msgstr "git archive: tikėtasi ?"
+msgstr "git archive: tikėtasi ištuštinimo"
 
 #: builtin/branch.c:136
 #, c-format
@@ -417,6 +424,8 @@ msgid ""
 "deleting branch '%s' that has been merged to\n"
 "         '%s', but not yet merged to HEAD."
 msgstr ""
+"išmetama šaka '%s', kuri buvo sujungta su\n"
+"         '%s', bet dar nesujungta su HEAD."
 
 #: builtin/branch.c:140
 #, c-format
@@ -424,34 +433,36 @@ msgid ""
 "not deleting branch '%s' that is not yet merged to\n"
 "         '%s', even though it is merged to HEAD."
 msgstr ""
+"neišmetama šaka '%s', kuri dar nebuvo sujungta su\n"
+"         '%s', nors ji sujungta su HEAD."
 
 #. TRANSLATORS: This is "remote " in "remote branch '%s' not found"
 #: builtin/branch.c:161
 msgid "remote "
-msgstr ""
+msgstr "distancinis "
 
 #: builtin/branch.c:169
 msgid "cannot use -a with -d"
-msgstr ""
+msgstr "negalima naudoti -a su -d"
 
 #: builtin/branch.c:175
 msgid "Couldn't look up commit object for HEAD"
-msgstr ""
+msgstr "Nepavyko surasti fiksavimo objekto HEAD"
 
 #: builtin/branch.c:180
 #, c-format
 msgid "Cannot delete the branch '%s' which you are currently on."
-msgstr ""
+msgstr "Negalima išmesti šakos '%s', kurioje dabar esi."
 
 #: builtin/branch.c:190
 #, c-format
 msgid "%sbranch '%s' not found."
-msgstr ""
+msgstr "%sšaka '%s' nerasta."
 
 #: builtin/branch.c:198
 #, c-format
 msgid "Couldn't look up commit object for '%s'"
-msgstr ""
+msgstr "Nepavyko surasti fiksavimo objekto '%s'"
 
 #: builtin/branch.c:204
 #, c-format
@@ -459,256 +470,258 @@ msgid ""
 "The branch '%s' is not fully merged.\n"
 "If you are sure you want to delete it, run 'git branch -D %s'."
 msgstr ""
+"Šaka '%s' yra nepilnai sujungta.\n"
+"Jei esi tikras, kad nori ją ištrinti, leisk 'git branch -D %s'."
 
 #: builtin/branch.c:212
 #, c-format
 msgid "Error deleting %sbranch '%s'"
-msgstr ""
+msgstr "Klaida trinant %sšaką '%s'"
 
 #: builtin/branch.c:217
 #, c-format
 msgid "Deleted %sbranch %s (was %s).\n"
-msgstr ""
+msgstr "Ištrinta %sšaka %s (buvo %s).\n"
 
 #: builtin/branch.c:222
 msgid "Update of config-file failed"
-msgstr ""
+msgstr "Konfigūracinio failo atnaujinimas nepavyko"
 
 #: builtin/branch.c:304
 #, c-format
 msgid "branch '%s' does not point at a commit"
-msgstr ""
+msgstr "šaka '%s' nerodo į fiksavimą"
 
 #: builtin/branch.c:376
 #, c-format
 msgid "behind %d] "
-msgstr ""
+msgstr "už %d] "
 
 #: builtin/branch.c:378
 #, c-format
 msgid "ahead %d] "
-msgstr ""
+msgstr "priešais %d] "
 
 #: builtin/branch.c:380
 #, c-format
 msgid "ahead %d, behind %d] "
-msgstr ""
+msgstr "už %d, priešais %d] "
 
 #: builtin/branch.c:485
 msgid "(no branch)"
-msgstr ""
+msgstr "(ne šakoje)"
 
 #: builtin/branch.c:545
 msgid "some refs could not be read"
-msgstr ""
+msgstr "nepavyko perskaityti kelių rodyklių"
 
 #: builtin/branch.c:558
 msgid "cannot rename the current branch while not on any."
-msgstr ""
+msgstr "negalima pervadinti dabartinės šakos jei tokios nėra."
 
 #: builtin/branch.c:568 builtin/branch.c:572
 #, c-format
 msgid "Invalid branch name: '%s'"
-msgstr ""
+msgstr "Neteisingas šakos pavadinimas: '%s'"
 
 #: builtin/branch.c:575
 #, c-format
 msgid "A branch named '%s' already exists."
-msgstr ""
+msgstr "Šaka pavadinimu '%s' jau egzistuoja."
 
 #: builtin/branch.c:581
 msgid "Branch rename failed"
-msgstr ""
+msgstr "Šakos pervadinimas nepavyko"
 
 #: builtin/branch.c:585
 #, c-format
 msgid "Renamed a misnamed branch '%s' away"
-msgstr ""
+msgstr "Atgal pervadinome blogai pavadintą šaką '%s'"
 
 #: builtin/branch.c:589
 #, c-format
 msgid "Branch renamed to %s, but HEAD is not updated!"
-msgstr ""
+msgstr "Šaka pervadinta į %s, bet HEAD neatnaujintas!"
 
 #: builtin/branch.c:596
 msgid "Branch is renamed, but update of config-file failed"
-msgstr ""
+msgstr "Šaka pervadinta, bet konfigūracinio failo atnaujinimas nepavyko"
 
 #: builtin/branch.c:611
 #, c-format
 msgid "malformed object name %s"
-msgstr ""
+msgstr "blogai suformuotas objekto vardas %s"
 
 #: builtin/branch.c:685
 msgid "Failed to resolve HEAD as a valid ref."
-msgstr ""
+msgstr "Nepavyko nustatyti HEAD kaip tinkamos rodyklės"
 
 #: builtin/branch.c:691
 msgid "HEAD not found below refs/heads!"
-msgstr ""
+msgstr "HEAD nerasta refs/heads!"
 
 #: builtin/branch.c:711
 msgid "-a and -r options to 'git branch' do not make sense with a branch name"
-msgstr ""
+msgstr "'git branch' parinktys -a ir -r neturi prasmės su šakos pavadinimu"
 
 #: builtin/bundle.c:47
 #, c-format
 msgid "%s is okay\n"
-msgstr ""
+msgstr "%s yra geras\n"
 
 #: builtin/bundle.c:56
 msgid "Need a repository to create a bundle."
-msgstr ""
+msgstr "Reikia repozitorijos kad galėtume sukurti rinkinį"
 
 #: builtin/bundle.c:60
 msgid "Need a repository to unbundle."
-msgstr ""
+msgstr "Reikia repozitorijos norint išrinkti"
 
 #: builtin/checkout.c:108 builtin/checkout.c:136
 #, c-format
 msgid "path '%s' does not have our version"
-msgstr ""
+msgstr "kelias '%s' neturi mūsų versijos"
 
 #: builtin/checkout.c:110 builtin/checkout.c:138
 #, c-format
 msgid "path '%s' does not have their version"
-msgstr ""
+msgstr "kelias '%s' neturi jų versijos"
 
 #: builtin/checkout.c:121
 #, c-format
 msgid "path '%s' does not have all three versions"
-msgstr ""
+msgstr "kelias '%s' neturi visų trijų versijų"
 
 #: builtin/checkout.c:156
 #, c-format
 msgid "path '%s' does not have all 3 versions"
-msgstr ""
+msgstr "kelias '%s' neturi visų 3 versijų"
 
 #: builtin/checkout.c:173
 #, c-format
 msgid "path '%s': cannot merge"
-msgstr ""
+msgstr "kelias '%s': negalima sujungti"
 
 #: builtin/checkout.c:190
 #, c-format
 msgid "Unable to add merge result for '%s'"
-msgstr ""
+msgstr "Negalima pridėti jungimo rezultato '%s'"
 
 #: builtin/checkout.c:195 builtin/reset.c:170
 #, c-format
 msgid "make_cache_entry failed for path '%s'"
-msgstr ""
+msgstr "make_cache_entry nepavyko keliui '%s'"
 
 #: builtin/checkout.c:217 builtin/checkout.c:372
 msgid "corrupt index file"
-msgstr ""
+msgstr "pažeistas turinio failas"
 
 #: builtin/checkout.c:245 builtin/checkout.c:252
 #, c-format
 msgid "path '%s' is unmerged"
-msgstr ""
+msgstr "kelias '%s' yra nesujungtas"
 
 #: builtin/checkout.c:281 builtin/checkout.c:476 builtin/clone.c:668
 #: builtin/merge.c:762
 msgid "unable to write new index file"
-msgstr ""
+msgstr "negalima rašyti naujo turinio failo"
 
 #: builtin/checkout.c:298 builtin/diff.c:302 builtin/merge.c:394
 msgid "diff_setup_done failed"
-msgstr ""
+msgstr "diff_setup_done nepavyko"
 
 #: builtin/checkout.c:394
 msgid "you need to resolve your current index first"
-msgstr ""
+msgstr "jums pirma reikia nustatyti jūsų dabartinį indeksą"
 
 #: builtin/checkout.c:525
 #, c-format
 msgid "Can not do reflog for '%s'\n"
-msgstr ""
+msgstr "Negalima daryti reflog '%s'\n"
 
 #: builtin/checkout.c:555
 msgid "HEAD is now at"
-msgstr ""
+msgstr "HEAD dabar yra"
 
 #: builtin/checkout.c:561
 #, c-format
 msgid "Already on '%s'\n"
-msgstr ""
+msgstr "Jau '%s'\n"
 
 #: builtin/checkout.c:565
 #, c-format
 msgid "Switched to and reset branch '%s'\n"
-msgstr ""
+msgstr "Perėjome į ir atstatėme šaką '%s'\n"
 
 #: builtin/checkout.c:567
 #, c-format
 msgid "Switched to a new branch '%s'\n"
-msgstr ""
+msgstr "Perjungėme į naują šaką '%s'\n"
 
 #: builtin/checkout.c:569
 #, c-format
 msgid "Switched to branch '%s'\n"
-msgstr ""
+msgstr "Perjungėme į šaką '%s'\n"
 
 #: builtin/checkout.c:687
 msgid "internal error: only -- alone should have been left"
-msgstr ""
+msgstr "vidinė klaida: tik vienas -- turėjo būti paliktas"
 
 #: builtin/checkout.c:689
 msgid "internal error in revision walk"
-msgstr ""
+msgstr "vidinė klaida vaikštant po revizijas"
 
 #: builtin/checkout.c:693
 msgid "Previous HEAD position was"
-msgstr ""
+msgstr "Praeita HEAD vieta buvo"
 
 #: builtin/checkout.c:718
 msgid "You are on a branch yet to be born"
-msgstr ""
+msgstr "Esi šakoje, kuri dar tik gims"
 
 #. case (1)
 #: builtin/checkout.c:846
 #, c-format
 msgid "invalid reference: %s"
-msgstr ""
+msgstr "bloga nuoroda: %s"
 
 #. case (1): want a tree
 #: builtin/checkout.c:885
 #, c-format
 msgid "reference is not a tree: %s"
-msgstr ""
+msgstr "nuoroda nėra medis: %s"
 
 #: builtin/checkout.c:952
 msgid "-B cannot be used with -b"
-msgstr ""
+msgstr "-B negali būti naudojamas su -b"
 
 #: builtin/checkout.c:961
 msgid "--patch is incompatible with all other options"
-msgstr ""
+msgstr "--patch yra nesuderinamas su visomis kitomis parinktimis"
 
 #: builtin/checkout.c:972
 msgid "--track needs a branch name"
-msgstr ""
+msgstr "--track reikalauja šakos vardo"
 
 #: builtin/checkout.c:979
 msgid "Missing branch name; try -b"
-msgstr ""
+msgstr "Trūksta šakos vardo; bandyk -b"
 
 #: builtin/checkout.c:985
 msgid "--orphan and -b|-B are mutually exclusive"
-msgstr ""
+msgstr "--orphan ir -b|-B yra tarpusavyje negalimi"
 
 #: builtin/checkout.c:987
 msgid "--orphan cannot be used with -t"
-msgstr ""
+msgstr "--orhphan negali būti naudojamas su -t"
 
 #: builtin/checkout.c:997
 msgid "git checkout: -f and -m are incompatible"
-msgstr ""
+msgstr "git checkout: -f ir -m yra nesuderinami"
 
 #: builtin/checkout.c:1031
 msgid "invalid path specification"
-msgstr ""
+msgstr "neteisingas kelio nurodymas"
 
 #: builtin/checkout.c:1039
 #, c-format
@@ -716,10 +729,12 @@ msgid ""
 "git checkout: updating paths is incompatible with switching branches.\n"
 "Did you intend to checkout '%s' which can not be resolved as commit?"
 msgstr ""
+"git checkout: kelių atnaujinimas nesuderinamas su šakų perjungimu.\n"
+"Ar tu norėjai checkout '%s', kuris negali būti nustatytas kaip fiksavimas?"
 
 #: builtin/checkout.c:1041
 msgid "git checkout: updating paths is incompatible with switching branches."
-msgstr ""
+msgstr "git checkout: updating paths is incompatible with switching branches.\n"
 
 #: builtin/checkout.c:1049
 msgid ""
