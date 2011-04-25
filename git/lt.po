@@ -3,6 +3,34 @@
 # This file is distributed under the same license as the git package.
 # Motiejus Jakštys <desired.mta@gmail.com>, 2011.
 #
+# Translation dictionary / Terminų žodynėlis
+# ------
+# abort             nutraukti
+# apply (patch)     pritaikyti (pataisą)
+# argument          parametras
+# branch            šaka
+# commit            fiksuoti
+# content           turinys
+# corrupt           pažeistas
+# file              failas
+# flush             ?
+# include           įtraukti
+# index             turinys
+# initial           eskizinis
+# merge             sujungti (?)
+# mutual            tarpusavyje
+# rebase            ?
+# remote            distancinis (?)
+# option            parinktis
+# output            išvestis
+# patch             pataisa
+# stage             pridėti
+# submodule         submodulis
+# specify           nurodyti
+# track             sekamas
+# unstage           išimti
+# working directory veikiamasis katalogas
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: git 1.7.5\n"
@@ -20,173 +48,174 @@ msgstr ""
 
 #: wt-status.c:134
 msgid "Unmerged paths:"
-msgstr ""
+msgstr "Nesujungti keliai:"
 
 #: wt-status.c:140 wt-status.c:157
 #, c-format
 msgid "  (use \"git reset %s <file>...\" to unstage)"
-msgstr ""
+msgstr "  (naudokite \"git reset %s <file>...\" norėdami išimti)"
 
 #: wt-status.c:142 wt-status.c:159
 msgid "  (use \"git rm --cached <file>...\" to unstage)"
-msgstr ""
+msgstr "  (naudokite \"git rm --cached <file> ...\" norėdami išimti)"
 
 #: wt-status.c:143
 msgid "  (use \"git add/rm <file>...\" as appropriate to mark resolution)"
-msgstr ""
+msgstr "  (naudokite \"git add/rm <file>...\" pasirinktinai norėdami pažymėti sprendimą)"
 
 #: wt-status.c:151
 msgid "Changes to be committed:"
-msgstr ""
+msgstr "Pakeitimai fiksavimui"
 
 #: wt-status.c:169
 msgid "Changes not staged for commit:"
-msgstr ""
+msgstr "Pakeitimai nepridėti fiksavimui:"
 
 #: wt-status.c:173
 msgid "  (use \"git add <file>...\" to update what will be committed)"
-msgstr ""
+msgstr "  (naudokite \"git add <file>...\" atnaujinti tam, kas bus fiksuojama)"
 
 #: wt-status.c:175
 msgid "  (use \"git add/rm <file>...\" to update what will be committed)"
-msgstr ""
+msgstr "  (naudokite \"git add/rm <file>...\" atnaujinti tam, kas bus fiksuojama)"
 
 #: wt-status.c:176
 msgid ""
 "  (use \"git checkout -- <file>...\" to discard changes in working directory)"
 msgstr ""
+"  (naudokite \"git checkout -- <file>...\" atmesti pakeitimus veikiamajame kataloge)"
 
 #: wt-status.c:178
 msgid "  (commit or discard the untracked or modified content in submodules)"
-msgstr ""
+msgstr "  (fiksuoti arba atmesti keistą turinį submoduliuose)"
 
 #: wt-status.c:187
 #, c-format
 msgid "%s files:"
-msgstr ""
+msgstr "%s failai:"
 
 #: wt-status.c:190
 #, c-format
 msgid "  (use \"git %s <file>...\" to include in what will be committed)"
-msgstr ""
+msgstr "  (naudokite \"git %s <file>...\" įtraukti tai, kas bus fiksuojama)"
 
 #: wt-status.c:207
 msgid "bug"
-msgstr ""
+msgstr "klaida"
 
 #: wt-status.c:212
 msgid "both deleted:"
-msgstr ""
+msgstr "abu ištrinti:"
 
 #: wt-status.c:213
 msgid "added by us:"
-msgstr ""
+msgstr "mūsų pridėti:"
 
 #: wt-status.c:214
 msgid "deleted by them:"
-msgstr ""
+msgstr "jų išmesti:"
 
 #: wt-status.c:215
 msgid "added by them:"
-msgstr ""
+msgstr "jų pridėti:"
 
 #: wt-status.c:216
 msgid "deleted by us:"
-msgstr ""
+msgstr "mūsų išmesti:"
 
 #: wt-status.c:217
 msgid "both added:"
-msgstr ""
+msgstr "abu pridėti:"
 
 #: wt-status.c:218
 msgid "both modified:"
-msgstr ""
+msgstr "abu pakeisti:"
 
 #: wt-status.c:248
 msgid "new commits, "
-msgstr ""
+msgstr "nauji fiksavimai, "
 
 #: wt-status.c:250
 msgid "modified content, "
-msgstr ""
+msgstr "pakeistas turinys, "
 
 #: wt-status.c:252
 msgid "untracked content, "
-msgstr ""
+msgstr "nesekamas turinys, "
 
 #: wt-status.c:266
 #, c-format
 msgid "new file:   %s"
-msgstr ""
+msgstr "naujas failas:   %s"
 
 #: wt-status.c:269
 #, c-format
 msgid "copied:     %s -> %s"
-msgstr ""
+msgstr "kopijuotas:     %s -> %s"
 
 #: wt-status.c:272
 #, c-format
 msgid "deleted:    %s"
-msgstr ""
+msgstr "išmestas:    %s"
 
 #: wt-status.c:275
 #, c-format
 msgid "modified:   %s"
-msgstr ""
+msgstr "pakeistas:   %s"
 
 #: wt-status.c:278
 #, c-format
 msgid "renamed:    %s -> %s"
-msgstr ""
+msgstr "pakeistas:    %s -> %s"
 
 #: wt-status.c:281
 #, c-format
 msgid "typechange: %s"
-msgstr ""
+msgstr "tipo pakeitimas: %s"
 
 #: wt-status.c:284
 #, c-format
 msgid "unknown:    %s"
-msgstr ""
+msgstr "nežinomas:    %s"
 
 #: wt-status.c:287
 #, c-format
 msgid "unmerged:   %s"
-msgstr ""
+msgstr "neprijungtas:   %s"
 
 #: wt-status.c:290
 #, c-format
 msgid "bug: unhandled diff status %c"
-msgstr ""
+msgstr "klaida: neapdorojamas diff statusas %c"
 
 #: wt-status.c:713
 msgid "On branch "
-msgstr ""
+msgstr "Šakoje "
 
 #: wt-status.c:720
 msgid "Not currently on any branch."
-msgstr ""
+msgstr "Jokioje šakoje."
 
 #: wt-status.c:731
 msgid "Initial commit"
-msgstr ""
+msgstr "Eskizinis fiksavimas"
 
 #: wt-status.c:745
 msgid "Untracked"
-msgstr ""
+msgstr "Nesekamas"
 
 #: wt-status.c:747
 msgid "Ignored"
-msgstr ""
+msgstr "Ignoruojamas"
 
 #: wt-status.c:749
 #, c-format
 msgid "Untracked files not listed%s"
-msgstr ""
+msgstr "Nekekami failai nerodomi%s"
 
 #: wt-status.c:751
 msgid " (use -u option to show untracked files)"
-msgstr ""
+msgstr " (naudokite -u opciją"
 
 #: wt-status.c:757
 msgid "No changes"
@@ -221,165 +250,165 @@ msgstr ""
 
 #: wt-status.c:773
 msgid " (use -u to show untracked files)"
-msgstr ""
+msgstr " (naudokite -u parintį rodyti nesekamiems failams)"
 
 #: wt-status.c:776
 msgid " (working directory clean)"
-msgstr ""
+msgstr " (darbinė direktorija švari)"
 
 #: wt-status.c:884
 msgid "HEAD (no branch)"
-msgstr ""
+msgstr "HEAD (nėra šakos)"
 
 #: wt-status.c:890
 msgid "Initial commit on "
-msgstr ""
+msgstr "Pirmasis fiksavimas "
 
 #: wt-status.c:905
 msgid "behind "
-msgstr ""
+msgstr "už "
 
 #: wt-status.c:908 wt-status.c:911
 msgid "ahead "
-msgstr ""
+msgstr "prieš "
 
 #: wt-status.c:913
 msgid ", behind "
-msgstr ""
+msgstr ", už "
 
 #: builtin/add.c:40
 #, c-format
 msgid "unexpected diff status %c"
-msgstr ""
+msgstr "netikėtas diff statusas %c"
 
 #: builtin/add.c:66 builtin/commit.c:290
 msgid "updating files failed"
-msgstr ""
+msgstr "failų atnaujinimas nepavyko"
 
 #: builtin/add.c:76
 #, c-format
 msgid "remove '%s'\n"
-msgstr ""
+msgstr "išmesti '%s'\n"
 
 #: builtin/add.c:174
 #, c-format
 msgid "Path '%s' is in submodule '%.*s'"
-msgstr ""
+msgstr "Kelias '%s' yra submodulyje '%.*s'"
 
 #: builtin/add.c:190
 msgid "Unstaged changes after refreshing the index:"
-msgstr ""
+msgstr "Nepridėti pakeitimai po indekso atnaujinimo:"
 
 #: builtin/add.c:193 builtin/add.c:453 builtin/rm.c:186
 #, c-format
 msgid "pathspec '%s' did not match any files"
-msgstr ""
+msgstr "kelio specifikacija '%s' neatitiko jokių failų"
 
 #: builtin/add.c:207
 #, c-format
 msgid "'%s' is beyond a symbolic link"
-msgstr ""
+msgstr "'%s' yra už simbolinės nuorodos"
 
 #: builtin/add.c:274
 msgid "Could not read the index"
-msgstr ""
+msgstr "Negalėjome perskaityti indekso"
 
 #: builtin/add.c:283
 #, c-format
 msgid "Could not open '%s' for writing."
-msgstr ""
+msgstr "Negalėjome atidaryti '%s' rašymui."
 
 #: builtin/add.c:287
 msgid "Could not write patch"
-msgstr ""
+msgstr "Negalėjome rašyti pataisos"
 
 #: builtin/add.c:292
 #, c-format
 msgid "Could not stat '%s'"
-msgstr ""
+msgstr "Negalėjome gauti '%s' statuso"
 
 #: builtin/add.c:294
 msgid "Empty patch. Aborted."
-msgstr ""
+msgstr "Tuščia pataisa. Nutraukta."
 
 #: builtin/add.c:300
 #, c-format
 msgid "Could not apply '%s'"
-msgstr ""
+msgstr "Negalėjome pritaikyti '%s'"
 
 #: builtin/add.c:309
 msgid "The following paths are ignored by one of your .gitignore files:\n"
-msgstr ""
+msgstr "Šie keliai ignoruojami vienu jūsų .gitignore failų:\n"
 
 #: builtin/add.c:349
 #, c-format
 msgid "Use -f if you really want to add them.\n"
-msgstr ""
+msgstr "Naudokite -f jei tikrai norite juos pridėti.\n"
 
 #: builtin/add.c:350
 msgid "no files added"
-msgstr ""
+msgstr "nepridėta jokių failų"
 
 #: builtin/add.c:356
 msgid "adding files failed"
-msgstr ""
+msgstr "failų pridėjimas nepavyko"
 
 #: builtin/add.c:388
 msgid "-A and -u are mutually incompatible"
-msgstr ""
+msgstr "-A ir -u yra tarpusavyje nesuderinami"
 
 #: builtin/add.c:390
 msgid "Option --ignore-missing can only be used together with --dry-run"
-msgstr ""
+msgstr "Parinktis --ignore-missing gali būti naudojama tik kartu su --dry-run"
 
 #: builtin/add.c:410
 #, c-format
 msgid "Nothing specified, nothing added.\n"
-msgstr ""
+msgstr "Nieko nenurodyta, nieko nepridėta.\n"
 
 #: builtin/add.c:411
 #, c-format
 msgid "Maybe you wanted to say 'git add .'?\n"
-msgstr ""
+msgstr "Gal norėjai pasakyti 'git add .'?\n"
 
 #: builtin/add.c:417 builtin/clean.c:95 builtin/commit.c:347
 #: builtin/commit.c:356 builtin/mv.c:77 builtin/rm.c:162
 msgid "index file corrupt"
-msgstr ""
+msgstr "turinio failas pažeistas"
 
 #: builtin/add.c:469 builtin/mv.c:223 builtin/rm.c:260
 msgid "Unable to write new index file"
-msgstr ""
+msgstr "Negalėjome įrašyti naujo turinio failo"
 
 #: builtin/archive.c:17
 #, c-format
 msgid "could not create archive file '%s'"
-msgstr ""
+msgstr "negalėjome sukurti archyvo failo '%s'"
 
 #: builtin/archive.c:20
 msgid "could not redirect output"
-msgstr ""
+msgstr "negalėjome peradresuoti išvesties"
 
 #: builtin/archive.c:36
 msgid "git archive: Remote with no URL"
-msgstr ""
+msgstr "git archive: Distancinis be URL"
 
 #: builtin/archive.c:46
 msgid "git archive: expected ACK/NAK, got EOF"
-msgstr ""
+msgstr "git archive: tikėtasi ACK/NAK, gauta EOF"
 
 #: builtin/archive.c:51
 #, c-format
 msgid "git archive: NACK %s"
-msgstr ""
+msgstr "git archive: NACK %s"
 
 #: builtin/archive.c:52
 msgid "git archive: protocol error"
-msgstr ""
+msgstr "git archive: protokolo klaida"
 
 #: builtin/archive.c:57
 msgid "git archive: expected a flush"
-msgstr ""
+msgstr "git archive: tikėtasi ?"
 
 #: builtin/branch.c:136
 #, c-format
