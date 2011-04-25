@@ -1,4 +1,4 @@
-# Lithuanian translations for git package.
+r Lithuanian translations for git package.
 # Copyright (C) 2011 Motiejus Jakštys
 # This file is distributed under the same license as the git package.
 # Motiejus Jakštys <desired.mta@gmail.com>, 2011.
@@ -1246,16 +1246,19 @@ msgid ""
 "new_index file. Check that disk is not full or quota is\n"
 "not exceeded, and then \"git reset HEAD\" to recover."
 msgstr ""
+"Repozitorija buvo atnaujinta, bet nepavyko įrašyti new_index\n"
+"(naujojo indekso) failo. Patikrinkite, ar diskas ne pilnas\n"
+"arba disko kvota neviršyta, ir tuomet \"git reset HEAD\" atstatymui."
 
 #: builtin/describe.c:234
 #, c-format
 msgid "annotated tag %s not available"
-msgstr ""
+msgstr "anotuota žymė %s neprieinama"
 
 #: builtin/describe.c:238
 #, c-format
 msgid "annotated tag %s has no embedded name"
-msgstr ""
+msgstr "anotuota žymė %s neturi įterpto vardo"
 
 #: builtin/describe.c:240
 #, c-format
