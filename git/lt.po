@@ -6,38 +6,38 @@
 # Translation dictionary / Terminų žodynėlis
 # ------
 # abort             nutraukti
+# 
 # add               pridėti
 # apply (patch)     pritaikyti (pataisą)
-# argument          parametras
-# bundle            rinkinys, surinkti
+# bare              plika
 # branch            šaka
-# checkout          ?
-# commit            fiksuoti (?)
+# bundle            rinkinys, surinkti
+# checkout          paimti
+# commit            fiksuoti (veiksm.), revizija (daikt.)
 # content           turinys
 # corrupt           pažeistas
-# file              failas
 # flush             ištuštinimas (?)
 # include           įtraukti
 # index             indeksas
-# initial           eskizinis
-# merge             sujungti (?)
-# mutual            tarpusavyje
-# rebase            ?
-# reset             atstatyti
-# remote            distancinis (?)
-# repository        repozitorija
-# revision          revizija
-# ref / reference   nuoroda
+# initial           pradinis
+# merge             sulieti
 # option            parinktis
 # output            išvestis
-# patch             pataisa (?)
-# stage             pridėti (?)
-# submodule         submodulis
+# patch             pataisa
+# rebase            rebazuoti (to-do)
+# ref / reference   nuoroda
+# remote            nuotolinis
+# repository        repozitorija
+# reset             atstatyti
+# revision          revizija
 # specify           nurodyti
+# stage             įsiminti
+# submodule         submodulis
 # track             sekti
-# unstage           išimti (?)
 # unbundle          išrinkti
-# working directory veikiamasis katalogas
+# unstage           pamiršti
+# upsteam           bazinis (?)
+# working directory darbinis katalogas
 #
 msgid ""
 msgstr ""
@@ -49,7 +49,7 @@ msgstr ""
 "Language-Team: Lithuanian\n"
 "Language: lt\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=ASCII\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && (n"
 "%100<10 || n%100>=20) ? 1 : 2);\n"
@@ -61,11 +61,11 @@ msgstr "Nesujungti keliai:"
 #: wt-status.c:140 wt-status.c:157
 #, c-format
 msgid "  (use \"git reset %s <file>...\" to unstage)"
-msgstr "  (naudokite \"git reset %s <file>...\" norėdami išimti)"
+msgstr "  (naudokite \"git reset %s <file>...\" norėdami pamiršti)"
 
 #: wt-status.c:142 wt-status.c:159
 msgid "  (use \"git rm --cached <file>...\" to unstage)"
-msgstr "  (naudokite \"git rm --cached <file> ...\" norėdami išimti)"
+msgstr "  (naudokite \"git rm --cached <file> ...\" norėdami pamiršti)"
 
 #: wt-status.c:143
 msgid "  (use \"git add/rm <file>...\" as appropriate to mark resolution)"
@@ -91,7 +91,7 @@ msgstr "  (naudokite \"git add/rm <file>...\" atnaujinti tam, kas bus fiksuojama
 msgid ""
 "  (use \"git checkout -- <file>...\" to discard changes in working directory)"
 msgstr ""
-"  (naudokite \"git checkout -- <file>...\" atmesti pakeitimus veikiamajame kataloge)"
+"  (naudokite \"git checkout -- <file>...\" atmesti pakeitimus darbiniame kataloge)"
 
 #: wt-status.c:178
 msgid "  (commit or discard the untracked or modified content in submodules)"
@@ -141,7 +141,7 @@ msgstr "abu pakeisti:"
 
 #: wt-status.c:248
 msgid "new commits, "
-msgstr "nauji fiksavimai, "
+msgstr "naujos revizijos, "
 
 #: wt-status.c:250
 msgid "modified content, "
@@ -206,7 +206,7 @@ msgstr "Jokioje šakoje."
 
 #: wt-status.c:731
 msgid "Initial commit"
-msgstr "Eskizinis fiksavimas"
+msgstr "Pradinė revizija"
 
 #: wt-status.c:745
 msgid "Untracked"
@@ -219,42 +219,42 @@ msgstr "Ignoruojamas"
 #: wt-status.c:749
 #, c-format
 msgid "Untracked files not listed%s"
-msgstr "Nekekami failai nerodomi%s"
+msgstr "Nesekami failai nerodomi%s"
 
 #: wt-status.c:751
 msgid " (use -u option to show untracked files)"
-msgstr " (naudokite -u opciją"
+msgstr " (naudokite -u parinktį rodyti nesekamus failus)"
 
 #: wt-status.c:757
 msgid "No changes"
-msgstr ""
+msgstr "Nėra pakeitimų"
 
 #: wt-status.c:761
 #, c-format
 msgid "no changes added to commit%s\n"
-msgstr ""
+msgstr "nepridėta pakeitimų į reviziją %s\n"
 
 #: wt-status.c:763
 msgid " (use \"git add\" and/or \"git commit -a\")"
-msgstr ""
+msgstr " (naudokite \"git add \" ir/arba \"git commit -a\")"
 
 #: wt-status.c:765
 #, c-format
 msgid "nothing added to commit but untracked files present%s\n"
-msgstr ""
+msgstr "niekas nepridėta į reviziją bet nesekami failai egzistuoja%s\n"
 
 #: wt-status.c:767
 msgid " (use \"git add\" to track)"
-msgstr ""
+msgstr " (naudokite \"git add\" norėdami sekti)"
 
 #: wt-status.c:769 wt-status.c:772 wt-status.c:775
 #, c-format
 msgid "nothing to commit%s\n"
-msgstr ""
+msgstr "nieko fiksuotino%s\n"
 
 #: wt-status.c:770
 msgid " (create/copy files and use \"git add\" to track)"
-msgstr ""
+msgstr " (kurkite/kopijuokite failus ir naudokite \"git add\" sekti)"
 
 #: wt-status.c:773
 msgid " (use -u to show untracked files)"
@@ -262,7 +262,7 @@ msgstr " (naudokite -u parintį rodyti nesekamiems failams)"
 
 #: wt-status.c:776
 msgid " (working directory clean)"
-msgstr " (darbinė direktorija švari)"
+msgstr " (darbinis katalogas švarus)"
 
 #: wt-status.c:884
 msgid "HEAD (no branch)"
@@ -270,7 +270,7 @@ msgstr "HEAD (nėra šakos)"
 
 #: wt-status.c:890
 msgid "Initial commit on "
-msgstr "Pirmasis fiksavimas "
+msgstr "Pirmoji revizija "
 
 #: wt-status.c:905
 msgid "behind "
@@ -305,7 +305,7 @@ msgstr "Kelias '%s' yra submodulyje '%.*s'"
 
 #: builtin/add.c:190
 msgid "Unstaged changes after refreshing the index:"
-msgstr "Nepridėti pakeitimai po indekso atnaujinimo:"
+msgstr "Neįsiminti pakeitimai po indekso atnaujinimo:"
 
 #: builtin/add.c:193 builtin/add.c:453 builtin/rm.c:186
 #, c-format
@@ -346,7 +346,7 @@ msgstr "Negalėjome pritaikyti '%s'"
 
 #: builtin/add.c:309
 msgid "The following paths are ignored by one of your .gitignore files:\n"
-msgstr "Šie keliai ignoruojami vienu jūsų .gitignore failų:\n"
+msgstr "Šie keliai ignoruojami vienu iš jūsų .gitignore failų:\n"
 
 #: builtin/add.c:349
 #, c-format
@@ -382,16 +382,16 @@ msgstr "Gal norėjai pasakyti 'git add .'?\n"
 #: builtin/add.c:417 builtin/clean.c:95 builtin/commit.c:347
 #: builtin/commit.c:356 builtin/mv.c:77 builtin/rm.c:162
 msgid "index file corrupt"
-msgstr "turinio failas pažeistas"
+msgstr "indeksas pažeistas"
 
 #: builtin/add.c:469 builtin/mv.c:223 builtin/rm.c:260
 msgid "Unable to write new index file"
-msgstr "Negalėjome įrašyti naujo turinio failo"
+msgstr "Negalėjome įrašyti naujo indekso failo"
 
 #: builtin/archive.c:17
 #, c-format
 msgid "could not create archive file '%s'"
-msgstr "negalėjome sukurti archyvo failo '%s'"
+msgstr "negalėjome sukurti archyvo '%s'"
 
 #: builtin/archive.c:20
 msgid "could not redirect output"
@@ -399,7 +399,7 @@ msgstr "negalėjome peradresuoti išvesties"
 
 #: builtin/archive.c:36
 msgid "git archive: Remote with no URL"
-msgstr "git archive: Distancinis be URL"
+msgstr "git archive: Nuotolinis be URL"
 
 #: builtin/archive.c:46
 msgid "git archive: expected ACK/NAK, got EOF"
@@ -439,7 +439,7 @@ msgstr ""
 #. TRANSLATORS: This is "remote " in "remote branch '%s' not found"
 #: builtin/branch.c:161
 msgid "remote "
-msgstr "distancinis "
+msgstr "nuotolinė "
 
 #: builtin/branch.c:169
 msgid "cannot use -a with -d"
@@ -462,7 +462,7 @@ msgstr "%sšaka '%s' nerasta."
 #: builtin/branch.c:198
 #, c-format
 msgid "Couldn't look up commit object for '%s'"
-msgstr "Nepavyko surasti fiksavimo objekto '%s'"
+msgstr "Nepavyko surasti revizijos objekto '%s'"
 
 #: builtin/branch.c:204
 #, c-format
@@ -470,7 +470,7 @@ msgid ""
 "The branch '%s' is not fully merged.\n"
 "If you are sure you want to delete it, run 'git branch -D %s'."
 msgstr ""
-"Šaka '%s' yra nepilnai sujungta.\n"
+"Šaka '%s' yra nepilnai sulieta.\n"
 "Jei esi tikras, kad nori ją ištrinti, leisk 'git branch -D %s'."
 
 #: builtin/branch.c:212
@@ -490,7 +490,7 @@ msgstr "Konfigūracinio failo atnaujinimas nepavyko"
 #: builtin/branch.c:304
 #, c-format
 msgid "branch '%s' does not point at a commit"
-msgstr "šaka '%s' nerodo į fiksavimą"
+msgstr "šaka '%s' nerodo į reviziją"
 
 #: builtin/branch.c:376
 #, c-format
@@ -513,11 +513,11 @@ msgstr "(ne šakoje)"
 
 #: builtin/branch.c:545
 msgid "some refs could not be read"
-msgstr "nepavyko perskaityti kelių rodyklių"
+msgstr "nepavyko perskaityti kai kurių nuorodų"
 
 #: builtin/branch.c:558
 msgid "cannot rename the current branch while not on any."
-msgstr "negalima pervadinti dabartinės šakos jei tokios nėra."
+msgstr "negalima pervadinti dabartinės šakos kol esate jokioje."
 
 #: builtin/branch.c:568 builtin/branch.c:572
 #, c-format
@@ -554,11 +554,11 @@ msgstr "blogai suformuotas objekto vardas %s"
 
 #: builtin/branch.c:685
 msgid "Failed to resolve HEAD as a valid ref."
-msgstr "Nepavyko nustatyti HEAD kaip tinkamos rodyklės"
+msgstr "Nepavyko nustatyti HEAD kaip tinkamos nuorodos"
 
 #: builtin/branch.c:691
 msgid "HEAD not found below refs/heads!"
-msgstr "HEAD nerasta refs/heads!"
+msgstr "HEAD nerasta po refs/heads!"
 
 #: builtin/branch.c:711
 msgid "-a and -r options to 'git branch' do not make sense with a branch name"
@@ -575,7 +575,7 @@ msgstr "Reikia repozitorijos kad galėtume sukurti rinkinį"
 
 #: builtin/bundle.c:60
 msgid "Need a repository to unbundle."
-msgstr "Reikia repozitorijos norint išrinkti"
+msgstr "Reikia repozitorijos norint išrinkti."
 
 #: builtin/checkout.c:108 builtin/checkout.c:136
 #, c-format
@@ -605,7 +605,7 @@ msgstr "kelias '%s': negalima sujungti"
 #: builtin/checkout.c:190
 #, c-format
 msgid "Unable to add merge result for '%s'"
-msgstr "Negalima pridėti jungimo rezultato '%s'"
+msgstr "Negalima pridėti liejimo rezultato '%s'"
 
 #: builtin/checkout.c:195 builtin/reset.c:170
 #, c-format
@@ -614,17 +614,17 @@ msgstr "make_cache_entry nepavyko keliui '%s'"
 
 #: builtin/checkout.c:217 builtin/checkout.c:372
 msgid "corrupt index file"
-msgstr "pažeistas turinio failas"
+msgstr "pažeistas indekso failas"
 
 #: builtin/checkout.c:245 builtin/checkout.c:252
 #, c-format
 msgid "path '%s' is unmerged"
-msgstr "kelias '%s' yra nesujungtas"
+msgstr "kelias '%s' yra nesulietas"
 
 #: builtin/checkout.c:281 builtin/checkout.c:476 builtin/clone.c:668
 #: builtin/merge.c:762
 msgid "unable to write new index file"
-msgstr "negalima rašyti naujo turinio failo"
+msgstr "negalima rašyti naujo indekso failo"
 
 #: builtin/checkout.c:298 builtin/diff.c:302 builtin/merge.c:394
 msgid "diff_setup_done failed"
@@ -665,7 +665,7 @@ msgstr "Perjungėme į šaką '%s'\n"
 
 #: builtin/checkout.c:687
 msgid "internal error: only -- alone should have been left"
-msgstr "vidinė klaida: tik vienas -- turėjo būti paliktas"
+msgstr "vidinė klaida: tik -- turėjo būti paliktas"
 
 #: builtin/checkout.c:689
 msgid "internal error in revision walk"
@@ -730,190 +730,195 @@ msgid ""
 "Did you intend to checkout '%s' which can not be resolved as commit?"
 msgstr ""
 "git checkout: kelių atnaujinimas nesuderinamas su šakų perjungimu.\n"
-"Ar tu norėjai checkout '%s', kuris negali būti nustatytas kaip fiksavimas?"
+"Ar tu norėjai checkout '%s', kuris negali būti nustatytas kaip revizija?"
 
 #: builtin/checkout.c:1041
 msgid "git checkout: updating paths is incompatible with switching branches."
-msgstr "git checkout: updating paths is incompatible with switching branches.\n"
+msgstr "git checkout: kelių atnaujinimas ir šakų keitimas nesuderinami."
 
 #: builtin/checkout.c:1049
 msgid ""
 "git checkout: --ours/--theirs, --force and --merge are incompatible when\n"
 "checking out of the index."
 msgstr ""
+"git checkout: --ours/--theirs, --force ir --merge yra nesuderinami kai\n"
+"paimama iš indekso."
 
 #: builtin/checkout.c:1060
 #, c-format
 msgid "git checkout: we do not like '%s' as a branch name."
-msgstr ""
+msgstr "git checkout: mums nepatinka '%s' kaip šakos pavadinimas."
 
 #: builtin/checkout.c:1065
 #, c-format
 msgid "git checkout: branch %s already exists"
-msgstr ""
+msgstr "git checkout: šaka %s jau egzistuoja"
 
 #: builtin/checkout.c:1072
 msgid "Cannot switch branch to a non-commit."
-msgstr ""
+msgstr "Negalima keisti šakos į ne-reviziją."
 
 #: builtin/checkout.c:1075
 msgid "--ours/--theirs is incompatible with switching branches."
-msgstr ""
+msgstr "--ours/--theirs nesuderinama kai perjungiamos šakos."
 
 #: builtin/clean.c:78
 msgid "-x and -X cannot be used together"
-msgstr ""
+msgstr "-x ir -X negali būti naudojami kartu"
 
 #: builtin/clean.c:82
 msgid ""
 "clean.requireForce set to true and neither -n nor -f given; refusing to clean"
 msgstr ""
+"clean.requireForce pažymėtas \"true\" ir nei -n, nei -f duotas; atsisakome valyti"
 
 #: builtin/clean.c:85
 msgid ""
 "clean.requireForce defaults to true and neither -n nor -f given; refusing to "
 "clean"
 msgstr ""
+"clean.requireForce pagal nutylėjimą \"true\" ir nei -n, nei -f duotas; atsisakome "
+"valyti"
 
 #: builtin/clean.c:154 builtin/clean.c:175
 #, c-format
 msgid "Would remove %s\n"
-msgstr ""
+msgstr "Pašalintų %s\n"
 
 #: builtin/clean.c:158 builtin/clean.c:178
 #, c-format
 msgid "Removing %s\n"
-msgstr ""
+msgstr "Pašalinama %s\n"
 
 #: builtin/clean.c:161 builtin/clean.c:181
 #, c-format
 msgid "failed to remove %s"
-msgstr ""
+msgstr "nepavyko pašalinti %s"
 
 #: builtin/clean.c:165
 #, c-format
 msgid "Would not remove %s\n"
-msgstr ""
+msgstr "Nepašalintų %s\n"
 
 #: builtin/clean.c:167
 #, c-format
 msgid "Not removing %s\n"
-msgstr ""
+msgstr "Nešalinama %s\n"
 
 #: builtin/clone.c:214
 #, c-format
 msgid "reference repository '%s' is not a local directory."
-msgstr ""
+msgstr "nurodyta repozitorija '%s' yra ne vietinis katalogas."
 
 #: builtin/clone.c:241
 #, c-format
 msgid "failed to open '%s'"
-msgstr ""
+msgstr "nepavyko atverti '%s'"
 
 #: builtin/clone.c:245
 #, c-format
 msgid "failed to create directory '%s'"
-msgstr ""
+msgstr "nepavyko sukurti katalogo '%s'"
 
 #: builtin/clone.c:247 builtin/diff.c:74
 #, c-format
 msgid "failed to stat '%s'"
-msgstr ""
+msgstr "nepavyko gauti '%s' statuso"
 
 #: builtin/clone.c:249
 #, c-format
 msgid "%s exists and is not a directory"
-msgstr ""
+msgstr "%s egzistuoja ir yra ne katalogas"
 
 #: builtin/clone.c:263
 #, c-format
 msgid "failed to stat %s\n"
-msgstr ""
+msgstr "nepavyko nustatyti %s\n"
 
 #: builtin/clone.c:273
 #, c-format
 msgid "failed to unlink '%s'"
-msgstr ""
+msgstr "nepavyko pašalinti '%s'"
 
 #: builtin/clone.c:278
 #, c-format
 msgid "failed to create link '%s'"
-msgstr ""
+msgstr "nepavyko sukurti nuorodos '%s'"
 
 #: builtin/clone.c:282
 #, c-format
 msgid "failed to copy file to '%s'"
-msgstr ""
+msgstr "nepavyko nukopijuoti failo į '%s'"
 
 #: builtin/clone.c:311
 #, c-format
 msgid "done.\n"
-msgstr ""
+msgstr "baigta.\n"
 
 #: builtin/clone.c:394
 msgid "Too many arguments."
-msgstr ""
+msgstr "Per daug argumentų."
 
 #: builtin/clone.c:398
 msgid "You must specify a repository to clone."
-msgstr ""
+msgstr "Privalote nurodyti katalogą klonavimui."
 
 #: builtin/clone.c:406
 #, c-format
 msgid "--bare and --origin %s options are incompatible."
-msgstr ""
+msgstr "--bare ir --origin %s parinktys nesuderinamos."
 
 #: builtin/clone.c:425
 msgid "--depth is ignored in local clones; use file:// instead."
-msgstr ""
+msgstr "--depth ignoruojamas lokaliuose klonuose; naudok file:// vietoj to."
 
 #: builtin/clone.c:435
 #, c-format
 msgid "destination path '%s' already exists and is not an empty directory."
-msgstr ""
+msgstr "paskirties kelias '%s' jau egzistuoja ir yra ne tuščias katalogas"
 
 #: builtin/clone.c:445
 #, c-format
 msgid "working tree '%s' already exists."
-msgstr ""
+msgstr "darbinis medis '%s' jau egzistuoja."
 
 #: builtin/clone.c:458 builtin/clone.c:472
 #, c-format
 msgid "could not create leading directories of '%s'"
-msgstr ""
+msgstr "negalėjome sukurti '%s' priekinių direktorijų"
 
 #: builtin/clone.c:461
 #, c-format
 msgid "could not create work tree dir '%s'."
-msgstr ""
+msgstr "negalėjome sukurti darbinio medžio direktorijos '%s'."
 
 #: builtin/clone.c:480
 #, c-format
 msgid "Cloning into bare repository %s...\n"
-msgstr ""
+msgstr "Klonuojame į pliką repozitoriją %s...\n"
 
 #: builtin/clone.c:482
 #, c-format
 msgid "Cloning into %s...\n"
-msgstr ""
+msgstr "Klonuojama į %s...\n"
 
 #: builtin/clone.c:540
 #, c-format
 msgid "Don't know how to clone %s"
-msgstr ""
+msgstr "Nežinau, kaip klonuoti %s"
 
 #: builtin/clone.c:579
 #, c-format
 msgid "Remote branch %s not found in upstream %s, using HEAD instead"
-msgstr ""
+msgstr "Nuotolinė šaka %s nerasta baziniame %s, naudojame HEAD vietoj to"
 
 #: builtin/clone.c:589
 msgid "You appear to have cloned an empty repository."
-msgstr ""
+msgstr "Panašu, kad nuklonavai tuščią repozitoriją."
 
 #: builtin/clone.c:631
 msgid "remote HEAD refers to nonexistent ref, unable to checkout.\n"
-msgstr ""
+msgstr "nuotolinis HEAD rodo į neegzistuojančią nuorodą, negalima nusikrauti.\n"
 
 #: builtin/commit.c:41
 msgid ""
@@ -928,6 +933,17 @@ msgid ""
 "\n"
 "    git commit --amend --reset-author\n"
 msgstr ""
+"Jūsų vardas ir el. pašto adresas buvo sukonfigūruoti automatiškai\n"
+"remiantis jūsų vartotojo ir kompiuterio vardais. Prašau patikrinkite, \n"
+"kad tai yra tikslu.\n"
+"Galite išjungti šią žinutę nustatydami:\n"
+"\n"
+"    git config --global user.name \"Jūsų Vardas\"\n"
+"    git config --global user.email jūs@example.com\n"
+"Po šio veiksmo, galite pataisyti savo tapatybę šiai revizijai taip:\n"
+"After doing this, you may fix the identity used for this commit with:\n"
+"\n"
+"    git commit --amend --reset-author\n"
 
 #: builtin/commit.c:53
 msgid ""
@@ -935,6 +951,9 @@ msgid ""
 "it empty. You can repeat your command with --allow-empty, or you can\n"
 "remove the commit entirely with \"git reset HEAD^\".\n"
 msgstr ""
+"Paprašei pakeisti paskutinę reviziją, bet šis veiksmas ją padarytų tuščia.\n"
+"Gali pakartoti savo komandą su --allow-empty, arba gali ją išvis išmesti\n"
+"su \"git reset HEAD^\".\n"
 
 #: builtin/commit.c:58
 msgid ""
@@ -945,94 +964,100 @@ msgid ""
 "\n"
 "Otherwise, please use 'git reset'\n"
 msgstr ""
+"Praeitas cherry-pick yra dabar tuščias, gali būti dėl konflikto sprendimo.\n"
+"Jei vis tiek norite fiksuoti, naudokite:\n"
+"\n"
+"    git commit --allow-empty\n"
+"\n"
+"Kitu atveju, naudokite 'git reset'\n"
 
 #: builtin/commit.c:317
 msgid "failed to unpack HEAD tree object"
-msgstr ""
+msgstr "nepavyko išpakuoti HEAD medžio objekto"
 
 #: builtin/commit.c:345
 msgid "interactive add failed"
-msgstr ""
+msgstr "interaktyvus pridėjimas nepavyko"
 
 #: builtin/commit.c:376 builtin/commit.c:396 builtin/commit.c:442
 msgid "unable to write new_index file"
-msgstr ""
+msgstr "nepavyko įrašyti naujo indekso failo"
 
 #: builtin/commit.c:426
 #, c-format
 msgid "cannot do a partial commit during a %s."
-msgstr ""
+msgstr "negalime daryti dalinio fiksavimo per %s."
 
 #: builtin/commit.c:435
 msgid "cannot read the index"
-msgstr ""
+msgstr "indekso skaitymas negalimas"
 
 #: builtin/commit.c:455
 msgid "unable to write temporary index file"
-msgstr ""
+msgstr "laikinojo indekso failo rašymas negalimas"
 
 #: builtin/commit.c:502 builtin/commit.c:1403
 msgid "could not parse HEAD commit"
-msgstr ""
+msgstr "nepavyko išanalizuoti HEAD revizijos"
 
 #: builtin/commit.c:521 builtin/commit.c:527
 #, c-format
 msgid "invalid commit: %s"
-msgstr ""
+msgstr "neteisinga revizija: %s"
 
 #: builtin/commit.c:545
 msgid "malformed --author parameter"
-msgstr ""
+msgstr "blogai suformuotas --author parametras"
 
 #: builtin/commit.c:601
 #, c-format
 msgid "Malformed ident string: '%s'"
-msgstr ""
+msgstr "Blogai suformuota paslinkimo eilutė: '%s'"
 
 #: builtin/commit.c:634 builtin/commit.c:667 builtin/commit.c:966
 #, c-format
 msgid "could not lookup commit %s"
-msgstr ""
+msgstr "nepavyko rasti revizijos %s"
 
 #: builtin/commit.c:646 builtin/shortlog.c:299
 #, c-format
 msgid "(reading log message from standard input)\n"
-msgstr ""
+msgstr "(skaitoma žinutė iš standartinės įvesties)\n"
 
 #: builtin/commit.c:648
 msgid "could not read log from standard input"
-msgstr ""
+msgstr "žurnalo skaitymas iš standartinės įvesties negalimas"
 
 #: builtin/commit.c:652
 #, c-format
 msgid "could not read log file '%s'"
-msgstr ""
+msgstr "negalima skaityti žurnalo failo '%s'"
 
 #: builtin/commit.c:658
 msgid "commit has empty message"
-msgstr ""
+msgstr "revizija turi tuščią žinutę"
 
 #: builtin/commit.c:674
 msgid "could not read MERGE_MSG"
-msgstr ""
+msgstr "nepavyko perskaityti MERGE_MSG"
 
 #: builtin/commit.c:678
 msgid "could not read SQUASH_MSG"
-msgstr ""
+msgstr "nepavyko perskaityti SQUASH_MSG"
 
 #: builtin/commit.c:682
 #, c-format
 msgid "could not read '%s'"
-msgstr ""
+msgstr "nepavyko perskaityti '%s'"
 
 #: builtin/commit.c:709
 #, c-format
 msgid "could not open '%s'"
-msgstr ""
+msgstr "nepavyko atidaryti '%s'"
 
 #: builtin/commit.c:733
 msgid "could not write commit template"
-msgstr ""
+msgstr "nepavyko daryti revizijos šablono"
 
 #: builtin/commit.c:746
 #, c-format
@@ -1043,16 +1068,23 @@ msgid ""
 "\t%s\n"
 "and try again.\n"
 msgstr ""
+"\n"
+"Panašu, kad jūs galbūt fiksuojate %s.\n"
+"Jei tai nėra tiesa, prašome pašalinti failą\n"
+"\t%s\n"
+"ir bandyti dar kartą.\n"
 
 #: builtin/commit.c:759
 msgid "Please enter the commit message for your changes."
-msgstr ""
+msgstr "Prašome įvesti revizijos žinutę savo pakeitimams."
 
 #: builtin/commit.c:762
 msgid ""
 " Lines starting\n"
 "with '#' will be ignored, and an empty message aborts the commit.\n"
 msgstr ""
+" Eilutės prasidedančios\n"
+"'#' bus ignoruotos, ir tuščia revizijos žinutė atšaukia fiksavimą.\n"
 
 #: builtin/commit.c:767
 msgid ""
@@ -1060,149 +1092,153 @@ msgid ""
 "with '#' will be kept; you may remove them yourself if you want to.\n"
 "An empty message aborts the commit.\n"
 msgstr ""
+" Eilutės prasidedančios\n"
+"'#' bus laikomos; Galite išmesti jas pats, jei norite.\n"
+"Tuščia revizijos žinutė atšaukia fiksavimą.\n"
 
 #: builtin/commit.c:779
 #, c-format
 msgid "%sAuthor:    %s"
-msgstr ""
+msgstr "%Autorius:    %s"
 
 #: builtin/commit.c:786
 #, c-format
 msgid "%sCommitter: %s"
-msgstr ""
+msgstr "%sFiksuotojas: %s"
+""
 
 #: builtin/commit.c:806
 msgid "Cannot read index"
-msgstr ""
+msgstr "Indekso skaitymas negalimas"
 
 #: builtin/commit.c:846
 msgid "Error building trees"
-msgstr ""
+msgstr "Klaida generuojant medžius"
 
 #: builtin/commit.c:861 builtin/tag.c:313
 #, c-format
 msgid "Please supply the message using either -m or -F option.\n"
-msgstr ""
+msgstr "Prašome pateikti žinutę naudojant -m arba -F parinktis.\n"
 
 #: builtin/commit.c:941
 #, c-format
 msgid "No existing author found with '%s'"
-msgstr ""
+msgstr "Nerastas egzistuojantis autorius su '%s'"
 
 #: builtin/commit.c:956 builtin/commit.c:1149
 #, c-format
 msgid "Invalid untracked files mode '%s'"
-msgstr ""
+msgstr "Netinkama nesekamų failų būsena '%s'"
 
 #: builtin/commit.c:995
 msgid "Using both --reset-author and --author does not make sense"
-msgstr ""
+msgstr "Abiejų --reset-author ir --author naudojimas neturi logikos"
 
 #: builtin/commit.c:1009
 msgid "You have nothing to amend."
-msgstr ""
+msgstr "Jūs neturite ko pakeisti."
 
 #: builtin/commit.c:1011
 #, c-format
 msgid "You are in the middle of a %s -- cannot amend."
-msgstr ""
+msgstr "Jei esate viduryje %s -- negalima naudoti amend"
 
 #: builtin/commit.c:1013
 msgid "Options --squash and --fixup cannot be used together"
-msgstr ""
+msgstr "Parinktys --squash ir --fixup negali būti naudojami kartu"
 
 #: builtin/commit.c:1023
 msgid "Only one of -c/-C/-F/--fixup can be used."
-msgstr ""
+msgstr "Tik vienas iš -c/-C/-F/--fixup gali būti naudojamas."
 
 #: builtin/commit.c:1025
 msgid "Option -m cannot be combined with -c/-C/-F/--fixup."
-msgstr ""
+msgstr "Parinktis -m negali būti jungiama su -c/-C/-F/--fixup."
 
 #: builtin/commit.c:1031
 msgid "--reset-author can be used only with -C, -c or --amend."
-msgstr ""
+msgstr "--reset-author gali būti naudojamas tik su -C, -c arba --amend."
 
 #: builtin/commit.c:1045
 msgid "Only one of --include/--only/--all/--interactive can be used."
-msgstr ""
+msgstr "Tik vienas iš --include/--only/--all/--interactive gali būti naudojamas."
 
 #: builtin/commit.c:1047
 msgid "No paths with --include/--only does not make sense."
-msgstr ""
+msgstr "Jokie keliai su --include/--only turi logikos"
 
 #: builtin/commit.c:1049
 msgid "Clever... amending the last one with dirty index."
-msgstr ""
+msgstr "Gudrutis... keiti paskutinį su nešvariu indeksu."
 
 #: builtin/commit.c:1051
 msgid "Explicit paths specified without -i nor -o; assuming --only paths..."
-msgstr ""
+msgstr "Specialiai abibrėžti keliai be -i nei -o; tariame --only keliai..."
 
 #: builtin/commit.c:1061
 #, c-format
 msgid "Invalid cleanup mode %s"
-msgstr ""
+msgstr "Neteisingas išvalymo būdas %s"
 
 #: builtin/commit.c:1066
 msgid "Paths with -a does not make sense."
-msgstr ""
+msgstr "Keliai su -a neturi logikos."
 
 #: builtin/commit.c:1068
 msgid "Paths with --interactive does not make sense."
-msgstr ""
+msgstr "Keliai su --interactive neturi logikos."
 
 #: builtin/commit.c:1249
 msgid "couldn't look up newly created commit"
-msgstr ""
+msgstr "nepavyko rasti naujai sukurtos revizijos"
 
 #: builtin/commit.c:1251
 msgid "could not parse newly created commit"
-msgstr ""
+msgstr "nepavyko išanalizuoti naujai sukurtos revizijos"
 
 #: builtin/commit.c:1291
 msgid "detached HEAD"
-msgstr ""
+msgstr "atjungtas HEAD"
 
 #: builtin/commit.c:1293
 msgid " (root-commit)"
-msgstr ""
+msgstr " (šakininė-revizija)"
 
 #: builtin/commit.c:1416 builtin/merge.c:488
 #, c-format
 msgid "could not open '%s' for reading"
-msgstr ""
+msgstr "nepavyko atidaryti '%s' skaitymui"
 
 #: builtin/commit.c:1421
 #, c-format
 msgid "Corrupt MERGE_HEAD file (%s)"
-msgstr ""
+msgstr "Sugadintas MERGE_HEAD failas (%s)"
 
 #: builtin/commit.c:1428
 msgid "could not read MERGE_MODE"
-msgstr ""
+msgstr "negalima perskaityti MERGE_HEAD"
 
 #: builtin/commit.c:1447
 #, c-format
 msgid "could not read commit message: %s"
-msgstr ""
+msgstr "negalima perskaityti fiksavimo žinutės: %s"
 
 #: builtin/commit.c:1461
 #, c-format
 msgid "Aborting commit due to empty commit message.\n"
-msgstr ""
+msgstr "Nutraukiamas fiksavimas dėl tuščios fiksavimo žinutės.\n"
 
 #: builtin/commit.c:1468
 msgid "failed to write commit object"
-msgstr ""
+msgstr "nepavyko įrašyti fiksavimo objekto"
 
 #: builtin/commit.c:1486
 msgid "cannot lock HEAD ref"
-msgstr ""
+msgstr "nepavyko užrakinti HEAD nuorodos"
 
 #: builtin/commit.c:1490
 msgid "cannot update HEAD ref"
-msgstr ""
+msgstr "nepavyko atnaujinti HEAD rodyklės"
 
 #: builtin/commit.c:1500
 msgid ""
