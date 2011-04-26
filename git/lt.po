@@ -364,7 +364,7 @@ msgstr "-A ir -u yra tarpusavyje nesuderinami"
 
 #: builtin/add.c:390
 msgid "Option --ignore-missing can only be used together with --dry-run"
-msgstr "Parinktis --ignore-missing gali būti naudojama tik kartu su --dry-run"
+msgstr "Parinktis --ignore-missing gali būti vartojama tik kartu su --dry-run"
 
 #: builtin/add.c:410
 #, c-format
@@ -690,7 +690,7 @@ msgstr "nuoroda nėra medis: %s"
 
 #: builtin/checkout.c:952
 msgid "-B cannot be used with -b"
-msgstr "-B negali būti naudojamas su -b"
+msgstr "-B negali būti vartojamas su -b"
 
 #: builtin/checkout.c:961
 msgid "--patch is incompatible with all other options"
@@ -710,7 +710,7 @@ msgstr "--orphan ir -b|-B yra tarpusavyje negalimi"
 
 #: builtin/checkout.c:987
 msgid "--orphan cannot be used with -t"
-msgstr "--orhphan negali būti naudojamas su -t"
+msgstr "--orhphan negali būti vartojamas su -t"
 
 #: builtin/checkout.c:997
 msgid "git checkout: -f and -m are incompatible"
@@ -761,7 +761,7 @@ msgstr "--ours/--theirs nesuderinama kai perjungiamos šakos."
 
 #: builtin/clean.c:78
 msgid "-x and -X cannot be used together"
-msgstr "-x ir -X negali būti naudojami kartu"
+msgstr "-x ir -X negali būti vartojamas kartu"
 
 #: builtin/clean.c:82
 msgid ""
@@ -1115,7 +1115,7 @@ msgstr "Klaida generuojant medžius"
 #: builtin/commit.c:861 builtin/tag.c:313
 #, c-format
 msgid "Please supply the message using either -m or -F option.\n"
-msgstr "Prašome pateikti žinutę naudojant -m arba -F parinktis.\n"
+msgstr "Prašome pateikti žinutę vartojant -m arba -F parinktis.\n"
 
 #: builtin/commit.c:941
 #, c-format
@@ -1129,7 +1129,7 @@ msgstr "Netinkama nesekamų failų būsena '%s'"
 
 #: builtin/commit.c:995
 msgid "Using both --reset-author and --author does not make sense"
-msgstr "Abiejų --reset-author ir --author naudojimas neturi prasmės"
+msgstr "Argumentų --reset-author ir --author vartojimas kartu neturi prasmės"
 
 #: builtin/commit.c:1009
 msgid "You have nothing to amend."
@@ -1142,11 +1142,11 @@ msgstr "Jei esate viduryje %s -- negalima naudoti amend"
 
 #: builtin/commit.c:1013
 msgid "Options --squash and --fixup cannot be used together"
-msgstr "Parinktys --squash ir --fixup negali būti naudojami kartu"
+msgstr "Parinktys --squash ir --fixup negali būti vartojami kartu"
 
 #: builtin/commit.c:1023
 msgid "Only one of -c/-C/-F/--fixup can be used."
-msgstr "Tik vienas iš -c/-C/-F/--fixup gali būti naudojamas."
+msgstr "Tik vienas iš -c/-C/-F/--fixup gali būti vartojamas."
 
 #: builtin/commit.c:1025
 msgid "Option -m cannot be combined with -c/-C/-F/--fixup."
@@ -1154,11 +1154,11 @@ msgstr "Parinktis -m negali būti jungiama su -c/-C/-F/--fixup."
 
 #: builtin/commit.c:1031
 msgid "--reset-author can be used only with -C, -c or --amend."
-msgstr "--reset-author gali būti naudojamas tik su -C, -c arba --amend."
+msgstr "--reset-author gali būti vartojamas tik su -C, -c arba --amend."
 
 #: builtin/commit.c:1045
 msgid "Only one of --include/--only/--all/--interactive can be used."
-msgstr "Tik vienas iš --include/--only/--all/--interactive gali būti naudojamas."
+msgstr "Tik vienas iš --include/--only/--all/--interactive gali būti vartojamas."
 
 #: builtin/commit.c:1047
 msgid "No paths with --include/--only does not make sense."
