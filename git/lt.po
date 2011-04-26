@@ -33,7 +33,7 @@ r Lithuanian translations for git package.
 # track             sekti
 # unbundle          išrinkti
 # unstage           pamiršti
-# upsteam           bazinis (?)
+# upstream          bazinis (?)
 # working directory darbinis katalogas
 #
 msgid ""
