@@ -5,18 +5,15 @@ r Lithuanian translations for git package.
 #
 # Translation dictionary / Terminų žodynėlis
 # ------
-# abort             nutraukti
-# 
-# add               pridėti
 # apply (patch)     pritaikyti (pataisą)
 # bare              plika
 # branch            šaka
 # bundle            rinkinys, surinkti
-# checkout          paimti
-# commit            fiksuoti (veiksm.), revizija (daikt.)
+# checkout          iš(si)kelti (FIX)
+# commit            įkelti (veiksm.), revizija (daikt.) (FIX)
 # content           turinys
 # corrupt           pažeistas
-# flush             ištuštinimas (?)
+# flush             priverstinis įrašymas
 # include           įtraukti
 # index             indeksas
 # initial           pradinis
@@ -24,8 +21,8 @@ r Lithuanian translations for git package.
 # option            parinktis
 # output            išvestis
 # patch             pataisa
-# rebase            rebazuoti (to-do)
-# ref / reference   nuoroda
+# rebase            rebazuoti
+# ref/reference     nuoroda
 # remote            nuotolinis
 # repository        repozitorija
 # reset             atstatyti
@@ -328,7 +325,7 @@ msgstr "Negalėjome atidaryti '%s' rašymui."
 
 #: builtin/add.c:287
 msgid "Could not write patch"
-msgstr "Negalėjome rašyti pataisos"
+msgstr "Negalėjome įrašyti pataisos"
 
 #: builtin/add.c:292
 #, c-format
@@ -416,7 +413,7 @@ msgstr "git archive: protokolo klaida"
 
 #: builtin/archive.c:57
 msgid "git archive: expected a flush"
-msgstr "git archive: tikėtasi ištuštinimo"
+msgstr "git archive: tikėtasi priverstinio įrašymo komandos"
 
 #: builtin/branch.c:136
 #, c-format
@@ -624,7 +621,7 @@ msgstr "kelias '%s' yra nesulietas"
 #: builtin/checkout.c:281 builtin/checkout.c:476 builtin/clone.c:668
 #: builtin/merge.c:762
 msgid "unable to write new index file"
-msgstr "negalima rašyti naujo indekso failo"
+msgstr "negalima įrašyti naujo indekso failo"
 
 #: builtin/checkout.c:298 builtin/diff.c:302 builtin/merge.c:394
 msgid "diff_setup_done failed"
