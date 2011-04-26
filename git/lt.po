@@ -1129,7 +1129,7 @@ msgstr "Netinkama nesekamų failų būsena '%s'"
 
 #: builtin/commit.c:995
 msgid "Using both --reset-author and --author does not make sense"
-msgstr "Abiejų --reset-author ir --author naudojimas neturi logikos"
+msgstr "Abiejų --reset-author ir --author naudojimas neturi prasmės"
 
 #: builtin/commit.c:1009
 msgid "You have nothing to amend."
@@ -1162,7 +1162,7 @@ msgstr "Tik vienas iš --include/--only/--all/--interactive gali būti naudojama
 
 #: builtin/commit.c:1047
 msgid "No paths with --include/--only does not make sense."
-msgstr "Jokie keliai su --include/--only turi logikos"
+msgstr "Jokie keliai su --include/--only neturi prasmės"
 
 #: builtin/commit.c:1049
 msgid "Clever... amending the last one with dirty index."
@@ -1179,11 +1179,11 @@ msgstr "Neteisingas išvalymo būdas %s"
 
 #: builtin/commit.c:1066
 msgid "Paths with -a does not make sense."
-msgstr "Keliai su -a neturi logikos."
+msgstr "Keliai su -a neturi prasmės."
 
 #: builtin/commit.c:1068
 msgid "Paths with --interactive does not make sense."
-msgstr "Keliai su --interactive neturi logikos."
+msgstr "Keliai su --interactive neturi prasmės."
 
 #: builtin/commit.c:1249
 msgid "couldn't look up newly created commit"
