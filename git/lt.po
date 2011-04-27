@@ -7,12 +7,14 @@ r Lithuanian translations for git package.
 # ------
 # apply (patch)     pritaikyti (pataisą)
 # bare              plika
+# blob              elementarusis objektas
 # branch            šaka
 # bundle            rinkinys, surinkti
-# checkout          iš(si)kelti (FIX)
-# commit            įkelti (veiksm.), revizija (daikt.) (FIX)
+# checkout          iš(si)kelti
+# commit            įkelti, įkėlimas
 # content           turinys
 # corrupt           pažeistas
+# fast-forward      ?
 # flush             priverstinis įrašymas
 # include           įtraukti
 # index             indeksas
@@ -21,6 +23,7 @@ r Lithuanian translations for git package.
 # option            parinktis
 # output            išvestis
 # patch             pataisa
+# pattern           ? (grep context)
 # rebase            rebazuoti
 # ref/reference     nuoroda
 # remote            nuotolinis
@@ -70,19 +73,19 @@ msgstr "  (naudokite \"git add/rm <file>...\" pasirinktinai norėdami pažymėti
 
 #: wt-status.c:151
 msgid "Changes to be committed:"
-msgstr "Pakeitimai fiksavimui"
+msgstr "Pakeitimai įkėlimui:"
 
 #: wt-status.c:169
 msgid "Changes not staged for commit:"
-msgstr "Pakeitimai nepridėti fiksavimui:"
+msgstr "Pakeitimai nepridėti įkėlimui:"
 
 #: wt-status.c:173
 msgid "  (use \"git add <file>...\" to update what will be committed)"
-msgstr "  (naudokite \"git add <file>...\" atnaujinti tam, kas bus fiksuojama)"
+msgstr "  (naudokite \"git add <file>...\" atnaujinti tam, kas bus įkeliama)"
 
 #: wt-status.c:175
 msgid "  (use \"git add/rm <file>...\" to update what will be committed)"
-msgstr "  (naudokite \"git add/rm <file>...\" atnaujinti tam, kas bus fiksuojama)"
+msgstr "  (naudokite \"git add/rm <file>...\" atnaujinti tam, kas bus įkeliama)"
 
 #: wt-status.c:176
 msgid ""
@@ -92,7 +95,7 @@ msgstr ""
 
 #: wt-status.c:178
 msgid "  (commit or discard the untracked or modified content in submodules)"
-msgstr "  (fiksuoti arba atmesti keistą turinį submoduliuose)"
+msgstr "  (įkelti arba atmesti keistą turinį submoduliuose)"
 
 #: wt-status.c:187
 #, c-format
@@ -102,7 +105,7 @@ msgstr "%s failai:"
 #: wt-status.c:190
 #, c-format
 msgid "  (use \"git %s <file>...\" to include in what will be committed)"
-msgstr "  (naudokite \"git %s <file>...\" įtraukti tai, kas bus fiksuojama)"
+msgstr "  (naudokite \"git %s <file>...\" įtraukti tai, kas bus įkeliama)"
 
 #: wt-status.c:207
 msgid "bug"
@@ -203,7 +206,7 @@ msgstr "Jokioje šakoje."
 
 #: wt-status.c:731
 msgid "Initial commit"
-msgstr "Pradinė revizija"
+msgstr "Pradinis įkėlimas"
 
 #: wt-status.c:745
 msgid "Untracked"
@@ -229,7 +232,7 @@ msgstr "Nėra pakeitimų"
 #: wt-status.c:761
 #, c-format
 msgid "no changes added to commit%s\n"
-msgstr "nepridėta pakeitimų į reviziją %s\n"
+msgstr "nepridėta pakeitimų į įkėlimą %s\n"
 
 #: wt-status.c:763
 msgid " (use \"git add\" and/or \"git commit -a\")"
@@ -247,7 +250,7 @@ msgstr " (naudokite \"git add\" norėdami sekti)"
 #: wt-status.c:769 wt-status.c:772 wt-status.c:775
 #, c-format
 msgid "nothing to commit%s\n"
-msgstr "nieko fiksuotino%s\n"
+msgstr "nieko keltino%s\n"
 
 #: wt-status.c:770
 msgid " (create/copy files and use \"git add\" to track)"
@@ -267,7 +270,7 @@ msgstr "HEAD (nėra šakos)"
 
 #: wt-status.c:890
 msgid "Initial commit on "
-msgstr "Pirmoji revizija "
+msgstr "Pirmasis įkėlimas "
 
 #: wt-status.c:905
 msgid "behind "
@@ -444,7 +447,7 @@ msgstr "negalima naudoti -a su -d"
 
 #: builtin/branch.c:175
 msgid "Couldn't look up commit object for HEAD"
-msgstr "Nepavyko surasti fiksavimo objekto HEAD"
+msgstr "Nepavyko surasti revizijos objekto HEAD"
 
 #: builtin/branch.c:180
 #, c-format
@@ -519,7 +522,7 @@ msgstr "negalima pervadinti dabartinės šakos kol esate jokioje."
 #: builtin/branch.c:568 builtin/branch.c:572
 #, c-format
 msgid "Invalid branch name: '%s'"
-msgstr "Neteisingas šakos pavadinimas: '%s'"
+msgstr "Netinkamas šakos pavadinimas: '%s'"
 
 #: builtin/branch.c:575
 #, c-format
@@ -680,7 +683,7 @@ msgstr "Esi šakoje, kuri dar tik gims"
 #: builtin/checkout.c:846
 #, c-format
 msgid "invalid reference: %s"
-msgstr "bloga nuoroda: %s"
+msgstr "netinkama nuoroda: %s"
 
 #. case (1): want a tree
 #: builtin/checkout.c:885
@@ -718,7 +721,7 @@ msgstr "git checkout: -f ir -m yra nesuderinami"
 
 #: builtin/checkout.c:1031
 msgid "invalid path specification"
-msgstr "neteisingas kelio nurodymas"
+msgstr "netinkamas kelio nurodymas"
 
 #: builtin/checkout.c:1039
 #, c-format
@@ -727,7 +730,7 @@ msgid ""
 "Did you intend to checkout '%s' which can not be resolved as commit?"
 msgstr ""
 "git checkout: kelių atnaujinimas nesuderinamas su šakų perjungimu.\n"
-"Ar tu norėjai checkout '%s', kuris negali būti nustatytas kaip revizija?"
+"Ar tu norėjai išsikelti '%s', kuris negali būti nustatytas kaip įkėlimas?"
 
 #: builtin/checkout.c:1041
 msgid "git checkout: updating paths is incompatible with switching branches."
@@ -810,7 +813,7 @@ msgstr "nurodyta repozitorija '%s' yra ne vietinis katalogas."
 #: builtin/clone.c:241
 #, c-format
 msgid "failed to open '%s'"
-msgstr "nepavyko atverti '%s'"
+msgstr "nepavyko atidaryti '%s'"
 
 #: builtin/clone.c:245
 #, c-format
@@ -915,7 +918,7 @@ msgstr "Panašu, kad nuklonavai tuščią repozitoriją."
 
 #: builtin/clone.c:631
 msgid "remote HEAD refers to nonexistent ref, unable to checkout.\n"
-msgstr "nuotolinis HEAD rodo į neegzistuojančią nuorodą, negalima nusikrauti.\n"
+msgstr "nuotolinis HEAD rodo į neegzistuojančią nuorodą, negalima išsikelti.\n"
 
 #: builtin/commit.c:41
 msgid ""
@@ -937,8 +940,7 @@ msgstr ""
 "\n"
 "    git config --global user.name \"Jūsų Vardas\"\n"
 "    git config --global user.email jūs@example.com\n"
-"Po šio veiksmo, galite pataisyti savo tapatybę šiai revizijai taip:\n"
-"After doing this, you may fix the identity used for this commit with:\n"
+"Po šio veiksmo, galite pataisyti savo tapatybę šiai šiam įkėlimui taip:\n"
 "\n"
 "    git commit --amend --reset-author\n"
 
@@ -983,7 +985,7 @@ msgstr "nepavyko įrašyti naujo indekso failo"
 #: builtin/commit.c:426
 #, c-format
 msgid "cannot do a partial commit during a %s."
-msgstr "negalime daryti dalinio fiksavimo per %s."
+msgstr "negalime daryti dalinio įkėlimo per %s."
 
 #: builtin/commit.c:435
 msgid "cannot read the index"
@@ -1000,7 +1002,7 @@ msgstr "nepavyko išanalizuoti HEAD revizijos"
 #: builtin/commit.c:521 builtin/commit.c:527
 #, c-format
 msgid "invalid commit: %s"
-msgstr "neteisinga revizija: %s"
+msgstr "netinkamas įkėlimas: %s"
 
 #: builtin/commit.c:545
 msgid "malformed --author parameter"
@@ -1081,7 +1083,7 @@ msgid ""
 "with '#' will be ignored, and an empty message aborts the commit.\n"
 msgstr ""
 " Eilutės prasidedančios\n"
-"'#' bus ignoruotos, ir tuščia revizijos žinutė atšaukia fiksavimą.\n"
+"'#' bus ignoruotos, ir tuščia revizijos žinutė atšaukia įkėlimą.\n"
 
 #: builtin/commit.c:767
 msgid ""
@@ -1091,7 +1093,7 @@ msgid ""
 msgstr ""
 " Eilutės prasidedančios\n"
 "'#' bus laikomos; Galite išmesti jas pats, jei norite.\n"
-"Tuščia revizijos žinutė atšaukia fiksavimą.\n"
+"Tuščia revizijos žinutė atšaukia įkėlimą.\n"
 
 #: builtin/commit.c:779
 #, c-format
@@ -1175,7 +1177,7 @@ msgstr "Specialiai abibrėžti keliai be -i nei -o; tariame --only keliai..."
 #: builtin/commit.c:1061
 #, c-format
 msgid "Invalid cleanup mode %s"
-msgstr "Neteisingas išvalymo būdas %s"
+msgstr "Netinkamas išvalymo būdas %s"
 
 #: builtin/commit.c:1066
 msgid "Paths with -a does not make sense."
@@ -1218,12 +1220,12 @@ msgstr "negalima perskaityti MERGE_HEAD"
 #: builtin/commit.c:1447
 #, c-format
 msgid "could not read commit message: %s"
-msgstr "negalima perskaityti fiksavimo žinutės: %s"
+msgstr "negalima perskaityti revizijos žinutės: %s"
 
 #: builtin/commit.c:1461
 #, c-format
 msgid "Aborting commit due to empty commit message.\n"
-msgstr "Nutraukiamas fiksavimas dėl tuščios fiksavimo žinutės.\n"
+msgstr "Nutraukiamas įkėlimas dėl tuščios įkėlimo žinutės.\n"
 
 #: builtin/commit.c:1468
 msgid "failed to write commit object"
@@ -1260,32 +1262,32 @@ msgstr "anotuota žymė %s neturi įterpto vardo"
 #: builtin/describe.c:240
 #, c-format
 msgid "tag '%s' is really '%s' here"
-msgstr ""
+msgstr "žymė '%s' iš tikro čia yra '%s'"
 
 #: builtin/describe.c:267
 #, c-format
 msgid "Not a valid object name %s"
-msgstr ""
+msgstr "Netinkamas objekto vardas %s"
 
 #: builtin/describe.c:270
 #, c-format
 msgid "%s is not a valid '%s' object"
-msgstr ""
+msgstr "%s nėra tinkamas '%s' objektas"
 
 #: builtin/describe.c:287
 #, c-format
 msgid "no tag exactly matches '%s'"
-msgstr ""
+msgstr "jokia žymė tiksliai atitinka '%s'"
 
 #: builtin/describe.c:289
 #, c-format
 msgid "searching to describe %s\n"
-msgstr ""
+msgstr "ieškome apibūdinti %s\n"
 
 #: builtin/describe.c:329
 #, c-format
 msgid "finished search at %s\n"
-msgstr ""
+msgstr "paieška baigta %s\n"
 
 #: builtin/describe.c:353
 #, c-format
@@ -1293,6 +1295,8 @@ msgid ""
 "No annotated tags can describe '%s'.\n"
 "However, there were unannotated tags: try --tags."
 msgstr ""
+"Jokia anotuota žymė negali aprašyti '%s'.\n"
+"Tačiau buvo neanotuotų žymių: bandyk --tags."
 
 #: builtin/describe.c:357
 #, c-format
@@ -1300,11 +1304,13 @@ msgid ""
 "No tags can describe '%s'.\n"
 "Try --always, or create some tags."
 msgstr ""
+"Jokia žymė negali paaiškinti '%s'.\n"
+"Bandyk --always, arba sukurk žymių."
 
 #: builtin/describe.c:378
 #, c-format
 msgid "traversed %lu commits\n"
-msgstr ""
+msgstr "pereita per %lu įkėlimų\n"
 
 #: builtin/describe.c:381
 #, c-format
@@ -1312,65 +1318,67 @@ msgid ""
 "more than %i tags found; listed %i most recent\n"
 "gave up search at %s\n"
 msgstr ""
+"rasta daugiau nei %i žymių; rodomos %i naujausios\n"
+"nustota ieškoti čia: %s\n"
 
 #: builtin/describe.c:436
 msgid "--long is incompatible with --abbrev=0"
-msgstr ""
+msgstr "--long yra nesuderinamas su --abbrev=0"
 
 #: builtin/describe.c:462
 msgid "No names found, cannot describe anything."
-msgstr ""
+msgstr "Vardų nerasta, negalima nieko apibūdinti."
 
 #: builtin/describe.c:469
 msgid "--dirty is incompatible with committishes"
-msgstr ""
+msgstr "--dirty nesuderinamas su revizijų vardais"
 
 #: builtin/diff.c:76
 #, c-format
 msgid "'%s': not a regular file or symlink"
-msgstr ""
+msgstr "'%s': nei failas, nei simbolinė nuoroda"
 
 #: builtin/diff.c:220
 #, c-format
 msgid "invalid option: %s"
-msgstr ""
+msgstr "netinkama parinktis: %s"
 
 #: builtin/diff.c:297
 msgid "Not a git repository"
-msgstr ""
+msgstr "Ne git repozitorija"
 
 #: builtin/diff.c:347
 #, c-format
 msgid "invalid object '%s' given."
-msgstr ""
+msgstr "duotas netinkamas objektas '%s'."
 
 #: builtin/diff.c:352
 #, c-format
 msgid "more than %d trees given: '%s'"
-msgstr ""
+msgstr "duoti daugiau nei %d medžiai: '%s'"
 
 #: builtin/diff.c:362
 #, c-format
 msgid "more than two blobs given: '%s'"
-msgstr ""
+msgstr "duoti daugiau nei du elementarieji objektai: '%s'"
 
 #: builtin/diff.c:370
 #, c-format
 msgid "unhandled object '%s' given."
-msgstr ""
+msgstr "duotas neapdorotas objektas: '%s'."
 
 #: builtin/fetch.c:199
 msgid "Couldn't find remote ref HEAD"
-msgstr ""
+msgstr "Negalėjome rasti nuotolinės nuorodos HEAD"
 
 #: builtin/fetch.c:252
 #, c-format
 msgid "object %s not found"
-msgstr ""
+msgstr "objektas %s nerastas"
 
 #: builtin/fetch.c:257
 msgid "[up to date]"
-msgstr ""
+msgstr "[naujausias]"
 
 #.
 #. * If this is the head, and it's not okay to update
@@ -1379,36 +1387,37 @@ msgstr ""
 #: builtin/fetch.c:270
 #, c-format
 msgid "! %-*s %-*s -> %s  (can't fetch in current branch)"
-msgstr ""
+msgstr "! %-*s %-*s -> %s  (negalima siųstis dabartinėje šakoje)"
 
 #: builtin/fetch.c:271 builtin/fetch.c:342
 msgid "[rejected]"
-msgstr ""
+msgstr "[atmesta]"
 
 #: builtin/fetch.c:281
 msgid "[tag update]"
-msgstr ""
+msgstr "[žymės atnaujinimas]"
 
 #: builtin/fetch.c:282 builtin/fetch.c:307 builtin/fetch.c:323
 msgid "  (unable to update local ref)"
-msgstr ""
+msgstr "  (negalėjome atnaujinti vietinės nuorodos)"
 
 #: builtin/fetch.c:294
 msgid "[new tag]"
-msgstr ""
+msgstr "[nauja žymė]"
 
 #: builtin/fetch.c:298
 msgid "[new branch]"
-msgstr ""
+msgstr "[nauja šaka]"
 
 #: builtin/fetch.c:338
 msgid "unable to update local ref"
-msgstr ""
+msgstr "negalėjome atnaujinti vietinės nuorodos"
 
 #: builtin/fetch.c:338
 msgid "forced update"
-msgstr ""
+msgstr "priverstinis atnaujinimas"
 
+# FIXME
 #: builtin/fetch.c:343
 msgid "(non-fast-forward)"
 msgstr ""
@@ -1416,12 +1425,12 @@ msgstr ""
 #: builtin/fetch.c:361 builtin/fetch.c:684
 #, c-format
 msgid "cannot open %s: %s\n"
-msgstr ""
+msgstr "negalima atidaryti %s: %s\n"
 
 #: builtin/fetch.c:439
 #, c-format
 msgid "From %.*s\n"
-msgstr ""
+msgstr "Nuo: %.*s\n"
 
 #: builtin/fetch.c:450
 #, c-format
@@ -1429,114 +1438,118 @@ msgid ""
 "some local refs could not be updated; try running\n"
 " 'git remote prune %s' to remove any old, conflicting branches"
 msgstr ""
+"kai kurios vietinės nuroodos negalėjo būti atnaujintos; bandyk leisti\n"
+" 'git remote prune %s' nodėdamas išmesti senas, konfliktuojančias šakas"
 
 #: builtin/fetch.c:500
 msgid "could not run rev-list"
-msgstr ""
+msgstr "nepavyko paleisti rev-list"
 
 #: builtin/fetch.c:514
 #, c-format
 msgid "failed write to rev-list: %s"
-msgstr ""
+msgstr "nepavyko įrašyti į rev-list: %s"
 
 #: builtin/fetch.c:521
 #, c-format
 msgid "failed to close rev-list's stdin: %s"
-msgstr ""
+msgstr "nepavyko uždaryti rev-list'o standartinės įvesties: %s"
 
 #: builtin/fetch.c:548
 #, c-format
 msgid "   (%s will become dangling)\n"
-msgstr ""
+msgstr "   (%s pataps karojantis)\n"
 
 #: builtin/fetch.c:549
 #, c-format
 msgid "   (%s has become dangling)\n"
-msgstr ""
+msgstr "   (%s patapo karojantis)\n"
 
 #: builtin/fetch.c:556
 msgid "[deleted]"
-msgstr ""
+msgstr "[ištrinta]"
 
 #: builtin/fetch.c:557
 msgid "(none)"
-msgstr ""
+msgstr "(joks)"
 
 #: builtin/fetch.c:674
 #, c-format
 msgid "Refusing to fetch into current branch %s of non-bare repository"
-msgstr ""
+msgstr "Atsisakoma siųsti į dabartinę ne plikos repozitorijos šaką"
 
 #: builtin/fetch.c:708
 #, c-format
 msgid "Don't know how to fetch from %s"
-msgstr ""
+msgstr "Nežinau, kaip siųstis iš %s"
 
 #: builtin/fetch.c:762
 #, c-format
 msgid "Option \"%s\" value \"%s\" is not valid for %s"
-msgstr ""
+msgstr "Parinkties \"%s\" reikšmė \"%s\" netinkama %s"
 
 #: builtin/fetch.c:765
 #, c-format
 msgid "Option \"%s\" is ignored for %s\n"
-msgstr ""
+msgstr "Parinktis \"%s\" ignoruojama %s\n"
 
 #: builtin/fetch.c:864
 #, c-format
 msgid "Fetching %s\n"
-msgstr ""
+msgstr "Siunčiama %s\n"
 
 #: builtin/fetch.c:866
 #, c-format
 msgid "Could not fetch %s"
-msgstr ""
+msgstr "Nepavyko atsiųsti %s"
 
 #: builtin/fetch.c:882
 msgid ""
 "No remote repository specified.  Please, specify either a URL or a\n"
 "remote name from which new revisions should be fetched."
 msgstr ""
+"Nenurodyta jokia nuotolinė repozitorija. Prašome, nurodykite arba URL arba\n"
+"nuotolinė vardą, iš kurio bus siunčiamos naujos revizijos."
 
 #: builtin/fetch.c:902
 msgid "You need to specify a tag name."
-msgstr ""
+msgstr "Turite nurodyti žymos vardą."
 
 #: builtin/fetch.c:944
 msgid "fetch --all does not take a repository argument"
-msgstr ""
+msgstr "fetch --all nereikalingas repozitorijos argumentas"
 
 #: builtin/fetch.c:946
 msgid "fetch --all does not make sense with refspecs"
-msgstr ""
+msgstr "fetch --all neturi prasmės su nuorodomis"
 
 #: builtin/fetch.c:957
 #, c-format
 msgid "No such remote or remote group: %s"
-msgstr ""
+msgstr "Nėra tokio nuotolinio arba nuotolinės grupės: %s"
 
 #: builtin/fetch.c:965
 msgid "Fetching a group and specifying refspecs does not make sense"
-msgstr ""
+msgstr "Grupės siuntimas ir refspecs nurodymas neturi prasmės"
 
 #: builtin/gc.c:63
 #, c-format
 msgid "Invalid %s: '%s'"
-msgstr ""
+msgstr "Netinkamas %s: '%s'"
 
 #: builtin/gc.c:78
 msgid "Too many options specified"
-msgstr ""
+msgstr "Nurodyta per daug parinkčių"
 
 #: builtin/gc.c:103
 #, c-format
 msgid "insanely long object directory %.*s"
-msgstr ""
+msgstr "beprotiškai ilga objekto direktorija %.*s"
 
 #: builtin/gc.c:223
 #, c-format
 msgid "Auto packing the repository for optimum performance.\n"
-msgstr ""
+msgstr "Automatiškai pakuojama repozitorija optimaliam vykdymui.\n"
 
 #: builtin/gc.c:226
 #, c-format
@@ -1544,95 +1557,99 @@ msgid ""
 "Auto packing the repository for optimum performance. You may also\n"
 "run \"git gc\" manually. See \"git help gc\" for more information."
 msgstr ""
+"Automatiškai pakuojama repozitorija optimaliam vykdymui. Jūs galite taip\n"
+"pat leisti \"git gc\" rankiniu būdu. Daugiau informacijos \"git help gc\"."
 
 #: builtin/gc.c:254
 msgid ""
 "There are too many unreachable loose objects; run 'git prune' to remove them."
 msgstr ""
+"Per daug nepasiekiamų palaidų objektų; leiskite 'git prune' norėdami juos išmesti."
 
 #: builtin/grep.c:247
 #, c-format
 msgid "grep: failed to create thread: %s"
-msgstr ""
+msgstr "grep: nepavyko sukurti gijos: %s"
 
 #: builtin/grep.c:365
 #, c-format
 msgid "'%s': unable to read %s"
-msgstr ""
+msgstr "'%s': negalėjome skaityti %s"
 
 #: builtin/grep.c:416
 #, c-format
 msgid "'%s': %s"
-msgstr ""
+msgstr "'%s': %s"
 
 #: builtin/grep.c:427
 #, c-format
 msgid "'%s': short read %s"
-msgstr ""
+msgstr "'%s' : trumpas skaitymas %s"
 
 #: builtin/grep.c:489
 #, c-format
 msgid "Failed to chdir: %s"
-msgstr ""
+msgstr "Nepavyko chdir: %s"
 
 #: builtin/grep.c:564 builtin/grep.c:595
 #, c-format
 msgid "unable to read tree (%s)"
-msgstr ""
+msgstr "negalima perskaityti medžio (%s)"
 
 #: builtin/grep.c:609
 #, c-format
 msgid "unable to grep from object of type %s"
-msgstr ""
+msgstr "negalima leisti grep %s tipo objektui "
 
 #: builtin/grep.c:665
 #, c-format
 msgid "switch `%c' expects a numerical value"
-msgstr ""
+msgstr "jungiklis `%c' tikisi skaitinės reikšmės"
 
 #: builtin/grep.c:682
 #, c-format
 msgid "cannot open '%s'"
-msgstr ""
+msgstr "negalima atidaryti '%s'"
 
+# FIXME
 #: builtin/grep.c:925
 msgid "no pattern given."
 msgstr ""
 
 #: builtin/grep.c:929
 msgid "cannot mix --fixed-strings and regexp"
-msgstr ""
+msgstr "negalima kartu naudoti --fixed-strings ir regulariojo reiškinio"
 
 #: builtin/grep.c:954
 #, c-format
 msgid "bad object %s"
-msgstr ""
+msgstr "blogas objektas %s"
 
 #: builtin/grep.c:984
 msgid "--open-files-in-pager only works on the worktree"
-msgstr ""
+msgstr "--open-files-in-pager veikia tik darbiniame medyje"
 
 #: builtin/grep.c:1009
 msgid "--cached cannot be used with --no-index."
-msgstr ""
+msgstr "--cached negali būti vartojamas su --no-index."
 
 #: builtin/grep.c:1011
 msgid "--no-index cannot be used with revs."
-msgstr ""
+msgstr "--no-index negali būti vartojamas su revizijomis."
 
 #: builtin/grep.c:1020
 msgid "both --cached and trees are given."
-msgstr ""
+msgstr "abu --cached ir medžiai duoti."
 
 #: builtin/init-db.c:35
 #, c-format
 msgid "Could not make %s writable by group"
-msgstr ""
+msgstr "Nepavyko %s padaryti rašomo grupei"
 
 #: builtin/init-db.c:62
 #, c-format
 msgid "insanely long template name %s"
-msgstr ""
+msgstr "beprotiškai ilgas šablono vardas %s"
 
 #: builtin/init-db.c:67
 #, c-format
@@ -1657,7 +1674,7 @@ msgstr ""
 #: builtin/init-db.c:99
 #, c-format
 msgid "insanely long symlink %s"
-msgstr ""
+msgstr "beprotiškai ilga simbolinė nuoroda %s"
 
 #: builtin/init-db.c:102
 #, c-format
@@ -1672,27 +1689,27 @@ msgstr ""
 #: builtin/init-db.c:110
 #, c-format
 msgid "ignoring template %s"
-msgstr ""
+msgstr "ignoruojamas šablonas %s"
 
 #: builtin/init-db.c:133
 #, c-format
 msgid "insanely long template path %s"
-msgstr ""
+msgstr "beprotiškai ilgas šablono kelias %s"
 
 #: builtin/init-db.c:141
 #, c-format
 msgid "templates not found %s"
-msgstr ""
+msgstr "nerasti šablonai %s"
 
 #: builtin/init-db.c:154
 #, c-format
 msgid "not copying templates of a wrong format version %d from '%s'"
-msgstr ""
+msgstr "nekopijuojami blogo formato %d versijos šablonai iš '%s'"
 
 #: builtin/init-db.c:192
 #, c-format
 msgid "insane git directory %s"
-msgstr ""
+msgstr "beprotiška git direktorija %s"
 
 #.
 #. * TRANSLATORS: The first '%s' is either "Reinitialized
