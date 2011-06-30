@@ -46,7 +46,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: git 1.7.5\n"
 "Report-Msgid-Bugs-To: Git Mailing List <git@vger.kernel.org>\n"
-"POT-Creation-Date: 2011-04-25 09:37+0100\n"
+"POT-Creation-Date: 2011-06-30 14:49+0300\n"
 "PO-Revision-Date: 2011-04-25 09:38+0100\n"
 "Last-Translator: Motiejus Jakštys <desired.mta@gmail.com>\n"
 "Language-Team: Lithuanian\n"
@@ -56,6 +56,30 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && (n"
 "%100<10 || n%100>=20) ? 1 : 2);\n"
+
+#: diff.c:104
+#, c-format
+msgid "  Failed to parse dirstat cut-off percentage '%.*s'\n"
+msgstr ""
+
+#: diff.c:109
+#, c-format
+msgid "  Unknown dirstat parameter '%.*s'\n"
+msgstr ""
+
+#: diff.c:205
+#, c-format
+msgid ""
+"Found errors in 'diff.dirstat' config variable:\n"
+"%s"
+msgstr ""
+
+#: diff.c:3271
+#, c-format
+msgid ""
+"Failed to parse --dirstat/-X option parameter:\n"
+"%s"
+msgstr ""
 
 #: wt-status.c:134
 msgid "Unmerged paths:"
@@ -72,7 +96,9 @@ msgstr "  (naudokite \"git rm --cached <file> ...\" norėdami pamiršti)"
 
 #: wt-status.c:143
 msgid "  (use \"git add/rm <file>...\" as appropriate to mark resolution)"
-msgstr "  (naudokite \"git add/rm <file>...\" pasirinktinai norėdami pažymėti sprendimą)"
+msgstr ""
+"  (naudokite \"git add/rm <file>...\" pasirinktinai norėdami pažymėti "
+"sprendimą)"
 
 #: wt-status.c:151
 msgid "Changes to be committed:"
@@ -88,13 +114,15 @@ msgstr "  (naudokite \"git add <file>...\" atnaujinti tam, kas bus įkeliama)"
 
 #: wt-status.c:175
 msgid "  (use \"git add/rm <file>...\" to update what will be committed)"
-msgstr "  (naudokite \"git add/rm <file>...\" atnaujinti tam, kas bus įkeliama)"
+msgstr ""
+"  (naudokite \"git add/rm <file>...\" atnaujinti tam, kas bus įkeliama)"
 
 #: wt-status.c:176
 msgid ""
 "  (use \"git checkout -- <file>...\" to discard changes in working directory)"
 msgstr ""
-"  (naudokite \"git checkout -- <file>...\" atmesti pakeitimus darbiniame kataloge)"
+"  (naudokite \"git checkout -- <file>...\" atmesti pakeitimus darbiniame "
+"kataloge)"
 
 #: wt-status.c:178
 msgid "  (commit or discard the untracked or modified content in submodules)"
@@ -287,12 +315,12 @@ msgstr "prieš "
 msgid ", behind "
 msgstr ", už "
 
-#: builtin/add.c:40
+#: builtin/add.c:61
 #, c-format
 msgid "unexpected diff status %c"
 msgstr "netikėtas diff statusas %c"
 
-#: builtin/add.c:66 builtin/commit.c:290
+#: builtin/add.c:66 builtin/commit.c:291
 msgid "updating files failed"
 msgstr "failų atnaujinimas nepavyko"
 
@@ -301,93 +329,93 @@ msgstr "failų atnaujinimas nepavyko"
 msgid "remove '%s'\n"
 msgstr "išmesti '%s'\n"
 
-#: builtin/add.c:174
+#: builtin/add.c:175
 #, c-format
 msgid "Path '%s' is in submodule '%.*s'"
 msgstr "Kelias '%s' yra submodulyje '%.*s'"
 
-#: builtin/add.c:190
+#: builtin/add.c:191
 msgid "Unstaged changes after refreshing the index:"
 msgstr "Neįsiminti pakeitimai po indekso atnaujinimo:"
 
-#: builtin/add.c:193 builtin/add.c:453 builtin/rm.c:186
+#: builtin/add.c:194 builtin/add.c:454 builtin/rm.c:186
 #, c-format
 msgid "pathspec '%s' did not match any files"
 msgstr "kelio specifikacija '%s' neatitiko jokių failų"
 
-#: builtin/add.c:207
+#: builtin/add.c:208
 #, c-format
 msgid "'%s' is beyond a symbolic link"
 msgstr "'%s' yra už simbolinės nuorodos"
 
-#: builtin/add.c:274
+#: builtin/add.c:275
 msgid "Could not read the index"
 msgstr "Negalėjome perskaityti indekso"
 
-#: builtin/add.c:283
+#: builtin/add.c:284
 #, c-format
 msgid "Could not open '%s' for writing."
 msgstr "Negalėjome atidaryti '%s' rašymui."
 
-#: builtin/add.c:287
+#: builtin/add.c:288
 msgid "Could not write patch"
 msgstr "Negalėjome įrašyti lopo"
 
-#: builtin/add.c:292
+#: builtin/add.c:293
 #, c-format
 msgid "Could not stat '%s'"
 msgstr "Negalėjome gauti '%s' statuso"
 
-#: builtin/add.c:294
+#: builtin/add.c:295
 msgid "Empty patch. Aborted."
 msgstr "Tuščias lopas. Nutraukta."
 
-#: builtin/add.c:300
+#: builtin/add.c:301
 #, c-format
 msgid "Could not apply '%s'"
 msgstr "Negalėjome pritaikyti '%s'"
 
-#: builtin/add.c:309
+#: builtin/add.c:310
 msgid "The following paths are ignored by one of your .gitignore files:\n"
 msgstr "Šie keliai ignoruojami vienu iš jūsų .gitignore failų:\n"
 
-#: builtin/add.c:349
+#: builtin/add.c:350
 #, c-format
 msgid "Use -f if you really want to add them.\n"
 msgstr "Naudokite -f jei tikrai norite juos pridėti.\n"
 
-#: builtin/add.c:350
+#: builtin/add.c:351
 msgid "no files added"
 msgstr "nepridėta jokių failų"
 
-#: builtin/add.c:356
+#: builtin/add.c:357
 msgid "adding files failed"
 msgstr "failų pridėjimas nepavyko"
 
-#: builtin/add.c:388
+#: builtin/add.c:389
 msgid "-A and -u are mutually incompatible"
 msgstr "-A ir -u yra tarpusavyje nesuderinami"
 
-#: builtin/add.c:390
+#: builtin/add.c:391
 msgid "Option --ignore-missing can only be used together with --dry-run"
 msgstr "Parinktis --ignore-missing gali būti vartojama tik kartu su --dry-run"
 
-#: builtin/add.c:410
+#: builtin/add.c:411
 #, c-format
 msgid "Nothing specified, nothing added.\n"
 msgstr "Nieko nenurodyta, nieko nepridėta.\n"
 
-#: builtin/add.c:411
+#: builtin/add.c:412
 #, c-format
 msgid "Maybe you wanted to say 'git add .'?\n"
 msgstr "Gal norėjai pasakyti 'git add .'?\n"
 
-#: builtin/add.c:417 builtin/clean.c:95 builtin/commit.c:347
-#: builtin/commit.c:356 builtin/mv.c:77 builtin/rm.c:162
+#: builtin/add.c:418 builtin/clean.c:95 builtin/commit.c:350 builtin/mv.c:77
+#: builtin/rm.c:162
 msgid "index file corrupt"
 msgstr "indeksas pažeistas"
 
-#: builtin/add.c:469 builtin/mv.c:223 builtin/rm.c:260
+#: builtin/add.c:470 builtin/mv.c:223 builtin/rm.c:260
 msgid "Unable to write new index file"
 msgstr "Negalėjome įrašyti naujo indekso failo"
 
@@ -510,60 +538,60 @@ msgstr "priešais %d] "
 msgid "ahead %d, behind %d] "
 msgstr "už %d, priešais %d] "
 
-#: builtin/branch.c:485
+#: builtin/branch.c:483
 msgid "(no branch)"
 msgstr "(ne šakoje)"
 
-#: builtin/branch.c:545
+#: builtin/branch.c:543
 msgid "some refs could not be read"
 msgstr "nepavyko perskaityti kai kurių nuorodų"
 
-#: builtin/branch.c:558
+#: builtin/branch.c:556
 msgid "cannot rename the current branch while not on any."
 msgstr "negalima pervadinti dabartinės šakos kol esate jokioje."
 
-#: builtin/branch.c:568 builtin/branch.c:572
+#: builtin/branch.c:566 builtin/branch.c:570
 #, c-format
 msgid "Invalid branch name: '%s'"
 msgstr "Nevalidus šakos pavadinimas: '%s'"
 
-#: builtin/branch.c:575
+#: builtin/branch.c:573
 #, c-format
 msgid "A branch named '%s' already exists."
 msgstr "Šaka pavadinimu '%s' jau egzistuoja."
 
-#: builtin/branch.c:581
+#: builtin/branch.c:579
 msgid "Branch rename failed"
 msgstr "Šakos pervadinimas nepavyko"
 
-#: builtin/branch.c:585
+#: builtin/branch.c:583
 #, c-format
 msgid "Renamed a misnamed branch '%s' away"
 msgstr "Atgal pervadinome blogai pavadintą šaką '%s'"
 
-#: builtin/branch.c:589
+#: builtin/branch.c:587
 #, c-format
 msgid "Branch renamed to %s, but HEAD is not updated!"
 msgstr "Šaka pervadinta į %s, bet HEAD neatnaujintas!"
 
-#: builtin/branch.c:596
+#: builtin/branch.c:594
 msgid "Branch is renamed, but update of config-file failed"
 msgstr "Šaka pervadinta, bet konfigūracinio failo atnaujinimas nepavyko"
 
-#: builtin/branch.c:611
+#: builtin/branch.c:609
 #, c-format
 msgid "malformed object name %s"
 msgstr "blogai suformuotas objekto vardas %s"
 
-#: builtin/branch.c:685
+#: builtin/branch.c:683
 msgid "Failed to resolve HEAD as a valid ref."
 msgstr "Nepavyko nustatyti HEAD kaip validžios nuorodos"
 
-#: builtin/branch.c:691
+#: builtin/branch.c:689
 msgid "HEAD not found below refs/heads!"
 msgstr "HEAD nerasta po refs/heads!"
 
-#: builtin/branch.c:711
+#: builtin/branch.c:709
 msgid "-a and -r options to 'git branch' do not make sense with a branch name"
 msgstr "'git branch' parinktys -a ir -r neturi prasmės su šakos pavadinimu"
 
@@ -580,153 +608,196 @@ msgstr "Reikia repozitorijos kad galėtume sukurti rinkinį"
 msgid "Need a repository to unbundle."
 msgstr "Reikia repozitorijos norint išrinkti."
 
-#: builtin/checkout.c:108 builtin/checkout.c:136
+#: builtin/checkout.c:111 builtin/checkout.c:139
 #, c-format
 msgid "path '%s' does not have our version"
 msgstr "kelias '%s' neturi mūsų versijos"
 
-#: builtin/checkout.c:110 builtin/checkout.c:138
+#: builtin/checkout.c:113 builtin/checkout.c:141
 #, c-format
 msgid "path '%s' does not have their version"
 msgstr "kelias '%s' neturi jų versijos"
 
-#: builtin/checkout.c:121
+#: builtin/checkout.c:124
 #, c-format
 msgid "path '%s' does not have all three versions"
 msgstr "kelias '%s' neturi visų trijų versijų"
 
-#: builtin/checkout.c:156
+#: builtin/checkout.c:159
 #, c-format
 msgid "path '%s' does not have all 3 versions"
 msgstr "kelias '%s' neturi visų 3 versijų"
 
-#: builtin/checkout.c:173
+#: builtin/checkout.c:176
 #, c-format
 msgid "path '%s': cannot merge"
 msgstr "kelias '%s': negalima sujungti"
 
-#: builtin/checkout.c:190
+#: builtin/checkout.c:193
 #, c-format
 msgid "Unable to add merge result for '%s'"
 msgstr "Negalima pridėti liejimo rezultato '%s'"
 
-#: builtin/checkout.c:195 builtin/reset.c:170
+#: builtin/checkout.c:198 builtin/reset.c:170
 #, c-format
 msgid "make_cache_entry failed for path '%s'"
 msgstr "make_cache_entry nepavyko keliui '%s'"
 
-#: builtin/checkout.c:217 builtin/checkout.c:372
+#: builtin/checkout.c:220 builtin/checkout.c:374
 msgid "corrupt index file"
 msgstr "pažeistas indekso failas"
 
-#: builtin/checkout.c:245 builtin/checkout.c:252
+#: builtin/checkout.c:248 builtin/checkout.c:255
 #, c-format
 msgid "path '%s' is unmerged"
 msgstr "kelias '%s' yra nesulietas"
 
-#: builtin/checkout.c:281 builtin/checkout.c:476 builtin/clone.c:668
-#: builtin/merge.c:762
+#: builtin/checkout.c:284 builtin/checkout.c:478 builtin/clone.c:668
+#: builtin/merge.c:789
 msgid "unable to write new index file"
 msgstr "negalima įrašyti naujo indekso failo"
 
-#: builtin/checkout.c:298 builtin/diff.c:302 builtin/merge.c:394
+#: builtin/checkout.c:301 builtin/diff.c:301 builtin/merge.c:396
 msgid "diff_setup_done failed"
 msgstr "diff_setup_done nepavyko"
 
-#: builtin/checkout.c:394
+#: builtin/checkout.c:396
 msgid "you need to resolve your current index first"
 msgstr "jums pirma reikia nustatyti jūsų dabartinį indeksą"
 
-#: builtin/checkout.c:525
+#: builtin/checkout.c:527
 #, c-format
 msgid "Can not do reflog for '%s'\n"
 msgstr "Negalima daryti reflog '%s'\n"
 
-#: builtin/checkout.c:555
+#: builtin/checkout.c:557
 msgid "HEAD is now at"
 msgstr "HEAD dabar yra"
 
-#: builtin/checkout.c:561
+#: builtin/checkout.c:563
 #, c-format
 msgid "Already on '%s'\n"
 msgstr "Jau '%s'\n"
 
-#: builtin/checkout.c:565
+#: builtin/checkout.c:567
 #, c-format
 msgid "Switched to and reset branch '%s'\n"
 msgstr "Perėjome į ir atstatėme šaką '%s'\n"
 
-#: builtin/checkout.c:567
+#: builtin/checkout.c:569
 #, c-format
 msgid "Switched to a new branch '%s'\n"
 msgstr "Perjungėme į naują šaką '%s'\n"
 
-#: builtin/checkout.c:569
+#: builtin/checkout.c:571
 #, c-format
 msgid "Switched to branch '%s'\n"
 msgstr "Perjungėme į šaką '%s'\n"
 
-#: builtin/checkout.c:687
+#: builtin/checkout.c:651
+#, c-format
+msgid " ... and %d more.\n"
+msgstr ""
+
+#. The singular version
+#: builtin/checkout.c:657
+#, c-format
+msgid ""
+"Warning: you are leaving %d commit behind, not connected to\n"
+"any of your branches:\n"
+"\n"
+"%s\n"
+"If you want to keep it by creating a new branch, this may be a good time\n"
+"to do so with:\n"
+"\n"
+" git branch new_branch_name %s\n"
+"\n"
+msgid_plural ""
+"Warning: you are leaving %d commits behind, not connected to\n"
+"any of your branches:\n"
+"\n"
+"%s\n"
+"If you want to keep them by creating a new branch, this may be a good time\n"
+"to do so with:\n"
+"\n"
+" git branch new_branch_name %s\n"
+"\n"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+
+#: builtin/checkout.c:699
 msgid "internal error: only -- alone should have been left"
 msgstr "vidinė klaida: tik -- turėjo būti paliktas"
 
-#: builtin/checkout.c:689
+#: builtin/checkout.c:701
 msgid "internal error in revision walk"
 msgstr "vidinė klaida vaikštant po revizijas"
 
-#: builtin/checkout.c:693
+#: builtin/checkout.c:705
 msgid "Previous HEAD position was"
 msgstr "Praeita HEAD vieta buvo"
 
-#: builtin/checkout.c:718
+#: builtin/checkout.c:730
 msgid "You are on a branch yet to be born"
 msgstr "Esi šakoje, kuri dar tik gims"
 
 #. case (1)
-#: builtin/checkout.c:846
+#: builtin/checkout.c:858
 #, c-format
 msgid "invalid reference: %s"
 msgstr "nevalidi nuoroda: %s"
 
 #. case (1): want a tree
-#: builtin/checkout.c:885
+#: builtin/checkout.c:897
 #, c-format
 msgid "reference is not a tree: %s"
 msgstr "nuoroda nėra medis: %s"
 
-#: builtin/checkout.c:952
+#: builtin/checkout.c:964
 msgid "-B cannot be used with -b"
 msgstr "-B negali būti vartojamas su -b"
 
-#: builtin/checkout.c:961
+#: builtin/checkout.c:973
 msgid "--patch is incompatible with all other options"
 msgstr "--patch yra nesuderinamas su visomis kitomis parinktimis"
 
-#: builtin/checkout.c:972
+#: builtin/checkout.c:976
+#, fuzzy
+msgid "--detach cannot be used with -b/-B/--orphan"
+msgstr "--cached negali būti vartojamas su --no-index."
+
+#: builtin/checkout.c:978
+#, fuzzy
+msgid "--detach cannot be used with -t"
+msgstr "--orhphan negali būti vartojamas su -t"
+
+#: builtin/checkout.c:984
 msgid "--track needs a branch name"
 msgstr "--track reikalauja šakos vardo"
 
-#: builtin/checkout.c:979
+#: builtin/checkout.c:991
 msgid "Missing branch name; try -b"
 msgstr "Trūksta šakos vardo; bandyk -b"
 
-#: builtin/checkout.c:985
+#: builtin/checkout.c:997
 msgid "--orphan and -b|-B are mutually exclusive"
 msgstr "--orphan ir -b|-B yra tarpusavyje negalimi"
 
-#: builtin/checkout.c:987
+#: builtin/checkout.c:999
 msgid "--orphan cannot be used with -t"
 msgstr "--orhphan negali būti vartojamas su -t"
 
-#: builtin/checkout.c:997
+#: builtin/checkout.c:1009
 msgid "git checkout: -f and -m are incompatible"
 msgstr "git checkout: -f ir -m yra nesuderinami"
 
-#: builtin/checkout.c:1031
-msgid "nevalidus path specification"
+#: builtin/checkout.c:1043
+#, fuzzy
+msgid "invalid path specification"
 msgstr "netinkamas kelio nurodymas"
 
-#: builtin/checkout.c:1039
+#: builtin/checkout.c:1051
 #, c-format
 msgid ""
 "git checkout: updating paths is incompatible with switching branches.\n"
@@ -735,11 +806,16 @@ msgstr ""
 "git checkout: kelių atnaujinimas nesuderinamas su šakų perjungimu.\n"
 "Ar tu norėjai išsikelti '%s', kuris negali būti nustatytas kaip įkėlimas?"
 
-#: builtin/checkout.c:1041
+#: builtin/checkout.c:1053
 msgid "git checkout: updating paths is incompatible with switching branches."
 msgstr "git checkout: kelių atnaujinimas ir šakų keitimas nesuderinami."
 
-#: builtin/checkout.c:1049
+#: builtin/checkout.c:1058
+#, fuzzy
+msgid "git checkout: --detach does not take a path argument"
+msgstr "fetch --all nereikalingas repozitorijos argumentas"
+
+#: builtin/checkout.c:1061
 msgid ""
 "git checkout: --ours/--theirs, --force and --merge are incompatible when\n"
 "checking out of the index."
@@ -747,21 +823,21 @@ msgstr ""
 "git checkout: --ours/--theirs, --force ir --merge yra nesuderinami kai\n"
 "paimama iš indekso."
 
-#: builtin/checkout.c:1060
+#: builtin/checkout.c:1072
 #, c-format
 msgid "git checkout: we do not like '%s' as a branch name."
 msgstr "git checkout: mums nepatinka '%s' kaip šakos pavadinimas."
 
-#: builtin/checkout.c:1065
+#: builtin/checkout.c:1077
 #, c-format
 msgid "git checkout: branch %s already exists"
 msgstr "git checkout: šaka %s jau egzistuoja"
 
-#: builtin/checkout.c:1072
+#: builtin/checkout.c:1084
 msgid "Cannot switch branch to a non-commit."
 msgstr "Negalima keisti šakos į ne-reviziją."
 
-#: builtin/checkout.c:1075
+#: builtin/checkout.c:1087
 msgid "--ours/--theirs is incompatible with switching branches."
 msgstr "--ours/--theirs nesuderinama kai perjungiamos šakos."
 
@@ -773,15 +849,16 @@ msgstr "-x ir -X negali būti vartojamas kartu"
 msgid ""
 "clean.requireForce set to true and neither -n nor -f given; refusing to clean"
 msgstr ""
-"clean.requireForce pažymėtas \"true\" ir nei -n, nei -f duotas; atsisakome valyti"
+"clean.requireForce pažymėtas \"true\" ir nei -n, nei -f duotas; atsisakome "
+"valyti"
 
 #: builtin/clean.c:85
 msgid ""
 "clean.requireForce defaults to true and neither -n nor -f given; refusing to "
 "clean"
 msgstr ""
-"clean.requireForce pagal nutylėjimą \"true\" ir nei -n, nei -f duotas; atsisakome "
-"valyti"
+"clean.requireForce pagal nutylėjimą \"true\" ir nei -n, nei -f duotas; "
+"atsisakome valyti"
 
 #: builtin/clean.c:154 builtin/clean.c:175
 #, c-format
@@ -870,6 +947,11 @@ msgstr "Privalote nurodyti katalogą klonavimui."
 #, c-format
 msgid "--bare and --origin %s options are incompatible."
 msgstr "--bare ir --origin %s parinktys nesuderinamos."
+
+#: builtin/clone.c:420
+#, c-format
+msgid "repository '%s' does not exist"
+msgstr ""
 
 #: builtin/clone.c:425
 msgid "--depth is ignored in local clones; use file:// instead."
@@ -973,95 +1055,100 @@ msgstr ""
 "\n"
 "Kitu atveju, naudokite 'git reset'\n"
 
-#: builtin/commit.c:317
+#: builtin/commit.c:318
 msgid "failed to unpack HEAD tree object"
 msgstr "nepavyko išpakuoti HEAD medžio objekto"
 
-#: builtin/commit.c:345
+#: builtin/commit.c:359
+#, fuzzy
+msgid "unable to create temporary index"
+msgstr "laikinojo indekso failo rašymas negalimas"
+
+#: builtin/commit.c:365
 msgid "interactive add failed"
 msgstr "interaktyvus pridėjimas nepavyko"
 
-#: builtin/commit.c:376 builtin/commit.c:396 builtin/commit.c:442
+#: builtin/commit.c:397 builtin/commit.c:417 builtin/commit.c:463
 msgid "unable to write new_index file"
 msgstr "nepavyko įrašyti naujo indekso failo"
 
-#: builtin/commit.c:426
+#: builtin/commit.c:447
 #, c-format
 msgid "cannot do a partial commit during a %s."
 msgstr "negalime daryti dalinio įkėlimo per %s."
 
-#: builtin/commit.c:435
+#: builtin/commit.c:456
 msgid "cannot read the index"
 msgstr "indekso skaitymas negalimas"
 
-#: builtin/commit.c:455
+#: builtin/commit.c:476
 msgid "unable to write temporary index file"
 msgstr "laikinojo indekso failo rašymas negalimas"
 
-#: builtin/commit.c:502 builtin/commit.c:1403
+#: builtin/commit.c:523 builtin/commit.c:1428
 msgid "could not parse HEAD commit"
 msgstr "nepavyko išanalizuoti HEAD revizijos"
 
-#: builtin/commit.c:521 builtin/commit.c:527
+#: builtin/commit.c:542 builtin/commit.c:548
 #, c-format
 msgid "invalid commit: %s"
 msgstr "nevalidus įkėlimas: %s"
 
-#: builtin/commit.c:545
+#: builtin/commit.c:566
 msgid "malformed --author parameter"
 msgstr "blogai suformuotas --author parametras"
 
-#: builtin/commit.c:601
+#: builtin/commit.c:622
 #, c-format
 msgid "Malformed ident string: '%s'"
 msgstr "Blogai suformuota paslinkimo eilutė: '%s'"
 
-#: builtin/commit.c:634 builtin/commit.c:667 builtin/commit.c:966
+#: builtin/commit.c:656 builtin/commit.c:689 builtin/commit.c:989
 #, c-format
 msgid "could not lookup commit %s"
 msgstr "nepavyko rasti revizijos %s"
 
-#: builtin/commit.c:646 builtin/shortlog.c:299
+#: builtin/commit.c:668 builtin/shortlog.c:296
 #, c-format
 msgid "(reading log message from standard input)\n"
 msgstr "(skaitoma žinutė iš standartinės įvesties)\n"
 
-#: builtin/commit.c:648
+#: builtin/commit.c:670
 msgid "could not read log from standard input"
 msgstr "žurnalo skaitymas iš standartinės įvesties negalimas"
 
-#: builtin/commit.c:652
+#: builtin/commit.c:674
 #, c-format
 msgid "could not read log file '%s'"
 msgstr "negalima skaityti žurnalo failo '%s'"
 
-#: builtin/commit.c:658
+#: builtin/commit.c:680
 msgid "commit has empty message"
 msgstr "revizija turi tuščią žinutę"
 
-#: builtin/commit.c:674
+#: builtin/commit.c:696
 msgid "could not read MERGE_MSG"
 msgstr "nepavyko perskaityti MERGE_MSG"
 
-#: builtin/commit.c:678
+#: builtin/commit.c:700
 msgid "could not read SQUASH_MSG"
 msgstr "nepavyko perskaityti SQUASH_MSG"
 
-#: builtin/commit.c:682
+#: builtin/commit.c:704
 #, c-format
 msgid "could not read '%s'"
 msgstr "nepavyko perskaityti '%s'"
 
-#: builtin/commit.c:709
+#: builtin/commit.c:732
 #, c-format
 msgid "could not open '%s'"
 msgstr "nepavyko atidaryti '%s'"
 
-#: builtin/commit.c:733
+#: builtin/commit.c:756
 msgid "could not write commit template"
 msgstr "nepavyko daryti revizijos šablono"
 
-#: builtin/commit.c:746
+#: builtin/commit.c:769
 #, c-format
 msgid ""
 "\n"
@@ -1076,11 +1163,11 @@ msgstr ""
 "\t%s\n"
 "ir bandyti dar kartą.\n"
 
-#: builtin/commit.c:759
+#: builtin/commit.c:782
 msgid "Please enter the commit message for your changes."
 msgstr "Prašome įvesti revizijos žinutę savo pakeitimams."
 
-#: builtin/commit.c:762
+#: builtin/commit.c:785
 msgid ""
 " Lines starting\n"
 "with '#' will be ignored, and an empty message aborts the commit.\n"
@@ -1088,7 +1175,7 @@ msgstr ""
 " Eilutės prasidedančios\n"
 "'#' bus ignoruotos, ir tuščia revizijos žinutė atšaukia įkėlimą.\n"
 
-#: builtin/commit.c:767
+#: builtin/commit.c:790
 msgid ""
 " Lines starting\n"
 "with '#' will be kept; you may remove them yourself if you want to.\n"
@@ -1098,151 +1185,148 @@ msgstr ""
 "'#' bus laikomos; Galite išmesti jas pats, jei norite.\n"
 "Tuščia revizijos žinutė atšaukia įkėlimą.\n"
 
-#: builtin/commit.c:779
+#: builtin/commit.c:802
 #, c-format
 msgid "%sAuthor:    %s"
 msgstr "%Autorius:    %s"
 
-#: builtin/commit.c:786
+#: builtin/commit.c:809
 #, c-format
 msgid "%sCommitter: %s"
 msgstr "%sFiksuotojas: %s"
-""
 
-#: builtin/commit.c:806
+#: builtin/commit.c:829
 msgid "Cannot read index"
 msgstr "Indekso skaitymas negalimas"
 
-#: builtin/commit.c:846
+#: builtin/commit.c:869
 msgid "Error building trees"
 msgstr "Klaida generuojant medžius"
 
-#: builtin/commit.c:861 builtin/tag.c:313
+#: builtin/commit.c:884 builtin/tag.c:313
 #, c-format
 msgid "Please supply the message using either -m or -F option.\n"
 msgstr "Prašome pateikti žinutę vartojant -m arba -F parinktis.\n"
 
-#: builtin/commit.c:941
+#: builtin/commit.c:964
 #, c-format
 msgid "No existing author found with '%s'"
 msgstr "Nerastas egzistuojantis autorius su '%s'"
 
-#: builtin/commit.c:956 builtin/commit.c:1149
+#: builtin/commit.c:979 builtin/commit.c:1173
 #, c-format
 msgid "Invalid untracked files mode '%s'"
 msgstr "Nevalidi nesekamų failų būsena '%s'"
 
-#: builtin/commit.c:995
+#: builtin/commit.c:1018
 msgid "Using both --reset-author and --author does not make sense"
 msgstr "Argumentų --reset-author ir --author vartojimas kartu neturi prasmės"
 
-#: builtin/commit.c:1009
+#: builtin/commit.c:1032
 msgid "You have nothing to amend."
 msgstr "Jūs neturite ko pakeisti."
 
-#: builtin/commit.c:1011
+#: builtin/commit.c:1034
 #, c-format
 msgid "You are in the middle of a %s -- cannot amend."
 msgstr "Jei esate viduryje %s -- negalima naudoti amend"
 
-#: builtin/commit.c:1013
+#: builtin/commit.c:1036
 msgid "Options --squash and --fixup cannot be used together"
 msgstr "Parinktys --squash ir --fixup negali būti vartojami kartu"
 
-#: builtin/commit.c:1023
+#: builtin/commit.c:1046
 msgid "Only one of -c/-C/-F/--fixup can be used."
 msgstr "Tik vienas iš -c/-C/-F/--fixup gali būti vartojamas."
 
-#: builtin/commit.c:1025
+#: builtin/commit.c:1048
 msgid "Option -m cannot be combined with -c/-C/-F/--fixup."
 msgstr "Parinktis -m negali būti jungiama su -c/-C/-F/--fixup."
 
-#: builtin/commit.c:1031
+#: builtin/commit.c:1054
 msgid "--reset-author can be used only with -C, -c or --amend."
 msgstr "--reset-author gali būti vartojamas tik su -C, -c arba --amend."
 
-#: builtin/commit.c:1045
-msgid "Only one of --include/--only/--all/--interactive can be used."
-msgstr "Tik vienas iš --include/--only/--all/--interactive gali būti vartojamas."
+#: builtin/commit.c:1071
+#, fuzzy
+msgid "Only one of --include/--only/--all/--interactive/--patch can be used."
+msgstr ""
+"Tik vienas iš --include/--only/--all/--interactive gali būti vartojamas."
 
-#: builtin/commit.c:1047
+#: builtin/commit.c:1073
 msgid "No paths with --include/--only does not make sense."
 msgstr "Jokie keliai su --include/--only neturi prasmės"
 
-#: builtin/commit.c:1049
+#: builtin/commit.c:1075
 msgid "Clever... amending the last one with dirty index."
 msgstr "Gudrutis... keiti paskutinį su nešvariu indeksu."
 
-#: builtin/commit.c:1051
+#: builtin/commit.c:1077
 msgid "Explicit paths specified without -i nor -o; assuming --only paths..."
 msgstr "Specialiai abibrėžti keliai be -i nei -o; tariame --only keliai..."
 
-#: builtin/commit.c:1061
+#: builtin/commit.c:1087
 #, c-format
 msgid "Invalid cleanup mode %s"
 msgstr "Nevalidus išvalymo būdas %s"
 
-#: builtin/commit.c:1066
+#: builtin/commit.c:1092
 msgid "Paths with -a does not make sense."
 msgstr "Keliai su -a neturi prasmės."
 
-#: builtin/commit.c:1068
-msgid "Paths with --interactive does not make sense."
-msgstr "Keliai su --interactive neturi prasmės."
-
-#: builtin/commit.c:1249
+#: builtin/commit.c:1274
 msgid "couldn't look up newly created commit"
 msgstr "nepavyko rasti naujai sukurtos revizijos"
 
-#: builtin/commit.c:1251
+#: builtin/commit.c:1276
 msgid "could not parse newly created commit"
 msgstr "nepavyko išanalizuoti naujai sukurtos revizijos"
 
-#: builtin/commit.c:1291
+#: builtin/commit.c:1316
 msgid "detached HEAD"
 msgstr "atjungtas HEAD"
 
-#: builtin/commit.c:1293
+#: builtin/commit.c:1318
 msgid " (root-commit)"
 msgstr " (šakininė-revizija)"
 
-#: builtin/commit.c:1416 builtin/merge.c:488
+#: builtin/commit.c:1441 builtin/merge.c:490
 #, c-format
 msgid "could not open '%s' for reading"
 msgstr "nepavyko atidaryti '%s' skaitymui"
 
-#: builtin/commit.c:1421
+#: builtin/commit.c:1446
 #, c-format
 msgid "Corrupt MERGE_HEAD file (%s)"
 msgstr "Sugadintas MERGE_HEAD failas (%s)"
 
-#: builtin/commit.c:1428
+#: builtin/commit.c:1453
 msgid "could not read MERGE_MODE"
 msgstr "negalima perskaityti MERGE_HEAD"
 
-#: builtin/commit.c:1447
+#: builtin/commit.c:1472
 #, c-format
 msgid "could not read commit message: %s"
 msgstr "negalima perskaityti revizijos žinutės: %s"
 
-#: builtin/commit.c:1461
+#: builtin/commit.c:1486
 #, c-format
 msgid "Aborting commit due to empty commit message.\n"
 msgstr "Nutraukiamas įkėlimas dėl tuščios įkėlimo žinutės.\n"
 
-#: builtin/commit.c:1468
+#: builtin/commit.c:1493
 msgid "failed to write commit object"
 msgstr "nepavyko įrašyti fiksavimo objekto"
 
-#: builtin/commit.c:1486
+#: builtin/commit.c:1511
 msgid "cannot lock HEAD ref"
 msgstr "nepavyko užrakinti HEAD nuorodos"
 
-#: builtin/commit.c:1490
+#: builtin/commit.c:1515
 msgid "cannot update HEAD ref"
 msgstr "nepavyko atnaujinti HEAD rodyklės"
 
-#: builtin/commit.c:1500
+#: builtin/commit.c:1525
 msgid ""
 "Repository has been updated, but unable to write\n"
 "new_index file. Check that disk is not full or quota is\n"
@@ -1346,26 +1430,26 @@ msgstr "'%s': nei failas, nei simbolinė nuoroda"
 msgid "invalid option: %s"
 msgstr "nevalidi parinktis: %s"
 
-#: builtin/diff.c:297
+#: builtin/diff.c:296
 msgid "Not a git repository"
 msgstr "Ne git repozitorija"
 
-#: builtin/diff.c:347
+#: builtin/diff.c:346
 #, c-format
 msgid "invalid object '%s' given."
 msgstr "duotas nevalidus objektas '%s'."
 
-#: builtin/diff.c:352
+#: builtin/diff.c:351
 #, c-format
 msgid "more than %d trees given: '%s'"
 msgstr "duoti daugiau nei %d medžiai: '%s'"
 
-#: builtin/diff.c:362
+#: builtin/diff.c:361
 #, c-format
 msgid "more than two blobs given: '%s'"
 msgstr "duoti daugiau nei du elementarieji objektai: '%s'"
 
-#: builtin/diff.c:370
+#: builtin/diff.c:369
 #, c-format
 msgid "unhandled object '%s' given."
 msgstr "duotas neapdorotas objektas: '%s'."
@@ -1506,7 +1590,7 @@ msgstr "Siunčiama %s\n"
 msgid "Could not fetch %s"
 msgstr "Nepavyko atsiųsti %s"
 
-#: builtin/fetch.c:882
+#: builtin/fetch.c:883
 msgid ""
 "No remote repository specified.  Please, specify either a URL or a\n"
 "remote name from which new revisions should be fetched."
@@ -1514,24 +1598,24 @@ msgstr ""
 "Nenurodyta jokia nuotolinė repozitorija. Prašome, nurodykite arba URL arba\n"
 "nuotolinė vardą, iš kurio bus siunčiamos naujos revizijos."
 
-#: builtin/fetch.c:902
+#: builtin/fetch.c:903
 msgid "You need to specify a tag name."
 msgstr "Turite nurodyti žymos vardą."
 
-#: builtin/fetch.c:944
+#: builtin/fetch.c:946
 msgid "fetch --all does not take a repository argument"
 msgstr "fetch --all nereikalingas repozitorijos argumentas"
 
-#: builtin/fetch.c:946
+#: builtin/fetch.c:948
 msgid "fetch --all does not make sense with refspecs"
 msgstr "fetch --all neturi prasmės su nuorodomis"
 
-#: builtin/fetch.c:957
+#: builtin/fetch.c:959
 #, c-format
 msgid "No such remote or remote group: %s"
 msgstr "Nėra tokio nuotolinio arba nuotolinės grupės: %s"
 
-#: builtin/fetch.c:965
+#: builtin/fetch.c:967
 msgid "Fetching a group and specifying refspecs does not make sense"
 msgstr "Grupės siuntimas ir refspecs nurodymas neturi prasmės"
 
@@ -1555,10 +1639,10 @@ msgid "Auto packing the repository for optimum performance.\n"
 msgstr "Automatiškai pakuojama repozitorija optimaliam vykdymui.\n"
 
 #: builtin/gc.c:226
-#, c-format
+#, fuzzy, c-format
 msgid ""
 "Auto packing the repository for optimum performance. You may also\n"
-"run \"git gc\" manually. See \"git help gc\" for more information."
+"run \"git gc\" manually. See \"git help gc\" for more information.\n"
 msgstr ""
 "Automatiškai pakuojama repozitorija optimaliam vykdymui. Jūs galite taip\n"
 "pat leisti \"git gc\" rankiniu būdu. Daugiau informacijos \"git help gc\"."
@@ -1567,7 +1651,8 @@ msgstr ""
 msgid ""
 "There are too many unreachable loose objects; run 'git prune' to remove them."
 msgstr ""
-"Per daug nepasiekiamų palaidų objektų; leiskite 'git prune' norėdami juos išmesti."
+"Per daug nepasiekiamų palaidų objektų; leiskite 'git prune' norėdami juos "
+"išmesti."
 
 #: builtin/grep.c:247
 #, c-format
@@ -1615,32 +1700,28 @@ msgid "cannot open '%s'"
 msgstr "negalima atidaryti '%s'"
 
 # FIXME
-#: builtin/grep.c:925
+#: builtin/grep.c:961
 msgid "no pattern given."
 msgstr ""
 
-#: builtin/grep.c:929
-msgid "cannot mix --fixed-strings and regexp"
-msgstr "negalima kartu naudoti --fixed-strings ir regulariojo reiškinio"
-
-#: builtin/grep.c:954
+#: builtin/grep.c:988
 #, c-format
 msgid "bad object %s"
 msgstr "blogas objektas %s"
 
-#: builtin/grep.c:984
+#: builtin/grep.c:1012
 msgid "--open-files-in-pager only works on the worktree"
 msgstr "--open-files-in-pager veikia tik darbiniame medyje"
 
-#: builtin/grep.c:1009
+#: builtin/grep.c:1037
 msgid "--cached cannot be used with --no-index."
 msgstr "--cached negali būti vartojamas su --no-index."
 
-#: builtin/grep.c:1011
+#: builtin/grep.c:1039
 msgid "--no-index cannot be used with revs."
 msgstr "--no-index negali būti vartojamas su revizijomis."
 
-#: builtin/grep.c:1020
+#: builtin/grep.c:1048
 msgid "both --cached and trees are given."
 msgstr "abu --cached ir medžiai duoti."
 
@@ -1714,6 +1795,26 @@ msgstr "nekopijuojami blogo formato %d versijos šablonai iš '%s'"
 msgid "insane git directory %s"
 msgstr "beprotiškas git katalogas %s"
 
+#: builtin/init-db.c:322 builtin/init-db.c:325
+#, fuzzy, c-format
+msgid "%s already exists"
+msgstr "darbinis medis '%s' jau egzistuoja."
+
+#: builtin/init-db.c:354
+#, fuzzy, c-format
+msgid "unable to handle file type %d"
+msgstr "negalima perskaityti medžio (%s)"
+
+#: builtin/init-db.c:357
+#, fuzzy, c-format
+msgid "unable to move %s to %s"
+msgstr "Negalėjome rašyti %s"
+
+#: builtin/init-db.c:362
+#, fuzzy, c-format
+msgid "Could not create git link %s"
+msgstr "Negalėjome sukurti katalogo '%s'"
+
 #.
 #. * TRANSLATORS: The first '%s' is either "Reinitialized
 #. * existing" or "Initialized empty", the second " shared" or
@@ -1768,255 +1869,277 @@ msgstr "Negaliu prieiti prie darbinio katalogo"
 msgid "Cannot access work tree '%s'"
 msgstr "Negaliu prieiti darbinio medžio '%s'"
 
-#: builtin/log.c:104
-#, c-format
-msgid "invalid --decorate option: %s"
-msgstr "nevalidi --decorate parinktis: %s"
-
-#: builtin/log.c:113 builtin/log.c:1142 builtin/shortlog.c:287
-#, c-format
-msgid "unrecognized argument: %s"
-msgstr "neatpažintas argumentas: %s"
-
-#: builtin/log.c:156
+#: builtin/log.c:186
 #, c-format
 msgid "Final output: %d %s\n"
 msgstr "Galutinė išvestis: %d %s\n"
 
-#: builtin/log.c:255 builtin/log.c:679 builtin/log.c:1228 builtin/log.c:1447
-#: builtin/merge.c:337 builtin/revert.c:541 builtin/shortlog.c:184
+#: builtin/log.c:287 builtin/log.c:721 builtin/log.c:1274 builtin/log.c:1492
+#: builtin/merge.c:338 builtin/revert.c:539 builtin/shortlog.c:181
 msgid "revision walk setup failed"
 msgstr "revizijų vaikščiojimo nusistatymas nepavyko"
 
-#: builtin/log.c:352 builtin/log.c:439
+#: builtin/log.c:397 builtin/log.c:486
 #, c-format
 msgid "Could not read object %s"
 msgstr "Objekto %s skaitymas negalimas"
 
-#: builtin/log.c:463
+#: builtin/log.c:510
 #, c-format
 msgid "Unknown type: %d"
 msgstr "Neatpažintas tipas: %d"
 
-#: builtin/log.c:563
+#: builtin/log.c:605
 msgid "format.headers without value"
 msgstr "format.headers be reikšmės"
 
-#: builtin/log.c:635
+#: builtin/log.c:677
 msgid "name of output directory is too long"
 msgstr "išvesties katalogo vardas per ilgas"
 
-#: builtin/log.c:646
+#: builtin/log.c:688
 #, c-format
 msgid "Cannot open patch file %s"
 msgstr "Nepavyko atidaryti lopo failo"
 
-#: builtin/log.c:660
+#: builtin/log.c:702
 msgid "Need exactly one range."
 msgstr "Reikia tiksliai vieno intervalo."
 
-#: builtin/log.c:668
+#: builtin/log.c:710
 msgid "Not a range."
 msgstr "Ne intervalas."
 
-#: builtin/log.c:705
+#: builtin/log.c:747
 msgid "Could not extract email from committer identity."
 msgstr "Nepavyko gauti el. pašto adreso iš įkelėjo tapatybės."
 
-#: builtin/log.c:737
+#: builtin/log.c:779
 msgid "Cover letter needs email format"
 msgstr ""
 
-#: builtin/log.c:830
+#: builtin/log.c:872
 #, c-format
 msgid "insane in-reply-to: %s"
 msgstr "beprotiškas in-reply-to: %s"
 
-#: builtin/log.c:903
+#: builtin/log.c:945
 msgid "Two output directories?"
 msgstr "Du išvesties katalogai?"
 
-#: builtin/log.c:1091
+#: builtin/log.c:1136
 #, c-format
 msgid "bogus committer info %s"
 msgstr "klaidinga įkelėjo informacija %s"
 
-#: builtin/log.c:1136
+#: builtin/log.c:1181
 msgid "-n and -k are mutually exclusive."
 msgstr "-n ir -k yra tarpusavyje negalimi."
 
-#: builtin/log.c:1138
+#: builtin/log.c:1183
 msgid "--subject-prefix and -k are mutually exclusive."
 msgstr "--subject-prefix ir -k yra tarpusavyje negalimi."
 
-#: builtin/log.c:1145
+#: builtin/log.c:1188 builtin/shortlog.c:284
+#, c-format
+msgid "unrecognized argument: %s"
+msgstr "neatpažintas argumentas: %s"
+
+#: builtin/log.c:1191
 msgid "--name-only does not make sense"
 msgstr "--name-only neturi prasmės"
 
-#: builtin/log.c:1147
+#: builtin/log.c:1193
 msgid "--name-status does not make sense"
 msgstr "--name-status neturi prasmės"
 
-#: builtin/log.c:1149
+#: builtin/log.c:1195
 msgid "--check does not make sense"
 msgstr "--check neturi prasmės"
 
-#: builtin/log.c:1172
+#: builtin/log.c:1218
 msgid "standard output, or directory, which one?"
 msgstr "standartinė išvestis, ar katalogas, kuris?"
 
-#: builtin/log.c:1174
+#: builtin/log.c:1220
 #, c-format
 msgid "Could not create directory '%s'"
 msgstr "Negalėjome sukurti katalogo '%s'"
 
-#: builtin/log.c:1309
+#: builtin/log.c:1355
 msgid "Failed to create output files"
 msgstr "Nepavyko sukurti išvesties failų"
 
-#: builtin/log.c:1413
+#: builtin/log.c:1458
 #, c-format
 msgid ""
 "Could not find a tracked remote branch, please specify <upstream> manually.\n"
 msgstr ""
-"Nepavyko rasti sekamos nuotolinės šakos, prašome nurodyti <upstream> rankiniu būdu.\n"
+"Nepavyko rasti sekamos nuotolinės šakos, prašome nurodyti <upstream> "
+"rankiniu būdu.\n"
 
-#: builtin/log.c:1429 builtin/log.c:1431 builtin/log.c:1443
+#: builtin/log.c:1474 builtin/log.c:1476 builtin/log.c:1488
 #, c-format
 msgid "Unknown commit %s"
 msgstr "Nežinomas fiksavimas %s"
 
-#: builtin/merge.c:87
+#: builtin/merge.c:88
 msgid "switch `m' requires a value"
 msgstr "jungikliui „m“ reikia reikšmės"
 
-#: builtin/merge.c:124
+#: builtin/merge.c:125
 #, c-format
 msgid "Could not find merge strategy '%s'.\n"
 msgstr "Suliejimo strategija '%s' nerasta.\n"
 
-#: builtin/merge.c:125
+#: builtin/merge.c:126
 #, c-format
 msgid "Available strategies are:"
 msgstr "Galimos strategijos:"
 
-#: builtin/merge.c:130
+#: builtin/merge.c:131
 #, c-format
 msgid "Available custom strategies are:"
 msgstr "Galimos specialios strategijos:"
 
-#: builtin/merge.c:232
+#: builtin/merge.c:233
 msgid "could not run stash."
 msgstr "nepavyko paleisti ?"
 
-#: builtin/merge.c:237
+#: builtin/merge.c:238
 msgid "stash failed"
 msgstr ""
 
-#: builtin/merge.c:242
+#: builtin/merge.c:243
 #, c-format
 msgid "not a valid object: %s"
 msgstr "nevalidus objektas: %s"
 
-#: builtin/merge.c:260 builtin/merge.c:277
+#: builtin/merge.c:261 builtin/merge.c:278
 msgid "read-tree failed"
 msgstr "read-tree nepavyko"
 
-#: builtin/merge.c:306
+#: builtin/merge.c:307
 msgid " (nothing to squash)"
 msgstr ""
 
-#: builtin/merge.c:319
+#: builtin/merge.c:320
 #, c-format
 msgid "Squash commit -- not updating HEAD\n"
 msgstr ""
 
-#: builtin/merge.c:322 builtin/merge.c:817 builtin/merge.c:1398
-#: builtin/merge.c:1410 builtin/revert.c:213
+#: builtin/merge.c:323 builtin/merge.c:844 builtin/merge.c:1430
+#: builtin/merge.c:1442 builtin/revert.c:213
 #, c-format
 msgid "Could not write to '%s'"
 msgstr "Negalėjome rašyti į '%s'"
 
-#: builtin/merge.c:350
+#: builtin/merge.c:352
 msgid "Writing SQUASH_MSG"
 msgstr "Rašoma SQUASH_MSG"
 
-#: builtin/merge.c:352
+#: builtin/merge.c:354
 msgid "Finishing SQUASH_MSG"
 msgstr "Baigiama SQUASH_MSG"
 
-#: builtin/merge.c:372
+#: builtin/merge.c:374
 #, c-format
 msgid "No merge message -- not updating HEAD\n"
 msgstr "Nėra suliejimo žinutės -- neatnaujinamas HEAD\n"
 
-#: builtin/merge.c:423
+#: builtin/merge.c:425
 #, c-format
 msgid "'%s' does not point to a commit"
 msgstr "'%s' nerodo į fiksavimą"
 
-#: builtin/merge.c:518
+#: builtin/merge.c:517
 #, c-format
 msgid "Bad branch.%s.mergeoptions string: %s"
 msgstr "Bloga branch.:%s.mergeoptions eilutė: %s"
 
-#: builtin/merge.c:540
+#: builtin/merge.c:550
 #, c-format
 msgid "%s: negative length %s"
 msgstr "%s: neigiamas ilgis %s"
 
-#: builtin/merge.c:590
+#: builtin/merge.c:609
 msgid "git write-tree failed to write a tree"
 msgstr "git write-tree nepavyko įrašyti medžio"
 
-#: builtin/merge.c:632
+#: builtin/merge.c:659
 msgid "failed to read the cache"
 msgstr "nepavyko nuskaityti podėlio"
 
-#: builtin/merge.c:649
+#: builtin/merge.c:676
 msgid "Unable to write index."
 msgstr "Negalėjome rašyti indekso."
 
-#: builtin/merge.c:662
+#: builtin/merge.c:689
 msgid "Not handling anything other than two heads merge."
 msgstr "Nepalaikome nieko kito kaip dviejų galvų suliejimo."
 
-#: builtin/merge.c:676
+#: builtin/merge.c:703
 #, c-format
 msgid "Unknown option for merge-recursive: -X%s"
 msgstr "Nežinoma merge-recursive parinktis: -X%s"
 
-#: builtin/merge.c:690
+#: builtin/merge.c:717
 #, c-format
 msgid "unable to write %s"
 msgstr "Negalėjome rašyti %s"
 
-#: builtin/merge.c:814 builtin/merge.c:893 builtin/merge.c:1395
-#: builtin/merge.c:1404 builtin/revert.c:210
+#: builtin/merge.c:841 builtin/merge.c:920 builtin/merge.c:1427
+#: builtin/merge.c:1436 builtin/revert.c:210
 #, c-format
 msgid "Could not open '%s' for writing"
 msgstr "Nepavyko atidaryti '%s' rašymui"
 
-#: builtin/merge.c:842
+#: builtin/merge.c:852
+#, fuzzy, c-format
+msgid "Could not read from '%s'"
+msgstr "nepavyko perskaityti '%s'"
+
+#: builtin/merge.c:869
 #, c-format
 msgid "Wonderful.\n"
 msgstr "Nuostabu.\n"
 
-#: builtin/merge.c:909
+#: builtin/merge.c:936
 #, c-format
 msgid "Automatic merge failed; fix conflicts and then commit the result.\n"
-msgstr "Automatinis suliejimas nepavyko; išspręskite konfliktus ir įkelkite rezultatą.\n"
+msgstr ""
+"Automatinis suliejimas nepavyko; išspręskite konfliktus ir įkelkite "
+"rezultatą.\n"
 
-#: builtin/merge.c:924
+#: builtin/merge.c:951
 #, c-format
 msgid "'%s' is not a commit"
 msgstr "'%s' yra ne įkėlimas"
 
-#: builtin/merge.c:1024
+#: builtin/merge.c:992
+#, fuzzy
+msgid "No current branch."
+msgstr "Jokioje šakoje."
+
+#: builtin/merge.c:994
+#, fuzzy
+msgid "No remote for the current branch."
+msgstr "negalima pervadinti dabartinės šakos kol esate jokioje."
+
+#: builtin/merge.c:996
+msgid "No default upstream defined for the current branch."
+msgstr ""
+
+#: builtin/merge.c:1001
+#, c-format
+msgid "No remote tracking branch for %s from %s"
+msgstr ""
+
+#: builtin/merge.c:1053
 msgid "There is no merge to abort (MERGE_HEAD missing)."
 msgstr "Nėra suliejimo, kurį reikia nutraukti (trūksta MERGE_HEAD)."
 
-#: builtin/merge.c:1039
+#: builtin/merge.c:1068
 msgid ""
 "You have not concluded your merge (MERGE_HEAD exists).\n"
 "Please, commit your changes before you can merge."
@@ -2024,80 +2147,93 @@ msgstr ""
 "Jūs nebaigėte suliejimo (MERGE_HEAD egzistuoja).\n"
 "Prašome, fiksuokite savo pakeitimus prieš suliedami."
 
-#: builtin/merge.c:1042
+#: builtin/merge.c:1071
 msgid "You have not concluded your merge (MERGE_HEAD exists)."
 msgstr ""
 
-#: builtin/merge.c:1058
+#: builtin/merge.c:1075
+#, fuzzy
+msgid ""
+"You have not concluded your cherry-pick (CHERRY_PICK_HEAD exists).\n"
+"Please, commit your changes before you can merge."
+msgstr ""
+"Jūs nebaigėte suliejimo (MERGE_HEAD egzistuoja).\n"
+"Prašome, fiksuokite savo pakeitimus prieš suliedami."
+
+#: builtin/merge.c:1078
+msgid "You have not concluded your cherry-pick (CHERRY_PICK_HEAD exists)."
+msgstr ""
+
+#: builtin/merge.c:1087
 msgid "You cannot combine --squash with --no-ff."
 msgstr ""
 
-#: builtin/merge.c:1063
+#: builtin/merge.c:1092
 msgid "You cannot combine --no-ff with --ff-only."
 msgstr ""
 
-#: builtin/merge.c:1094
+#: builtin/merge.c:1126
 msgid "Can merge only exactly one commit into empty head"
 msgstr ""
 
-#: builtin/merge.c:1097
+#: builtin/merge.c:1129
 msgid "Squash commit into empty head not supported yet"
 msgstr ""
 
-#: builtin/merge.c:1099
+#: builtin/merge.c:1131
 msgid "Non-fast-forward commit does not make sense into an empty head"
 msgstr ""
 
-#: builtin/merge.c:1103 builtin/merge.c:1149
+#: builtin/merge.c:1135 builtin/merge.c:1181
 #, c-format
 msgid "%s - not something we can merge"
 msgstr ""
 
-#: builtin/merge.c:1207
+#: builtin/merge.c:1239
 #, c-format
 msgid "Updating %s..%s\n"
 msgstr ""
 
-#: builtin/merge.c:1241
+#: builtin/merge.c:1273
 #, c-format
 msgid "Trying really trivial in-index merge...\n"
 msgstr ""
 
-#: builtin/merge.c:1245
+#: builtin/merge.c:1277
 #, c-format
 msgid "Nope.\n"
 msgstr ""
 
-#: builtin/merge.c:1278
+#: builtin/merge.c:1310
 msgid "Not possible to fast-forward, aborting."
 msgstr ""
 
-#: builtin/merge.c:1304 builtin/merge.c:1377
+#: builtin/merge.c:1336 builtin/merge.c:1409
 #, c-format
 msgid "Rewinding the tree to pristine...\n"
 msgstr ""
 
-#: builtin/merge.c:1308
+#: builtin/merge.c:1340
 #, c-format
 msgid "Trying merge strategy %s...\n"
 msgstr ""
 
-#: builtin/merge.c:1369
+#: builtin/merge.c:1401
 #, c-format
 msgid "No merge strategy handled the merge.\n"
 msgstr ""
 
-#: builtin/merge.c:1371
+#: builtin/merge.c:1403
 #, c-format
 msgid "Merge with strategy %s failed.\n"
 msgstr ""
 
-#: builtin/merge.c:1379
+#: builtin/merge.c:1411
 #, c-format
 msgid "Using the %s to prepare resolving by hand.\n"
 msgstr ""
 
-#: builtin/merge.c:1415
+#: builtin/merge.c:1447
 #, c-format
 msgid "Automatic merge went well; stopped before committing as requested\n"
 msgstr ""
@@ -2164,154 +2300,154 @@ msgstr ""
 msgid "renaming '%s' failed"
 msgstr ""
 
-#: builtin/notes.c:149
+#: builtin/notes.c:139
 #, c-format
 msgid "unable to start 'show' for object '%s'"
 msgstr ""
 
-#: builtin/notes.c:155
+#: builtin/notes.c:145
 msgid "can't fdopen 'show' output fd"
 msgstr ""
 
-#: builtin/notes.c:165
+#: builtin/notes.c:155
 #, c-format
 msgid "failed to close pipe to 'show' for object '%s'"
 msgstr ""
 
-#: builtin/notes.c:168
+#: builtin/notes.c:158
 #, c-format
 msgid "failed to finish 'show' for object '%s'"
 msgstr ""
 
-#: builtin/notes.c:185 builtin/tag.c:303
+#: builtin/notes.c:175 builtin/tag.c:303
 #, c-format
 msgid "could not create file '%s'"
 msgstr ""
 
-#: builtin/notes.c:199
+#: builtin/notes.c:189
 msgid "Please supply the note contents using either -m or -F option"
 msgstr ""
 
-#: builtin/notes.c:220 builtin/notes.c:981
+#: builtin/notes.c:210 builtin/notes.c:968
 #, c-format
 msgid "Removing note for object %s\n"
 msgstr ""
 
-#: builtin/notes.c:225
+#: builtin/notes.c:215
 msgid "unable to write note object"
 msgstr ""
 
-#: builtin/notes.c:227
+#: builtin/notes.c:217
 #, c-format
 msgid "The note contents has been left in %s"
 msgstr ""
 
-#: builtin/notes.c:261 builtin/tag.c:437
+#: builtin/notes.c:251 builtin/tag.c:448
 #, c-format
 msgid "cannot read '%s'"
 msgstr ""
 
-#: builtin/notes.c:263 builtin/tag.c:440
+#: builtin/notes.c:253 builtin/tag.c:451
 #, c-format
 msgid "could not open or read '%s'"
 msgstr ""
 
-#: builtin/notes.c:282 builtin/notes.c:455 builtin/notes.c:457
-#: builtin/notes.c:517 builtin/notes.c:569 builtin/notes.c:640
-#: builtin/notes.c:645 builtin/notes.c:720 builtin/notes.c:762
-#: builtin/notes.c:973 builtin/reset.c:303 builtin/tag.c:453
+#: builtin/notes.c:272 builtin/notes.c:445 builtin/notes.c:447
+#: builtin/notes.c:507 builtin/notes.c:561 builtin/notes.c:644
+#: builtin/notes.c:649 builtin/notes.c:724 builtin/notes.c:766
+#: builtin/notes.c:963 builtin/reset.c:303 builtin/tag.c:464
 #, c-format
 msgid "Failed to resolve '%s' as a valid ref."
 msgstr ""
 
-#: builtin/notes.c:285
+#: builtin/notes.c:275
 #, c-format
 msgid "Failed to read object '%s'."
 msgstr ""
 
-#: builtin/notes.c:309
+#: builtin/notes.c:299
 msgid "Cannot commit uninitialized/unreferenced notes tree"
 msgstr ""
 
-#: builtin/notes.c:350
+#: builtin/notes.c:340
 #, c-format
 msgid "Bad notes.rewriteMode value: '%s'"
 msgstr ""
 
-#: builtin/notes.c:360
+#: builtin/notes.c:350
 #, c-format
 msgid "Refusing to rewrite notes in %s (outside of refs/notes/)"
 msgstr ""
 
 #. TRANSLATORS: The first %s is the name of the
 #. environment variable, the second %s is its value
-#: builtin/notes.c:387
+#: builtin/notes.c:377
 #, c-format
 msgid "Bad %s value: '%s'"
 msgstr ""
 
-#: builtin/notes.c:451
+#: builtin/notes.c:441
 #, c-format
 msgid "Malformed input line: '%s'."
 msgstr ""
 
-#: builtin/notes.c:466
+#: builtin/notes.c:456
 #, c-format
 msgid "Failed to copy notes from '%s' to '%s'"
 msgstr ""
 
-#: builtin/notes.c:510 builtin/notes.c:562 builtin/notes.c:623
-#: builtin/notes.c:635 builtin/notes.c:708 builtin/notes.c:755
-#: builtin/notes.c:966 builtin/notes.c:1004
+#: builtin/notes.c:500 builtin/notes.c:554 builtin/notes.c:627
+#: builtin/notes.c:639 builtin/notes.c:712 builtin/notes.c:759
+#: builtin/notes.c:1028
 msgid "too many parameters"
 msgstr ""
 
-#: builtin/notes.c:523 builtin/notes.c:768
+#: builtin/notes.c:513 builtin/notes.c:772
 #, c-format
 msgid "No note found for object %s."
 msgstr ""
 
-#: builtin/notes.c:576
+#: builtin/notes.c:580
 #, c-format
 msgid ""
 "Cannot add notes. Found existing notes for object %s. Use '-f' to overwrite "
 "existing notes"
 msgstr ""
 
-#: builtin/notes.c:581 builtin/notes.c:658
+#: builtin/notes.c:585 builtin/notes.c:662
 #, c-format
 msgid "Overwriting existing notes for object %s\n"
 msgstr ""
 
-#: builtin/notes.c:631
+#: builtin/notes.c:635
 msgid "too few parameters"
 msgstr ""
 
-#: builtin/notes.c:652
+#: builtin/notes.c:656
 #, c-format
 msgid ""
 "Cannot copy notes. Found existing notes for object %s. Use '-f' to overwrite "
 "existing notes"
 msgstr ""
 
-#: builtin/notes.c:664
+#: builtin/notes.c:668
 #, c-format
 msgid "Missing notes on source object %s. Cannot copy."
 msgstr ""
 
-#: builtin/notes.c:713
+#: builtin/notes.c:717
 #, c-format
 msgid ""
 "The -m/-F/-c/-C options have been deprecated for the 'edit' subcommand.\n"
 "Please use 'git notes add -f -m/-F/-c/-C' instead.\n"
 msgstr ""
 
-#: builtin/notes.c:979
+#: builtin/notes.c:966
 #, c-format
 msgid "Object %s has no note\n"
 msgstr ""
 
-#: builtin/notes.c:1074
+#: builtin/notes.c:1098
 #, c-format
 msgid "Unknown subcommand: %s"
 msgstr ""
@@ -2558,74 +2694,70 @@ msgstr ""
 msgid "You do not have a valid HEAD"
 msgstr ""
 
-#: builtin/revert.c:412
-msgid "Cannot revert a root commit"
-msgstr ""
-
-#: builtin/revert.c:421
+#: builtin/revert.c:419
 #, c-format
 msgid "Commit %s is a merge but no -m option was given."
 msgstr ""
 
-#: builtin/revert.c:429
+#: builtin/revert.c:427
 #, c-format
 msgid "Commit %s does not have parent %d"
 msgstr ""
 
-#: builtin/revert.c:433
+#: builtin/revert.c:431
 #, c-format
 msgid "Mainline was specified but commit %s is not a merge."
 msgstr ""
 
 #. TRANSLATORS: The first %s will be "revert" or
 #. "cherry-pick", the second %s a SHA1
-#: builtin/revert.c:444
+#: builtin/revert.c:442
 #, c-format
 msgid "%s: cannot parse parent commit %s"
 msgstr ""
 
-#: builtin/revert.c:448
+#: builtin/revert.c:446
 #, c-format
 msgid "Cannot get commit message for %s"
 msgstr ""
 
-#: builtin/revert.c:510
+#: builtin/revert.c:508
 #, c-format
 msgid "could not revert %s... %s"
 msgstr ""
 
-#: builtin/revert.c:511
+#: builtin/revert.c:509
 #, c-format
 msgid "could not apply %s... %s"
 msgstr ""
 
-#: builtin/revert.c:544
+#: builtin/revert.c:542
 msgid "empty commit set passed"
 msgstr ""
 
-#: builtin/revert.c:552
+#: builtin/revert.c:550
 #, c-format
 msgid "git %s: failed to read the index"
 msgstr ""
 
-#: builtin/revert.c:557
+#: builtin/revert.c:555
 #, c-format
 msgid "git %s: failed to refresh the index"
 msgstr ""
 
-#: builtin/revert.c:573
+#: builtin/revert.c:571
 msgid "cherry-pick --ff cannot be used with --signoff"
 msgstr ""
 
-#: builtin/revert.c:575
+#: builtin/revert.c:573
 msgid "cherry-pick --ff cannot be used with --no-commit"
 msgstr ""
 
-#: builtin/revert.c:577
+#: builtin/revert.c:575
 msgid "cherry-pick --ff cannot be used with -x"
 msgstr ""
 
-#: builtin/revert.c:579
+#: builtin/revert.c:577
 msgid "cherry-pick --ff cannot be used with --edit"
 msgstr ""
 
@@ -2660,12 +2792,12 @@ msgstr ""
 msgid "git rm: unable to remove %s"
 msgstr ""
 
-#: builtin/shortlog.c:161
+#: builtin/shortlog.c:157
 #, c-format
 msgid "Missing author: %s"
 msgstr ""
 
-#: builtin/tag.c:121 builtin/tag.c:456
+#: builtin/tag.c:121
 #, c-format
 msgid "tag name too long: %.*s..."
 msgstr ""
@@ -2739,43 +2871,52 @@ msgstr ""
 msgid "The tag message has been left in %s\n"
 msgstr ""
 
-#: builtin/tag.c:420
+#: builtin/tag.c:431
 msgid "-n option is only allowed with -l."
 msgstr ""
 
-#: builtin/tag.c:422
+#: builtin/tag.c:433
 msgid "--contains option is only allowed with -l."
 msgstr ""
 
-#: builtin/tag.c:430
+#: builtin/tag.c:441
 msgid "only one -F or -m option is allowed."
 msgstr ""
 
-#: builtin/tag.c:450
+#: builtin/tag.c:461
 msgid "too many params"
 msgstr ""
 
-#: builtin/tag.c:458
+#: builtin/tag.c:467
 #, c-format
 msgid "'%s' is not a valid tag name."
 msgstr ""
 
-#: builtin/tag.c:463
+#: builtin/tag.c:472
 #, c-format
 msgid "tag '%s' already exists"
 msgstr ""
 
-#: builtin/tag.c:471
+#: builtin/tag.c:480
 #, c-format
 msgid "%s: cannot lock the ref"
 msgstr ""
 
-#: builtin/tag.c:473
+#: builtin/tag.c:482
 #, c-format
 msgid "%s: cannot update the ref"
 msgstr ""
 
-#: builtin/tag.c:475
+#: builtin/tag.c:484
 #, c-format
 msgid "Updated tag '%s' (was %s)\n"
 msgstr ""
+
+#~ msgid "Paths with --interactive does not make sense."
+#~ msgstr "Keliai su --interactive neturi prasmės."
+
+#~ msgid "cannot mix --fixed-strings and regexp"
+#~ msgstr "negalima kartu naudoti --fixed-strings ir regulariojo reiškinio"
+
+#~ msgid "invalid --decorate option: %s"
+#~ msgstr "nevalidi --decorate parinktis: %s"
