@@ -25,10 +25,11 @@
 # output            išvestis
 # patch             lopas
 # pattern           ? (grep context)
+# push              (su)stumti
 # rebase            rebazuoti
 # ref/reference     nuoroda
 # remote            nuotolinis
-# repository        repozitorija
+# repository        saugykla
 # reset             atstatyti
 # revision          revizija
 # specify           nurodyti
@@ -602,11 +603,11 @@ msgstr "%s yra geras\n"
 
 #: builtin/bundle.c:56
 msgid "Need a repository to create a bundle."
-msgstr "Reikia repozitorijos kad galėtume sukurti rinkinį"
+msgstr "Reikia saugyklos, kad galėtume sukurti rinkinį."
 
 #: builtin/bundle.c:60
 msgid "Need a repository to unbundle."
-msgstr "Reikia repozitorijos norint išrinkti."
+msgstr "Reikia saugyklos norint išrinkti rinkinį."
 
 #: builtin/checkout.c:111 builtin/checkout.c:139
 #, c-format
@@ -631,7 +632,7 @@ msgstr "kelias '%s' neturi visų 3 versijų"
 #: builtin/checkout.c:176
 #, c-format
 msgid "path '%s': cannot merge"
-msgstr "kelias '%s': negalima sujungti"
+msgstr "kelias '%s': negalima sulieti"
 
 #: builtin/checkout.c:193
 #, c-format
@@ -888,7 +889,7 @@ msgstr "Nešalinama %s\n"
 #: builtin/clone.c:214
 #, c-format
 msgid "reference repository '%s' is not a local directory."
-msgstr "nurodyta repozitorija '%s' yra ne vietinis katalogas."
+msgstr "nurodyta saugykla '%s' nėra vietinis katalogas."
 
 #: builtin/clone.c:241
 #, c-format
@@ -941,7 +942,7 @@ msgstr "Per daug argumentų."
 
 #: builtin/clone.c:398
 msgid "You must specify a repository to clone."
-msgstr "Privalote nurodyti katalogą klonavimui."
+msgstr "Privalote nurodyti saugyklą klonavimui."
 
 #: builtin/clone.c:406
 #, c-format
@@ -951,7 +952,7 @@ msgstr "--bare ir --origin %s parinktys nesuderinamos."
 #: builtin/clone.c:420
 #, c-format
 msgid "repository '%s' does not exist"
-msgstr ""
+msgstr "saugykla '%s' neegzistuoja"
 
 #: builtin/clone.c:425
 msgid "--depth is ignored in local clones; use file:// instead."
@@ -980,7 +981,7 @@ msgstr "negalėjome sukurti darbinio medžio katalogo '%s'."
 #: builtin/clone.c:480
 #, c-format
 msgid "Cloning into bare repository %s...\n"
-msgstr "Klonuojame į pliką repozitoriją %s...\n"
+msgstr "Klonuojame į pliką saugyklą %s...\n"
 
 #: builtin/clone.c:482
 #, c-format
@@ -999,7 +1000,7 @@ msgstr "Nuotolinė šaka %s nerasta baziniame %s, naudojame HEAD vietoj to"
 
 #: builtin/clone.c:589
 msgid "You appear to have cloned an empty repository."
-msgstr "Panašu, kad nuklonavai tuščią repozitoriją."
+msgstr "Panašu, kad nuklonavai tuščią saugyklą."
 
 #: builtin/clone.c:631
 msgid "remote HEAD refers to nonexistent ref, unable to checkout.\n"
@@ -1332,7 +1333,7 @@ msgid ""
 "new_index file. Check that disk is not full or quota is\n"
 "not exceeded, and then \"git reset HEAD\" to recover."
 msgstr ""
-"Repozitorija buvo atnaujinta, bet nepavyko įrašyti new_index\n"
+"Saugykla buvo atnaujinta, bet nepavyko įrašyti new_index\n"
 "(naujojo indekso) failo. Patikrinkite, ar diskas ne pilnas\n"
 "arba disko kvota neviršyta, ir tuomet \"git reset HEAD\" atstatymui."
 
@@ -1432,7 +1433,7 @@ msgstr "nevalidi parinktis: %s"
 
 #: builtin/diff.c:296
 msgid "Not a git repository"
-msgstr "Ne git repozitorija"
+msgstr "Ne git saugykla"
 
 #: builtin/diff.c:346
 #, c-format
@@ -1563,7 +1564,7 @@ msgstr "(joks)"
 #: builtin/fetch.c:674
 #, c-format
 msgid "Refusing to fetch into current branch %s of non-bare repository"
-msgstr "Atsisakoma siųsti į dabartinę ne plikos repozitorijos šaką"
+msgstr "Atsisakoma siųsti į dabartinę ne plikos saugyklos šaką %s"
 
 #: builtin/fetch.c:708
 #, c-format
@@ -1595,7 +1596,7 @@ msgid ""
 "No remote repository specified.  Please, specify either a URL or a\n"
 "remote name from which new revisions should be fetched."
 msgstr ""
-"Nenurodyta jokia nuotolinė repozitorija. Prašome, nurodykite arba URL arba\n"
+"Nenurodyta jokia nuotolinė saugykla. Prašome, nurodykite arba URL arba\n"
 "nuotolinė vardą, iš kurio bus siunčiamos naujos revizijos."
 
 #: builtin/fetch.c:903
@@ -1604,7 +1605,7 @@ msgstr "Turite nurodyti žymos vardą."
 
 #: builtin/fetch.c:946
 msgid "fetch --all does not take a repository argument"
-msgstr "fetch --all nereikalingas repozitorijos argumentas"
+msgstr "fetch --all nereikalingas saugyklos argumentas"
 
 #: builtin/fetch.c:948
 msgid "fetch --all does not make sense with refspecs"
@@ -1636,7 +1637,7 @@ msgstr "beprotiškai ilgas objekto katalogas %.*s"
 #: builtin/gc.c:223
 #, c-format
 msgid "Auto packing the repository for optimum performance.\n"
-msgstr "Automatiškai pakuojama repozitorija optimaliam vykdymui.\n"
+msgstr "Saugykla automatiškai pakuojama optimialiam našumui.\n"
 
 #: builtin/gc.c:226
 #, fuzzy, c-format
@@ -1644,7 +1645,7 @@ msgid ""
 "Auto packing the repository for optimum performance. You may also\n"
 "run \"git gc\" manually. See \"git help gc\" for more information.\n"
 msgstr ""
-"Automatiškai pakuojama repozitorija optimaliam vykdymui. Jūs galite taip\n"
+"Saugykla automatiškai pakuojama optimaliam našumui. Jūs galite taip\n"
 "pat leisti \"git gc\" rankiniu būdu. Daugiau informacijos \"git help gc\"."
 
 #: builtin/gc.c:254
@@ -1823,7 +1824,7 @@ msgstr "Negalėjome sukurti katalogo '%s'"
 #: builtin/init-db.c:419
 #, c-format
 msgid "%s%s Git repository in %s%s\n"
-msgstr "%s%s Git repozitorija %s%s\n"
+msgstr "%s%s Git saugykla %s%s\n"
 
 #: builtin/init-db.c:420
 msgid "Reinitialized existing"
@@ -2166,15 +2167,15 @@ msgstr ""
 
 #: builtin/merge.c:1087
 msgid "You cannot combine --squash with --no-ff."
-msgstr ""
+msgstr "Jūs negalite jungti --squash su --no-ff."
 
 #: builtin/merge.c:1092
 msgid "You cannot combine --no-ff with --ff-only."
-msgstr ""
+msgstr "Jūs negalite jungti --no-ff su -ff-only."
 
 #: builtin/merge.c:1126
 msgid "Can merge only exactly one commit into empty head"
-msgstr ""
+msgstr "Galima lieti lygiai vieną fiksavimą į tuščią galvą"
 
 #: builtin/merge.c:1129
 msgid "Squash commit into empty head not supported yet"
@@ -2187,123 +2188,123 @@ msgstr ""
 #: builtin/merge.c:1135 builtin/merge.c:1181
 #, c-format
 msgid "%s - not something we can merge"
-msgstr ""
+msgstr "%s - ne kažkas ką mes galime lieti"
 
 #: builtin/merge.c:1239
 #, c-format
 msgid "Updating %s..%s\n"
-msgstr ""
+msgstr "Atnaujiname %s..%s\n"
 
 #: builtin/merge.c:1273
 #, c-format
 msgid "Trying really trivial in-index merge...\n"
-msgstr ""
+msgstr "Bandome tikrai trivialų indeksinį liejimą...\n"
 
 #: builtin/merge.c:1277
 #, c-format
 msgid "Nope.\n"
-msgstr ""
+msgstr "Ne.\n"
 
 #: builtin/merge.c:1310
 msgid "Not possible to fast-forward, aborting."
-msgstr ""
+msgstr "Neįmanoma tiesiškai sulieti, nutraukiama."
 
 #: builtin/merge.c:1336 builtin/merge.c:1409
 #, c-format
 msgid "Rewinding the tree to pristine...\n"
-msgstr ""
+msgstr "Atstatome medį į nesugadintą...\n"
 
 #: builtin/merge.c:1340
 #, c-format
 msgid "Trying merge strategy %s...\n"
-msgstr ""
+msgstr "Bandoma liejimo strategija %s...\n"
 
 #: builtin/merge.c:1401
 #, c-format
 msgid "No merge strategy handled the merge.\n"
-msgstr ""
+msgstr "Nei vienai liejimo strategijai nepavyko sulieti.\n"
 
 #: builtin/merge.c:1403
 #, c-format
 msgid "Merge with strategy %s failed.\n"
-msgstr ""
+msgstr "Liejimas su strategija %s nepavyko.\n"
 
 #: builtin/merge.c:1411
 #, c-format
 msgid "Using the %s to prepare resolving by hand.\n"
-msgstr ""
+msgstr "Naudojame %s ruošdami rankinį sprendimą.\n"
 
 #: builtin/merge.c:1447
 #, c-format
 msgid "Automatic merge went well; stopped before committing as requested\n"
-msgstr ""
+msgstr "Automatinis suliejimas pavyko; sustabdyta prieš fiksavimą kaip reikalauta\n"
 
 #: builtin/mv.c:103
 #, c-format
 msgid "Checking rename of '%s' to '%s'\n"
-msgstr ""
+msgstr "Tikrinamas '%s' pervadinimas į '%s'\n"
 
 #: builtin/mv.c:107
 msgid "bad source"
-msgstr ""
+msgstr "bloga pradžia"
 
 #: builtin/mv.c:110
 msgid "can not move directory into itself"
-msgstr ""
+msgstr "negalima perkelti katalogo į save patį"
 
 #: builtin/mv.c:113
 msgid "cannot move directory over file"
-msgstr ""
+msgstr "negalima perkelti katalogo ant failo"
 
 #: builtin/mv.c:123
 #, c-format
 msgid "Huh? %.*s is in index?"
-msgstr ""
+msgstr "Huh? %.*s yra indekse?"
 
 #: builtin/mv.c:135
 msgid "source directory is empty"
-msgstr ""
+msgstr "pradinis katalogas yra tuščias"
 
 #: builtin/mv.c:166
 msgid "not under version control"
-msgstr ""
+msgstr "neversijuojamas"
 
 #: builtin/mv.c:168
 msgid "destination exists"
-msgstr ""
+msgstr "paskirtis egzistuoja"
 
 #: builtin/mv.c:175
 #, c-format
 msgid "%s; will overwrite!"
-msgstr ""
+msgstr "%s; perrašys!"
 
 #: builtin/mv.c:178
 msgid "Cannot overwrite"
-msgstr ""
+msgstr "Negalima užrašyti ant viršaus"
 
 #: builtin/mv.c:181
 msgid "multiple sources for the same target"
-msgstr ""
+msgstr "keletas pradinių tam pačiam tikslui"
 
 #: builtin/mv.c:196
 #, c-format
 msgid "%s, source=%s, destination=%s"
-msgstr ""
+msgstr "%s, šaltinis=%s, paskirtis=%s"
 
 #: builtin/mv.c:206
 #, c-format
 msgid "Renaming %s to %s\n"
-msgstr ""
+msgstr "Pervadiname %s į %s\n"
 
 #: builtin/mv.c:209
 #, c-format
 msgid "renaming '%s' failed"
-msgstr ""
+msgstr "'%s' pervadinimas nepavyko"
 
 #: builtin/notes.c:139
 #, c-format
 msgid "unable to start 'show' for object '%s'"
-msgstr ""
+msgstr "negalima paleisti 'show' objektui '%s'"
 
 #: builtin/notes.c:145
 msgid "can't fdopen 'show' output fd"
@@ -2312,45 +2313,45 @@ msgstr ""
 #: builtin/notes.c:155
 #, c-format
 msgid "failed to close pipe to 'show' for object '%s'"
-msgstr ""
+msgstr "nepavyko uždaryti kanalo 'show' objektui '%s'"
 
 #: builtin/notes.c:158
 #, c-format
 msgid "failed to finish 'show' for object '%s'"
-msgstr ""
+msgstr "nepavyko pabaigti 'show' objektui '%s'"
 
 #: builtin/notes.c:175 builtin/tag.c:303
 #, c-format
 msgid "could not create file '%s'"
-msgstr ""
+msgstr "negalima sukurti failo '%s'"
 
 #: builtin/notes.c:189
 msgid "Please supply the note contents using either -m or -F option"
-msgstr ""
+msgstr "Prašome nurodyti žymos turinį naudodami -m arba -F parinktis"
 
 #: builtin/notes.c:210 builtin/notes.c:968
 #, c-format
 msgid "Removing note for object %s\n"
-msgstr ""
+msgstr "Išmetame žymą objektui %s\n"
 
 #: builtin/notes.c:215
 msgid "unable to write note object"
-msgstr ""
+msgstr "negalima rašyti žymos objekto"
 
 #: builtin/notes.c:217
 #, c-format
 msgid "The note contents has been left in %s"
-msgstr ""
+msgstr "Žymos turinys paliktas %s"
 
 #: builtin/notes.c:251 builtin/tag.c:448
 #, c-format
 msgid "cannot read '%s'"
-msgstr ""
+msgstr "negalima skaityti '%s'"
 
 #: builtin/notes.c:253 builtin/tag.c:451
 #, c-format
 msgid "could not open or read '%s'"
-msgstr ""
+msgstr "negalima atidaryti arba skaityti '%s'"
 
 #: builtin/notes.c:272 builtin/notes.c:445 builtin/notes.c:447
 #: builtin/notes.c:507 builtin/notes.c:561 builtin/notes.c:644
@@ -2358,54 +2359,54 @@ msgstr ""
 #: builtin/notes.c:963 builtin/reset.c:303 builtin/tag.c:464
 #, c-format
 msgid "Failed to resolve '%s' as a valid ref."
-msgstr ""
+msgstr "Nepavyko nustatyti '%s' kaip validžios nuorodos."
 
 #: builtin/notes.c:275
 #, c-format
 msgid "Failed to read object '%s'."
-msgstr ""
+msgstr "Nepavyko nuskaityti objekto '%s'."
 
 #: builtin/notes.c:299
 msgid "Cannot commit uninitialized/unreferenced notes tree"
-msgstr ""
+msgstr "Negalima fiksuoti neinicijuoto/nenuorodinio žymų medžio"
 
 #: builtin/notes.c:340
 #, c-format
 msgid "Bad notes.rewriteMode value: '%s'"
-msgstr ""
+msgstr "Bloga notes.rewriteMode reikšmė: '%s'"
 
 #: builtin/notes.c:350
 #, c-format
 msgid "Refusing to rewrite notes in %s (outside of refs/notes/)"
-msgstr ""
+msgstr "Atsisakoma perrašyti žymas %s (už refs/notes/)"
 
 #. TRANSLATORS: The first %s is the name of the
 #. environment variable, the second %s is its value
 #: builtin/notes.c:377
 #, c-format
 msgid "Bad %s value: '%s'"
-msgstr ""
+msgstr "Bloga %s reikšmė: '%s'"
 
 #: builtin/notes.c:441
 #, c-format
 msgid "Malformed input line: '%s'."
-msgstr ""
+msgstr "Blogai suformuota įvesties eilutė: '%s'."
 
 #: builtin/notes.c:456
 #, c-format
 msgid "Failed to copy notes from '%s' to '%s'"
-msgstr ""
+msgstr "Nepavyko nukopijuoti žymų iš '%s' į '%s'"
 
 #: builtin/notes.c:500 builtin/notes.c:554 builtin/notes.c:627
 #: builtin/notes.c:639 builtin/notes.c:712 builtin/notes.c:759
 #: builtin/notes.c:1028
 msgid "too many parameters"
-msgstr ""
+msgstr "per daug parametrų"
 
 #: builtin/notes.c:513 builtin/notes.c:772
 #, c-format
 msgid "No note found for object %s."
-msgstr ""
+msgstr "Nerasta jokia žyma objektui %s."
 
 #: builtin/notes.c:580
 #, c-format
@@ -2413,15 +2414,17 @@ msgid ""
 "Cannot add notes. Found existing notes for object %s. Use '-f' to overwrite "
 "existing notes"
 msgstr ""
+"Žymų pridėjimas negalimas. Rasta egzistuojančių žymų objektui %s. "
+"Naudokite '-f' norėdami perrašyti egzistuojančias žymas"
 
 #: builtin/notes.c:585 builtin/notes.c:662
 #, c-format
 msgid "Overwriting existing notes for object %s\n"
-msgstr ""
+msgstr "Perrašome egzistuojančias pastabas objektui %s\n"
 
 #: builtin/notes.c:635
 msgid "too few parameters"
-msgstr ""
+msgstr "per mažai parametrų"
 
 #: builtin/notes.c:656
 #, c-format
@@ -2429,11 +2432,12 @@ msgid ""
 "Cannot copy notes. Found existing notes for object %s. Use '-f' to overwrite "
 "existing notes"
 msgstr ""
+"Pastabų kopijavimas negalimas."
 
 #: builtin/notes.c:668
 #, c-format
 msgid "Missing notes on source object %s. Cannot copy."
-msgstr ""
+msgstr "Trūksta žymos šaltinio objektui %s. Negalima kopijuoti."
 
 #: builtin/notes.c:717
 #, c-format
@@ -2441,24 +2445,26 @@ msgid ""
 "The -m/-F/-c/-C options have been deprecated for the 'edit' subcommand.\n"
 "Please use 'git notes add -f -m/-F/-c/-C' instead.\n"
 msgstr ""
+"Parinktis -m/-F/-c/-C pakeitė 'edit' subkomanda.\n"
+"Prašome vietoje to naudoti 'git notes add -f -m/-F/-c/-C'.\n"
 
 #: builtin/notes.c:966
 #, c-format
 msgid "Object %s has no note\n"
-msgstr ""
+msgstr "Objektas %s neturi žymos\n"
 
 #: builtin/notes.c:1098
 #, c-format
 msgid "Unknown subcommand: %s"
-msgstr ""
+msgstr "Nežinoma subkomanda: %s"
 
 #: builtin/push.c:43
 msgid "tag shorthand without <tag>"
-msgstr ""
+msgstr "žymos sutrumpinimas be <tag>"
 
 #: builtin/push.c:62
 msgid "--delete only accepts plain target ref names"
-msgstr ""
+msgstr "--delete priima tik grynuosius nuorodų vardus"
 
 #: builtin/push.c:72
 #, c-format
@@ -2469,6 +2475,11 @@ msgid ""
 "\n"
 "    git push %s HEAD:<name-of-remote-branch>\n"
 msgstr ""
+"Jūs dabar nesate šakoje.\n"
+"Norėdami sustumti istoriją, vedančią į dabartinę (atjungto HEAD)\n"
+"padėtį, naudokite\n"
+"\n"
+"    git push %s HEAD:<nuotolinės-šakos-vardas>\n"
 
 #: builtin/push.c:79
 #, c-format
@@ -2478,26 +2489,31 @@ msgid ""
 "\n"
 "    git push --set-upstream %s %s\n"
 msgstr ""
+"Dabartinė šaka %s neturi bazinės šakos.\n"
+"Norėdami sustumti dabartinę šaką ir nustatyti nuotolinę kaip bazinę, naudokite\n"
+"\n"
+"    git push --set-upstream %s %s\n"
 
 #: builtin/push.c:87
 #, c-format
 msgid "The current branch %s has multiple upstream branches, refusing to push."
-msgstr ""
+msgstr "Dabartinė šaka %s turi keletą bazinių šakų, atsisakome stumti."
 
 #: builtin/push.c:110
 msgid ""
 "You didn't specify any refspecs to push, and push.default is \"nothing\"."
 msgstr ""
+"Jūs nenurodėte jokių stūmimo nuorodų, ir push.default yra \"niekas\"."
 
 #: builtin/push.c:130
 #, c-format
 msgid "Pushing to %s\n"
-msgstr ""
+msgstr "Stumiame į %s\n"
 
 #: builtin/push.c:134
 #, c-format
 msgid "failed to push some refs to '%s'"
-msgstr ""
+msgstr "nepavyko sustumti kai kurių nuorodų į '%s'"
 
 #: builtin/push.c:142
 #, c-format
@@ -2510,7 +2526,7 @@ msgstr ""
 #: builtin/push.c:159
 #, c-format
 msgid "bad repository '%s'"
-msgstr ""
+msgstr "bloga saugykla '%s'"
 
 #: builtin/push.c:160
 msgid ""
