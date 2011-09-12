@@ -2540,103 +2540,112 @@ msgid ""
 "\n"
 "    git push <name>\n"
 msgstr ""
+"Nenustatytas sustūmimo kelias.\n"
+"Nurodykite URL komandinėje eilutėje arba sukonifigūruokite nuotolinę "
+"saugyklą naudodami\n"
+"\n"
+"    git remote add <vardas> <url>\n"
+"\n"
+"ir tuomet sustumkite naudodami nuotolinį pavadinimą\n"
+"\n"
+"    git push <vardas>\n"
 
 #: builtin/push.c:175
 msgid "--all and --tags are incompatible"
-msgstr ""
+msgstr "--all ir --tags yra nesuderinami"
 
 #: builtin/push.c:176
 msgid "--all can't be combined with refspecs"
-msgstr ""
+msgstr "--all negali būti kombinuotas su nuorodomis"
 
 #: builtin/push.c:181
 msgid "--mirror and --tags are incompatible"
-msgstr ""
+msgstr "--mirror ir --tags yra nesuderinami"
 
 #: builtin/push.c:182
 msgid "--mirror can't be combined with refspecs"
-msgstr ""
+msgstr "--mirror negali būti kombinuotas su nuorodomis"
 
 #: builtin/push.c:187
 msgid "--all and --mirror are incompatible"
-msgstr ""
+msgstr "--all ir --mirror yra nesuderinami"
 
 #: builtin/push.c:253
 msgid "--delete is incompatible with --all, --mirror and --tags"
-msgstr ""
+msgstr "--delete yra nesuderinamas su --all, --mirror ir --tags"
 
 #: builtin/push.c:255
 msgid "--delete doesn't make sense without any refs"
-msgstr ""
+msgstr "--delete neturi prasmės be nuorodų"
 
 #: builtin/reset.c:33
 msgid "mixed"
-msgstr ""
+msgstr "maišyto"
 
 #: builtin/reset.c:33
 msgid "soft"
-msgstr ""
+msgstr "minkšto"
 
 #: builtin/reset.c:33
 msgid "hard"
-msgstr ""
+msgstr "kieto"
 
 #: builtin/reset.c:33
 msgid "merge"
-msgstr ""
+msgstr "suliejimo"
 
 #: builtin/reset.c:33
 msgid "keep"
-msgstr ""
+msgstr "paliekamo"
 
 #: builtin/reset.c:95
 msgid "You do not have a valid HEAD."
-msgstr ""
+msgstr "Jūs neturite validaus HEAD."
 
 #: builtin/reset.c:97
 msgid "Failed to find tree of HEAD."
-msgstr ""
+msgstr "Nepavyko rasti HEAD medžio."
 
 #: builtin/reset.c:103
 #, c-format
 msgid "Failed to find tree of %s."
-msgstr ""
+msgstr "Nepavyko rasti %s medžio."
 
 #: builtin/reset.c:108
 msgid "Could not write new index file."
-msgstr ""
+msgstr "Negalėjome įrašyti naujo indekso failo."
 
 #: builtin/reset.c:118
 #, c-format
 msgid "HEAD is now at %s"
-msgstr ""
+msgstr "HEAD yra dabar %s"
 
 #: builtin/reset.c:142
 msgid "Could not read index"
-msgstr ""
+msgstr "Negalėjome perskaityti indekso"
 
 #: builtin/reset.c:145
 msgid "Unstaged changes after reset:"
-msgstr ""
+msgstr "Neįsiminti pakeitimai po atstatymo:"
 
 #: builtin/reset.c:225
 #, c-format
 msgid "Reflog action message too long: %.*s..."
-msgstr ""
+msgstr "Reflog veiksmo žinutė per ilga: %.*s..."
 
 #: builtin/reset.c:231
 #, c-format
 msgid "Cannot do a %s reset in the middle of a merge."
-msgstr ""
+msgstr "Negalima daryti %s atstatymo viduryje suliejimo."
 
 #: builtin/reset.c:307
 #, c-format
 msgid "Could not parse object '%s'."
-msgstr ""
+msgstr "Negalėjome išanalizuoti objekto '%s'."
 
 #: builtin/reset.c:312
 msgid "--patch is incompatible with --{hard,mixed,soft}"
-msgstr ""
+msgstr "--patch yra nesuderinamas su --{hard,mixed,soft}"
 
 #: builtin/reset.c:321
 msgid "--mixed with paths is deprecated; use 'git reset -- <paths>' instead."
