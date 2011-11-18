@@ -11,6 +11,7 @@
 # branch            šaka
 # bundle            rinkinys, surinkti
 # checkout          iš(si)kelti
+# cherry-pick       vyšniavimas
 # commit            įkelti, įkėlimas
 # content           turinys
 # corrupt           pažeistas
@@ -23,6 +24,7 @@
 # merge             sulieti
 # option            parinktis
 # output            išvestis
+# parse             (iš-)analizuoti
 # patch             lopas
 # pattern           ? (grep context)
 # push              (su)stumti
@@ -35,7 +37,7 @@
 # specify           nurodyti
 # squash            ?
 # stage             įsiminti
-# stash             ?
+# stash             skrynutė
 # submodule         submodulis
 # track             sekti
 # unbundle          išrinkti
@@ -59,21 +61,20 @@ msgstr ""
 "%100<10 || n%100>=20) ? 1 : 2);\n"
 
 #: commit.c:46
-#, fuzzy, c-format
+#, c-format
 msgid "could not parse %s"
-msgstr "nepavyko perskaityti '%s'"
+msgstr "nepavyko išanalizuoti '%s'"
 
 #: commit.c:48
-#, fuzzy, c-format
+#, c-format
 msgid "%s %s is not a commit!"
 msgstr "'%s' yra ne įkėlimas"
 
 #: compat/obstack.c:406 compat/obstack.c:408
 msgid "memory exhausted"
-msgstr ""
+msgstr "atmintis sunaudota"
 
 #: connected.c:39
-#, fuzzy
 msgid "Could not run 'git rev-list'"
 msgstr "nepavyko paleisti rev-list"
 
@@ -90,12 +91,12 @@ msgstr "nepavyko uždaryti rev-list'o standartinės įvesties: %s"
 #: diff.c:104
 #, c-format
 msgid "  Failed to parse dirstat cut-off percentage '%.*s'\n"
-msgstr ""
+msgstr "  Nepavyko išanalizuoti direktorijos ribinio procento '%.*s'\n"
 
 #: diff.c:109
 #, c-format
 msgid "  Unknown dirstat parameter '%.*s'\n"
-msgstr ""
+msgstr "  Nežinomas dirstat parametras '%.*s'\n"
 
 #: diff.c:208
 #, c-format
@@ -103,6 +104,8 @@ msgid ""
 "Found errors in 'diff.dirstat' config variable:\n"
 "%s"
 msgstr ""
+"Rasta klaidų 'diff.dirstat' konfigūraciniame kintamajame:\n"
+"%s"
 
 #: diff.c:3299
 #, c-format
@@ -110,6 +113,8 @@ msgid ""
 "Failed to parse --dirstat/-X option parameter:\n"
 "%s"
 msgstr ""
+"Nepavyko išanalizuoti --dirstat/-X parinkties parametro:\n"
+"%s"
 
 #: help.c:309
 #, c-format
@@ -117,6 +122,8 @@ msgid ""
 "'%s' appears to be a git command, but we were not\n"
 "able to execute it. Maybe git-%s is broken?"
 msgstr ""
+"'%s' atrodo kaip git komanda, bet negalėjome jo paleisti.\n"
+"Gal git-%s sugadintas?"
 
 #: wt-status.c:136
 msgid "Unmerged paths:"
@@ -479,9 +486,9 @@ msgid "git archive: NACK %s"
 msgstr "git archive: NACK %s"
 
 #: builtin/archive.c:65
-#, fuzzy, c-format
+#, c-format
 msgid "remote error: %s"
-msgstr "nuotolinė "
+msgstr "nuotolinė klaida: %s"
 
 #: builtin/archive.c:66
 msgid "git archive: protocol error"
@@ -796,14 +803,12 @@ msgid "--patch is incompatible with all other options"
 msgstr "--patch yra nesuderinamas su visomis kitomis parinktimis"
 
 #: builtin/checkout.c:963
-#, fuzzy
 msgid "--detach cannot be used with -b/-B/--orphan"
-msgstr "--cached negali būti vartojamas su --no-index."
+msgstr "--detach negali būti vartojamas su -b/-B/--orphan"
 
 #: builtin/checkout.c:965
-#, fuzzy
 msgid "--detach cannot be used with -t"
-msgstr "--orhphan negali būti vartojamas su -t"
+msgstr "--detach negali būti naudojamas su -t"
 
 #: builtin/checkout.c:971
 msgid "--track needs a branch name"
@@ -826,7 +831,6 @@ msgid "git checkout: -f and -m are incompatible"
 msgstr "git checkout: -f ir -m yra nesuderinami"
 
 #: builtin/checkout.c:1030
-#, fuzzy
 msgid "invalid path specification"
 msgstr "netinkamas kelio nurodymas"
 
@@ -844,9 +848,8 @@ msgid "git checkout: updating paths is incompatible with switching branches."
 msgstr "git checkout: kelių atnaujinimas ir šakų keitimas nesuderinami."
 
 #: builtin/checkout.c:1045
-#, fuzzy
 msgid "git checkout: --detach does not take a path argument"
-msgstr "fetch --all nereikalingas repozitorijos argumentas"
+msgstr "git checkout: --detach nepriima kelio argumento"
 
 #: builtin/checkout.c:1048
 msgid ""
@@ -1001,12 +1004,12 @@ msgid "could not create work tree dir '%s'."
 msgstr "negalėjome sukurti darbinio medžio katalogo '%s'."
 
 #: builtin/clone.c:580
-#, fuzzy, c-format
+#, c-format
 msgid "Cloning into bare repository '%s'...\n"
 msgstr "Klonuojame į pliką saugyklą %s...\n"
 
 #: builtin/clone.c:582
-#, fuzzy, c-format
+#, c-format
 msgid "Cloning into '%s'...\n"
 msgstr "Klonuojama į %s...\n"
 
@@ -1083,7 +1086,6 @@ msgid "failed to unpack HEAD tree object"
 msgstr "nepavyko išpakuoti HEAD medžio objekto"
 
 #: builtin/commit.c:361
-#, fuzzy
 msgid "unable to create temporary index"
 msgstr "laikinojo indekso failo rašymas negalimas"
 
@@ -1267,10 +1269,9 @@ msgid "--reset-author can be used only with -C, -c or --amend."
 msgstr "--reset-author gali būti vartojamas tik su -C, -c arba --amend."
 
 #: builtin/commit.c:1069
-#, fuzzy
 msgid "Only one of --include/--only/--all/--interactive/--patch can be used."
 msgstr ""
-"Tik vienas iš --include/--only/--all/--interactive gali būti vartojamas."
+"Gali būti vartojamas tik vienas iš --include/--only/--all/--interactive."
 
 #: builtin/commit.c:1071
 msgid "No paths with --include/--only does not make sense."
@@ -1538,9 +1539,9 @@ msgid "cannot open %s: %s\n"
 msgstr "negalima atidaryti %s: %s\n"
 
 #: builtin/fetch.c:383
-#, fuzzy, c-format
+#, c-format
 msgid "%s did not send all necessary objects\n"
-msgstr "%s nėra validus '%s' objektas"
+msgstr "%s neatsiuntė visų reikalingų objektų\n"
 
 #: builtin/fetch.c:459
 #, c-format
@@ -1653,7 +1654,7 @@ msgid "Auto packing the repository for optimum performance.\n"
 msgstr "Saugykla automatiškai pakuojama optimialiam našumui.\n"
 
 #: builtin/gc.c:226
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "Auto packing the repository for optimum performance. You may also\n"
 "run \"git gc\" manually. See \"git help gc\" for more information.\n"
@@ -1728,18 +1729,16 @@ msgid "--open-files-in-pager only works on the worktree"
 msgstr "--open-files-in-pager veikia tik darbiniame medyje"
 
 #: builtin/grep.c:1074
-#, fuzzy
 msgid "--cached or --untracked cannot be used with --no-index."
-msgstr "--cached negali būti vartojamas su --no-index."
+msgstr "--cached arba --untracked negali būti vartojamas su --no-index."
 
 #: builtin/grep.c:1079
-#, fuzzy
 msgid "--no-index or --untracked cannot be used with revs."
-msgstr "--no-index negali būti vartojamas su revizijomis."
+msgstr "--no-index arba --untracked negali būti vartojamas su revizijomis."
 
 #: builtin/grep.c:1082
 msgid "--[no-]exclude-standard cannot be used for tracked contents."
-msgstr ""
+msgstr "--[no-]exclude-standard negali būti naudojamas nesekamam turiniui."
 
 #: builtin/grep.c:1090
 msgid "both --cached and trees are given."
@@ -1816,24 +1815,24 @@ msgid "insane git directory %s"
 msgstr "beprotiškas git katalogas %s"
 
 #: builtin/init-db.c:322 builtin/init-db.c:325
-#, fuzzy, c-format
+#, c-format
 msgid "%s already exists"
-msgstr "darbinis medis '%s' jau egzistuoja."
+msgstr "%s jau egzistuoja"
 
 #: builtin/init-db.c:354
-#, fuzzy, c-format
+#, c-format
 msgid "unable to handle file type %d"
-msgstr "negalima perskaityti medžio (%s)"
+msgstr "negalima apdoroti failo tipo %s"
 
 #: builtin/init-db.c:357
-#, fuzzy, c-format
+#, c-format
 msgid "unable to move %s to %s"
-msgstr "Negalėjome rašyti %s"
+msgstr "negalėjome perkelti %s į %s"
 
 #: builtin/init-db.c:362
-#, fuzzy, c-format
+#, c-format
 msgid "Could not create git link %s"
-msgstr "Negalėjome sukurti katalogo '%s'"
+msgstr "Negalėjome sukurti git nuorodos %s"
 
 #.
 #. * TRANSLATORS: The first '%s' is either "Reinitialized
@@ -2115,9 +2114,9 @@ msgid "Could not open '%s' for writing"
 msgstr "Nepavyko atidaryti '%s' rašymui"
 
 #: builtin/merge.c:863
-#, fuzzy, c-format
+#, c-format
 msgid "Could not read from '%s'"
-msgstr "nepavyko perskaityti '%s'"
+msgstr "Nepavyko perskaityti '%s'"
 
 #: builtin/merge.c:872
 #, c-format
@@ -2125,9 +2124,8 @@ msgid "Not committing merge; use 'git commit' to complete the merge.\n"
 msgstr ""
 
 #: builtin/merge.c:892
-#, fuzzy
 msgid "Empty commit message."
-msgstr "revizija turi tuščią žinutę"
+msgstr "Tuščia fiksavimo žinutė."
 
 #: builtin/merge.c:904
 #, c-format
@@ -2147,18 +2145,16 @@ msgid "'%s' is not a commit"
 msgstr "'%s' yra ne įkėlimas"
 
 #: builtin/merge.c:1029
-#, fuzzy
 msgid "No current branch."
 msgstr "Jokioje šakoje."
 
 #: builtin/merge.c:1031
-#, fuzzy
 msgid "No remote for the current branch."
-msgstr "negalima pervadinti dabartinės šakos kol esate jokioje."
+msgstr "Nėra nuotolinės saugyklos dabartinei šakai."
 
 #: builtin/merge.c:1033
 msgid "No default upstream defined for the current branch."
-msgstr ""
+msgstr "Standartinė \"bazė\" neaprašyta dabartinei šakai."
 
 #: builtin/merge.c:1038
 #, c-format
@@ -2182,17 +2178,16 @@ msgid "You have not concluded your merge (MERGE_HEAD exists)."
 msgstr ""
 
 #: builtin/merge.c:1143
-#, fuzzy
 msgid ""
 "You have not concluded your cherry-pick (CHERRY_PICK_HEAD exists).\n"
 "Please, commit your changes before you can merge."
 msgstr ""
-"Jūs nebaigėte suliejimo (MERGE_HEAD egzistuoja).\n"
+"Jūs nebaigėte savo vyšniavimo (CHERRY_PICK_HEAD egzistuoja).\n"
 "Prašome, fiksuokite savo pakeitimus prieš suliedami."
 
 #: builtin/merge.c:1146
 msgid "You have not concluded your cherry-pick (CHERRY_PICK_HEAD exists)."
-msgstr ""
+msgstr "Jūs nebaigėte savo vyšniavimo (CHERRY_PICK_HEAD egzistuoja)."
 
 #: builtin/merge.c:1155
 msgid "You cannot combine --squash with --no-ff."
@@ -2691,23 +2686,23 @@ msgid "Could not reset index file to revision '%s'."
 msgstr ""
 
 #: builtin/revert.c:108 builtin/revert.c:129
-#, fuzzy, c-format
+#, c-format
 msgid "%s: %s cannot be used with %s"
-msgstr "-B negali būti vartojamas su -b"
+msgstr "%s: %s negali būti vartojamas su %s"
 
 #: builtin/revert.c:162
 msgid "program error"
 msgstr ""
 
 #: builtin/revert.c:334 builtin/revert.c:862 builtin/revert.c:879
-#, fuzzy, c-format
+#, c-format
 msgid "Could not write to %s"
 msgstr "Negalėjome rašyti į '%s'"
 
 #: builtin/revert.c:337
 #, c-format
 msgid "Error wrapping up %s"
-msgstr ""
+msgstr "Klaida įpakuojant %s"
 
 #: builtin/revert.c:352
 msgid "Your local changes would be overwritten by cherry-pick."
@@ -2787,28 +2782,28 @@ msgid "git %s: failed to refresh the index"
 msgstr ""
 
 #: builtin/revert.c:729
-#, fuzzy, c-format
+#, c-format
 msgid "Cannot %s during a %s"
-msgstr "negaliu chdir į %s"
+msgstr "Negalima %s per %s"
 
 #: builtin/revert.c:750
-#, fuzzy, c-format
+#, c-format
 msgid "Could not parse line %d."
-msgstr "Negalėjome išanalizuoti objekto '%s'."
+msgstr "Negalėjome išanalizuoti eilutės %d."
 
 #: builtin/revert.c:757
 msgid "No commits parsed."
-msgstr ""
+msgstr "Jokie fiksavimai neišanalizuoti."
 
 #: builtin/revert.c:770
-#, fuzzy, c-format
+#, c-format
 msgid "Could not open %s"
-msgstr "nepavyko atidaryti '%s'"
+msgstr "Nepavyko atidaryti %s"
 
 #: builtin/revert.c:774
-#, fuzzy, c-format
+#, c-format
 msgid "Could not read %s."
-msgstr "nepavyko perskaityti '%s'"
+msgstr "Nepavyko perskaityti '%s'."
 
 #: builtin/revert.c:781
 #, c-format
@@ -2816,29 +2811,29 @@ msgid "Unusable instruction sheet: %s"
 msgstr ""
 
 #: builtin/revert.c:809
-#, fuzzy, c-format
+#, c-format
 msgid "Invalid key: %s"
 msgstr "Nevalidus %s: '%s'"
 
 #: builtin/revert.c:812
-#, fuzzy, c-format
+#, c-format
 msgid "Invalid value for %s: %s"
-msgstr "Nevalidus %s: '%s'"
+msgstr "Nevalidi reikšmė %s: %s"
 
 #: builtin/revert.c:824
-#, fuzzy, c-format
+#, c-format
 msgid "Malformed options sheet: %s"
 msgstr "Blogai suformuota įvesties eilutė: '%s'."
 
 #: builtin/revert.c:846
-#, fuzzy, c-format
+#, c-format
 msgid "%s already exists."
-msgstr "darbinis medis '%s' jau egzistuoja."
+msgstr "%s jau egzistuoja."
 
 #: builtin/revert.c:848
-#, fuzzy, c-format
+#, c-format
 msgid "Could not create sequencer directory %s"
-msgstr "Negalėjome sukurti katalogo '%s'"
+msgstr "Negalėjome sukurti sekos katalogo %s"
 
 #: builtin/revert.c:864 builtin/revert.c:883
 #, c-format
@@ -2846,9 +2841,9 @@ msgid "Error wrapping up %s."
 msgstr ""
 
 #: builtin/revert.c:876
-#, fuzzy, c-format
+#, c-format
 msgid "Could not format %s."
-msgstr "Nepavyko atsiųsti %s"
+msgstr "Nepavyko suformatuoti %s."
 
 #: builtin/revert.c:988
 msgid "A cherry-pick or revert is in progress."
@@ -2876,9 +2871,8 @@ msgid "No %s in progress"
 msgstr ""
 
 #: builtin/revert.c:1019
-#, fuzzy
 msgid "revert failed"
-msgstr "read-tree nepavyko"
+msgstr "atstatymas nepavyko"
 
 #: builtin/revert.c:1034
 msgid "cherry-pick failed"
@@ -3036,9 +3030,8 @@ msgid "Updated tag '%s' (was %s)\n"
 msgstr ""
 
 #: git-am.sh:48
-#, fuzzy
 msgid "You need to set your committer info first"
-msgstr "jums pirma reikia nustatyti jūsų dabartinį indeksą"
+msgstr "Jums pirma reikia nustatyti fiksuotojo informaciją"
 
 #: git-am.sh:134
 msgid "Repository lacks necessary blobs to fall back on 3-way merge."
@@ -3179,9 +3172,9 @@ msgid "Are you sure [Y/n]? "
 msgstr ""
 
 #: git-bisect.sh:354
-#, fuzzy, sh-format
+#, sh-format
 msgid "'$invalid' is not a valid commit"
-msgstr "'%s' yra ne įkėlimas"
+msgstr "'$invalid' nėra teisingas fiksavimas"
 
 #: git-bisect.sh:363
 #, sh-format
@@ -3195,13 +3188,13 @@ msgid "No logfile given"
 msgstr ""
 
 #: git-bisect.sh:391
-#, fuzzy, sh-format
+#, sh-format
 msgid "cannot read $file for replaying"
-msgstr "indekso skaitymas negalimas"
+msgstr "negalima skaityti $file pakartojimui"
 
 #: git-bisect.sh:408
 msgid "?? what are you talking about?"
-msgstr ""
+msgstr "?? apie ką čia kalbi?"
 
 #: git-bisect.sh:474
 msgid "We are not bisecting."
@@ -3223,7 +3216,6 @@ msgid "updating an unborn branch with changes added to the index"
 msgstr ""
 
 #: git-pull.sh:245
-#, fuzzy
 msgid "Cannot merge multiple branches into empty head"
 msgstr "Galima lieti lygiai vieną fiksavimą į tuščią galvą"
 
@@ -3236,33 +3228,28 @@ msgid "git stash clear with parameters is unimplemented"
 msgstr ""
 
 #: git-stash.sh:74
-#, fuzzy
 msgid "You do not have the initial commit yet"
-msgstr "Jūs neturite validaus HEAD."
+msgstr "Jūs dar neturite pirmojo fiksavimo"
 
 #: git-stash.sh:89
-#, fuzzy
 msgid "Cannot save the current index state"
-msgstr "Negaliu prieiti prie darbinio katalogo"
+msgstr "Negaliu išsaugoti dabartinės indekso stadijos"
 
 #: git-stash.sh:122 git-stash.sh:135
-#, fuzzy
 msgid "Cannot save the current worktree state"
-msgstr "Negaliu prieiti prie darbinio katalogo"
+msgstr "Negaliu išsaugoti dabartinės darbinio katalogo stadijos"
 
 #: git-stash.sh:139
-#, fuzzy
 msgid "No changes selected"
-msgstr "Nėra pakeitimų"
+msgstr "Nepažymėti jokie pakeitimai"
 
 #: git-stash.sh:142
 msgid "Cannot remove temporary index (can't happen)"
 msgstr ""
 
 #: git-stash.sh:155
-#, fuzzy
 msgid "Cannot record working tree state"
-msgstr "Negaliu prieiti darbinio medžio '%s'"
+msgstr "Negaliu perskaityti darbinio medžio stadijos"
 
 #: git-stash.sh:222
 msgid "No local changes to save"
@@ -3277,28 +3264,27 @@ msgid "Cannot save the current status"
 msgstr ""
 
 #: git-stash.sh:252
-#, fuzzy
 msgid "Cannot remove worktree changes"
-msgstr "Negaliu prieiti darbinio medžio '%s'"
+msgstr "Negaliu pašalinti darbinio medžio pakeitimų"
 
 #: git-stash.sh:351
 msgid "No stash found."
 msgstr ""
 
 #: git-stash.sh:358
-#, fuzzy, sh-format
+#, sh-format
 msgid "Too many revisions specified: $REV"
-msgstr "Nurodyta per daug parinkčių"
+msgstr "Per daug revizijų nurodyta: $REV"
 
 #: git-stash.sh:364
-#, fuzzy, sh-format
+#, sh-format
 msgid "$reference is not valid reference"
-msgstr "nuoroda nėra medis: %s"
+msgstr "$reference nėra validi nuoroda"
 
 #: git-stash.sh:392
-#, fuzzy, sh-format
+#, sh-format
 msgid "'$args' is not a stash-like commit"
-msgstr "'%s' yra ne įkėlimas"
+msgstr "'$args' yra ne stash tipo fiksavimas"
 
 #: git-stash.sh:403
 #, sh-format
@@ -3306,21 +3292,18 @@ msgid "'$args' is not a stash reference"
 msgstr ""
 
 #: git-stash.sh:411
-#, fuzzy
 msgid "unable to refresh index"
-msgstr "Negalėjome rašyti indekso."
+msgstr "nepavyko atnaujinti indekso"
 
 #: git-stash.sh:415
-#, fuzzy
 msgid "Cannot apply a stash in the middle of a merge"
-msgstr "Negalima daryti %s atstatymo viduryje suliejimo."
+msgstr "Negalima daryti skrynutės atstatymo viduryje suliejimo."
 
 #: git-stash.sh:423
 msgid "Conflicts in index. Try without --index."
 msgstr ""
 
 #: git-stash.sh:425
-#, fuzzy
 msgid "Could not save index tree"
 msgstr "Negalėjome perskaityti indekso"
 
@@ -3339,9 +3322,8 @@ msgid "${REV}: Could not drop stash entry"
 msgstr ""
 
 #: git-stash.sh:498
-#, fuzzy
 msgid "No branch name specified"
-msgstr "Šakos pervadinimas nepavyko"
+msgstr "Šakos pervadinimas nenurodytas"
 
 #: git-stash.sh:569
 msgid "(To restore them type \"git stash apply\")"
@@ -3368,12 +3350,12 @@ msgid "repo URL: '$repo' must be absolute or begin with ./|../"
 msgstr ""
 
 #: git-submodule.sh:263
-#, fuzzy, sh-format
+#, sh-format
 msgid "'$path' already exists in the index"
-msgstr "indekso skaitymas negalimas"
+msgstr "'$path' jau egzistuoja indekse"
 
 #: git-submodule.sh:280
-#, fuzzy, sh-format
+#, sh-format
 msgid "'$path' already exists and is not a valid git repo"
 msgstr "paskirties kelias '%s' jau egzistuoja ir yra ne tuščias katalogas"
 
@@ -3383,9 +3365,9 @@ msgid "Unable to checkout submodule '$path'"
 msgstr ""
 
 #: git-submodule.sh:299
-#, fuzzy, sh-format
+#, sh-format
 msgid "Failed to add submodule '$path'"
-msgstr "Nepavyko nuskaityti objekto '%s'."
+msgstr "Nepavyko pridėti submodulio '$path'"
 
 #: git-submodule.sh:304
 #, sh-format
